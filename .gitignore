@@ -1,0 +1,13 @@
+# Originalni PDF-ovi predavanja (autorska prava — ne objavljivati javno)
+*.pdf
+
+# Pomoćne skripte (sadrže lokalne putanje sa korisničkim imenom)
+_*.py
+
+# Radni / međufajlovi (nisu deo sajta)
+slides8_blocks/
+slides9_blocks/
+slides10_blocks/
+udzbenik_parts/
+objasnjenja_backup_verbose.html
+sajt.zip

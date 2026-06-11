@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<title>Cheat Sheet — Fizika formule</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+* { box-sizing: border-box; }
+body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 24px 18px; background: #f5f6fa; color: #1a1a2e; }
+h1 { font-size: 2em; text-align: center; color: #1a237e; border-bottom: 3px solid #1a237e; padding-bottom: 10px; margin-top: 0; }
+h2 { font-size: 1.25em; color: #1a237e; background: #e8eaf6; border-left: 5px solid #1a237e; padding: 8px 14px; margin: 28px 0 6px 0; border-radius: 0 6px 6px 0; }
+h3 { font-size: 0.95em; color: #555; margin: 16px 0 4px 0; font-style: italic; }
+.formula-box { background: #fff; border-left: 4px solid #1565c0; border-radius: 6px; padding: 12px 16px; margin: 8px 0 12px 0; box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+.formula-box.kljucna { border-left-color: #7a0010; background: #fdeef0; }
+.podsetnik { font-size: 0.88em; color: #444; margin-top: 8px; line-height: 1.6; }
+.toc { background: #e8eaf6; border-radius: 8px; padding: 14px 20px; margin-bottom: 30px; }
+.toc a { display: block; color: #1a237e; text-decoration: none; padding: 2px 0; font-size: 0.97em; }
+.toc a:hover { text-decoration: underline; }
+@media print {
+  body { max-width: 100%; padding: 8px; }
+  h2 { page-break-before: always; }
+  .formula-box { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<h1>Cheat Sheet — Fizika formule i izvodi</h1>
+<p style="text-align:center;color:#666;font-size:0.95em;">Samo formule sa prezentacija. Predavanja 6–10.</p>
+<div class="toc">
+<a href="#sesto_predavanje"><b>Šesto predavanje</b> (26 slajdova sa formulama)</a>
+<a href="#sedmo_predavanje"><b>Sedmo predavanje</b> (21 slajdova sa formulama)</a>
+<a href="#osmo_predavanje"><b>Osmo predavanje</b> (64 slajdova sa formulama)</a>
+<a href="#deveto_predavanje"><b>Deveto predavanje</b> (28 slajdova sa formulama)</a>
+<a href="#deseto_predavanje"><b>Deseto predavanje</b> (20 slajdova sa formulama)</a>
+</div>
+
+<h2 id="sesto_predavanje">Šesto predavanje</h2>
+<h3>Slajd 3 — Oscilatorno kretanje (opruga sa tegom)</h3>
+<div class="formula-box">
+$$ F = -\tilde{k}\,x \qquad (6.1) $$
+
+</div>
+<h3>Slajd 4 — Harmonijske oscilacije (prvi korak izvođenja)</h3>
+<div class="formula-box">
+1) Njutnov zakon: $\quad m \cdot a = F$
+    2) ubrzanje je $a=\dfrac{dv}{dt}$, a $F=-\tilde{k}x$: $\quad m\dfrac{dv}{dt} = -\tilde{k}x$
+    3) sve na jednu stranu: $\quad m\dfrac{dv}{dt} + \tilde{k}x = 0$
+    4) pomnožimo sa $dx$: $\quad m\,dv\,\dfrac{dx}{dt} + \tilde{k}x\,dx = 0$
+    5) pošto je $\dfrac{dx}{dt}=v$ (brzina): $\quad m\,v\,dv + \tilde{k}x\,dx = 0$
+
+</div>
+<h3>Slajd 5 — Harmonijske oscilacije (zakon održanja energije)</h3>
+<div class="formula-box">
+$$ m \int v\,dv + \tilde{k}\int x\,dx = C_1 \quad\Rightarrow\quad \frac{mv^2}{2} + \frac{\tilde{k}x^2}{2} = C_1 $$
+
+</div>
+<div class="formula-box">
+$$ C_1 = \tfrac{1}{2}\tilde{k}x_0^2 $$
+
+</div>
+<div class="formula-box">
+$$ \frac{mv^2}{2} + \frac{\tilde{k}x^2}{2} = \frac{\tilde{k}x_0^2}{2} \quad (=\text{const}) \qquad (6.2) $$
+
+</div>
+<h3>Slajd 6 — Izvođenje jednačine kretanja</h3>
+<div class="formula-box">
+$$ v = \sqrt{\frac{\tilde{k}}{m}\left(x_0^2 - x^2\right)} = \omega\sqrt{x_0^2 - x^2} \qquad (6.3) $$
+
+</div>
+<div class="formula-box">
+$$ \omega = \sqrt{\frac{\tilde{k}}{m}} \quad - \text{ kružna (ugaona) frekvencija oscilovanja} $$
+
+</div>
+<div class="formula-box">
+$\dfrac{dx}{dt} = \omega\sqrt{x_0^2 - x^2}$
+    $\Rightarrow\quad \dfrac{dx}{\sqrt{x_0^2 - x^2}} = \omega\,dt$ &nbsp;(razdvojimo $x$ i $t$ na svoje strane)
+    $\Rightarrow\quad \displaystyle\int \dfrac{dx}{\sqrt{x_0^2 - x^2}} = \omega\int dt + \varphi$ &nbsp;(integralimo obe strane)
+    $\Rightarrow\quad \arcsin\!\left(\dfrac{x}{x_0}\right) = \omega t + \varphi$
+
+</div>
+<h3>Slajd 7 — Jednačina kretanja harmonijskog oscilatora</h3>
+<div class="formula-box">
+$$ \boxed{\,x = x_0\,\sin(\omega t + \varphi)\,} \qquad (6.4) $$
+
+</div>
+<div class="formula-box">
+$$ x = x_0\sin\!\left(\omega t + \tfrac{\pi}{2}\right) = x_0\cos(\omega t) \qquad (6.5) $$
+
+</div>
+<div class="formula-box">
+$$ \omega = 2\pi\nu = \frac{2\pi}{T} \qquad,\qquad \nu = \frac{1}{T} $$
+
+</div>
+<h3>Slajd 8 — Brzina, ubrzanje i energija</h3>
+<div class="formula-box">
+$$ v = \frac{dx}{dt} = \frac{d}{dt}\big[x_0\sin(\omega t+\varphi)\big] = \omega x_0\cos(\omega t+\varphi) $$
+
+</div>
+<div class="formula-box">
+$$ a = \frac{dv}{dt} = \frac{d}{dt}\big[\omega x_0\cos(\omega t+\varphi)\big] = -\omega^2 x_0\sin(\omega t+\varphi) = -\omega^2 x $$
+
+</div>
+<div class="formula-box">
+$$ E_k = \tfrac{1}{2}mv^2 = \tfrac{1}{2}m\omega^2\left(x_0^2 - x^2\right) $$
+
+</div>
+<div class="formula-box">
+$$ E_p = -\int_0^x F\,dx = \tilde{k}\int_0^x x\,dx = \tfrac{1}{2}\tilde{k}x^2 = \tfrac{1}{2}m\omega^2 x^2 $$
+
+</div>
+<div class="formula-box">
+$$ E_u = E_k + E_p = \tfrac{1}{2}m\omega^2 x_0^2 = \text{const} $$
+
+</div>
+<h3>Slajd 11 — Rešenje: sila F(t) i njena amplituda F₀</h3>
+<div class="formula-box">
+$$ F(t) = m\,a(t) = m\frac{d^2x}{dt^2} = -m\omega^2 x_0\sin\!\left(\omega t - \tfrac{\pi}{2}\right) \equiv -F_0\sin\!\left(\omega t - \tfrac{\pi}{2}\right) $$
+
+</div>
+<div class="formula-box">
+$$ F_0 = m\omega^2 x_0 = 20\cdot10^{-3}\,\text{kg}\cdot\left(1\,\tfrac{\text{rad}}{\text{s}}\right)^2\cdot 0{,}1\,\text{m} = 2\,\text{mN} $$
+
+</div>
+<h3>Slajd 12 — Rešenje: k, period T i v_max</h3>
+<div class="formula-box">
+$$ \tilde k = \frac{F_0}{x_0} = \frac{2\cdot10^{-3}\,\text{N}}{0{,}1\,\text{m}} = 0{,}02\,\tfrac{\text{N}}{\text{m}} $$
+
+</div>
+<div class="formula-box">
+$$ T = \frac{2\pi}{\omega} = \frac{2\cdot 3{,}14\,\text{rad}}{1\,\tfrac{\text{rad}}{\text{s}}} = 6{,}28\,\text{s} $$
+
+</div>
+<div class="formula-box">
+$$ v_{max} = x_0\,\omega = 0{,}1\,\text{m}\cdot 1\,\tfrac{\text{rad}}{\text{s}} = 0{,}1\,\tfrac{\text{m}}{\text{s}} = 10\,\tfrac{\text{cm}}{\text{s}} $$
+
+</div>
+<h3>Slajd 13 — Oscilatorno (LC) kolo</h3>
+<div class="formula-box">
+$$ -L\frac{dI}{dt} = \frac{q}{C} \quad\Rightarrow\quad L\frac{dI}{dt} + \frac{q}{C} = 0 $$
+
+</div>
+<h3>Slajd 14 — LC kolo: zakon održanja energije</h3>
+<div class="formula-box">
+$$ L\frac{dI}{dt} + \frac{q}{C} = 0 \;\Big/\cdot dq \;\Rightarrow\; LI\,dI + \frac{1}{C}q\,dq = 0 \;\Rightarrow\; \tfrac12 LI^2 + \tfrac{1}{2C}q^2 = C_2 $$
+
+</div>
+<div class="formula-box">
+$$ \tfrac12 LI^2 + \tfrac12\frac{q^2}{C} = \tfrac12\frac{q_0^2}{C} \qquad (6.11) $$
+
+</div>
+<h3>Slajd 15 — LC kolo: jednačina oscilovanja</h3>
+<div class="formula-box">
+$$ q = q_0\sin\!\left(\frac{1}{\sqrt{LC}}\,t + \varphi\right) = q_0\sin(\omega t + \varphi) \qquad (6.12) $$
+
+</div>
+<div class="formula-box">
+$$ \omega = \frac{1}{\sqrt{LC}} $$
+
+</div>
+<div class="formula-box">
+$$ q = q_0\cos(\omega t) \qquad (6.13) $$
+
+</div>
+<h3>Slajd 20 — Talasna funkcija ψ(x,t)</h3>
+<div class="formula-box">
+$$ \psi(0,t) = \psi_0\cos(\omega t) \qquad (6.14) $$
+
+</div>
+<div class="formula-box">
+$$ \psi(x,t) = \psi_0\cos\big[\omega(t-\Delta t)\big] = \psi_0\cos\!\left[\omega\!\left(t-\frac{x}{v_0}\right)\right] $$
+
+</div>
+<h3>Slajd 21 — Talasni broj k i konačni oblik</h3>
+<div class="formula-box">
+$$ \psi(x,t) = \psi_0\cos\!\left[2\pi\!\left(\frac{t}{T} - \frac{x}{\lambda}\right)\right] \qquad (6.15) $$
+
+</div>
+<div class="formula-box">
+$$ k = \frac{2\pi}{\lambda} $$
+
+</div>
+<div class="formula-box">
+$$ \psi(x,t) = \psi_0\cos(\omega t - kx) \qquad (6.16) $$
+
+</div>
+<h3>Slajd 22 — Brzina i ubrzanje čestice</h3>
+<div class="formula-box">
+$$ u(x,t) = \frac{\partial\psi}{\partial t} = -\omega\psi_0\sin(\omega t - kx) \qquad (6.17) $$
+    $$ a(x,t) = \frac{\partial u}{\partial t} = -\omega^2\psi_0\cos(\omega t - kx) = -\omega^2\psi \qquad (6.18) $$
+
+</div>
+<h3>Slajd 23 — Osnovna relacija talasnog kretanja</h3>
+<div class="formula-box">
+$$ \omega\,dt - k\,dx = 0 \;\Rightarrow\; v_0 = \frac{dx}{dt} = \frac{\omega}{k} = \frac{2\pi\nu}{2\pi/\lambda} = \lambda\nu \qquad (6.19) $$
+
+</div>
+<div class="formula-box">
+$$ \boxed{\,v_0 = \lambda\,\nu\,} $$
+
+</div>
+<h3>Slajd 24 — Matematički dodatak (kompleksni zapis)</h3>
+<div class="formula-box">
+$$ e^{i\alpha} = \cos\alpha + i\sin\alpha $$
+
+</div>
+<div class="formula-box">
+$$ \psi(x,t) = \psi_0\,\mathrm{Re}\!\left[e^{i(\omega t - kx)}\right] \quad\text{ili}\quad \psi(x,t) = \psi_0\,e^{\pm i(\omega t - kx)} $$
+
+</div>
+<h3>Slajd 30 — Brzina talasa (Njutnov i Laplasov obrazac)</h3>
+<div class="formula-box">
+$$ v_0 = \sqrt{\frac{E}{\rho}} \qquad (6.20) $$
+
+</div>
+<div class="formula-box">
+$$ v_0 = \sqrt{\frac{\kappa p}{\rho}} \qquad (6.21) $$
+
+</div>
+<h3>Slajd 31 — Brzina zvuka u gasu preko temperature</h3>
+<div class="formula-box">
+$$ v_0 = \sqrt{\frac{\kappa RT}{M}} \qquad (6.22) $$
+
+</div>
+<div class="formula-box">
+$$ v_0 = c_0\sqrt{\frac{T}{T_0}} \qquad (6.23) $$
+
+</div>
+<h3>Slajd 33 — Primer: metalna šipka (rešenje)</h3>
+<div class="formula-box">
+$$ v_0 = \frac{2\ell}{t} = \sqrt{\frac{E}{\rho}} \;\Rightarrow\; E = \frac{4\ell^2}{t^2}\rho $$
+
+</div>
+<div class="formula-box">
+$$ E = \frac{4\cdot(30)^2}{(0{,}0166)^2}\cdot 8960 = 1{,}17\cdot10^{11}\,\text{Pa} = 117\,\text{GPa} $$
+
+</div>
+<h3>Slajd 35 — Primer: helijum (rešenje)</h3>
+<div class="formula-box">
+$$ v_T = \sqrt{\langle v^2\rangle} = \sqrt{\frac{3RT}{M}} \qquad,\qquad v_0 = \sqrt{\frac{\kappa RT}{M}} $$
+
+</div>
+<div class="formula-box">
+$$ v_T = \sqrt{\frac{3}{1{,}67}}\cdot 970 = 1300\,\tfrac{\text{m}}{\text{s}} $$
+
+</div>
+<h3>Slajd 37 — Hukov zakon na delić</h3>
+<div class="formula-box">
+$$ \frac{F}{S} = E_Y\frac{\Delta L}{L} $$
+
+</div>
+<h3>Slajd 38 — Sila i njena promena duž šipke</h3>
+<div class="formula-box">
+$$ \frac{F}{S} = E_Y\frac{\partial\psi}{\partial x} \;\Rightarrow\; F = S E_Y\frac{\partial\psi}{\partial x} \qquad (6.24) $$
+
+</div>
+<div class="formula-box">
+$$ dF = S E_Y\frac{\partial^2\psi}{\partial x^2}\,dx \qquad (6.25) $$
+
+</div>
+<h3>Slajd 39 — Talasna jednačina (konačno!)</h3>
+<div class="formula-box">
+$$ dF = \rho S\,dx\frac{\partial^2\psi}{\partial t^2} \qquad (6.26) $$
+
+</div>
+<div class="formula-box">
+$$ \frac{\partial^2\psi}{\partial t^2} = \frac{E_Y}{\rho}\cdot\frac{\partial^2\psi}{\partial x^2} \qquad (6.27) $$
+
+</div>
+<h3>Slajd 40 — Smisao talasne jednačine</h3>
+<div class="formula-box">
+$$ \frac{\partial^2\psi}{\partial t^2} = v_0^2\cdot\frac{\partial^2\psi}{\partial x^2} \qquad (6.28) $$
+
+</div>
+<h3>Slajd 41 — Univerzalnost: žica i zvuk</h3>
+<div class="formula-box">
+$$ \frac{\partial^2\psi}{\partial t^2} = \frac{F}{\gamma}\cdot\frac{\partial^2\psi}{\partial x^2} \;,\quad v_0=\sqrt{\frac{F}{\gamma}} $$
+
+</div>
+<div class="formula-box">
+$$ v_0=\sqrt{\left(\frac{\partial p}{\partial\rho}\right)_{ad}}=\sqrt{\frac{\kappa p}{\rho}} $$
+
+</div>
+<h3>Slajd 42 — Univerzalnost: elektromagnetni talas</h3>
+<div class="formula-box">
+$$ \frac{\partial^2 E_x}{\partial t^2}=v_0^2\frac{\partial^2 E_x}{\partial z^2} \;,\qquad \frac{\partial^2 B_y}{\partial t^2}=v_0^2\frac{\partial^2 B_y}{\partial z^2} $$
+
+</div>
+<div class="formula-box">
+$$ v_0=\sqrt{\frac{1}{\varepsilon_0\varepsilon_r\mu_0\mu_r}}=\frac{c}{\sqrt{\varepsilon_r\mu_r}} \;,\quad c=3\cdot10^8\,\tfrac{\text{m}}{\text{s}} $$
+
+</div>
+<h2 id="sedmo_predavanje">Sedmo predavanje</h2>
+<h3>L7 · Slajd 5 — Prenos energije zvučnim talasom</h3>
+<div class="formula-box">
+$$ \langle\epsilon\rangle = \tfrac12\mu\omega^2\psi_0^2 $$
+
+</div>
+<div class="formula-box">
+$$ \langle w\rangle = n_0\langle\epsilon\rangle = \tfrac12 n_0\mu\omega^2\psi_0^2 = \tfrac12\rho\omega^2\psi_0^2 $$
+
+</div>
+<h3>L7 · Slajd 6 — Fizički intenzitet zvuka</h3>
+<div class="formula-box">
+$$ I = v_0\langle w\rangle = \frac{P}{S} = \tfrac12\rho v_0\omega^2\psi_0^2 \;,\qquad [I]=\tfrac{\text{W}}{\text{m}^2} \qquad (7.1) $$
+
+</div>
+<div class="formula-box">
+$$ p = E_Y\frac{\partial\psi}{\partial x} = v_0^2\rho k\psi_0\sin(\omega t - kx) \equiv \Delta p_{max}\sin(\omega t - kx) $$
+
+</div>
+<h3>L7 · Slajd 7 — Intenzitet preko akustičkog pritiska</h3>
+<div class="formula-box">
+$$ \Delta p_{max} = \rho v_0\psi_0\omega \qquad (7.2) $$
+
+</div>
+<div class="formula-box">
+$$ I = \frac12\frac{\Delta p_{max}^2}{\rho v_0} = \frac{\Delta p_{eff}^2}{\mathcal{R}_{ac}} \qquad (7.3) $$
+
+</div>
+<h3>L7 · Slajd 8 — Fiziološki intenzitet (čujnost) i decibeli</h3>
+<div class="formula-box">
+$$ L\,[\text{dB}] = 10\log_{10}\frac{I}{I_0} \qquad (7.4) $$
+
+</div>
+<h3>L7 · Slajd 11 — Uslovi interferencije</h3>
+<div class="formula-box">
+$$ \delta = n\lambda \;;\qquad n=0,\pm1,\pm2,\dots \qquad (7.5) $$
+
+</div>
+<div class="formula-box">
+$$ \delta = (2n+1)\frac{\lambda}{2} \;;\qquad n=0,\pm1,\pm2,\dots \qquad (7.6) $$
+
+</div>
+<h3>L7 · Slajd 13 — Izvođenje stojećeg talasa</h3>
+<div class="formula-box">
+$$ \psi_+ = \psi_0\cos(\omega t - kx) \;,\qquad \psi_- = \psi_0\cos(\omega t + kx) $$
+
+</div>
+<div class="formula-box">
+$$ \psi = \psi_+ + \psi_- = 2\psi_0\cos(kx)\cos(\omega t) \equiv A(x)\cos(\omega t) \qquad (7.7) $$
+
+</div>
+<div class="formula-box">
+$$ A(x) = 2\psi_0\cos(kx) \qquad (7.8) $$
+
+</div>
+<h3>L7 · Slajd 20 — Šipka učvršćena sa jedne strane (formule)</h3>
+<div class="formula-box">
+$$ L = (2n+1)\frac{\lambda_n}{4} \;,\qquad n=0,1,2,\dots $$
+
+</div>
+<div class="formula-box">
+$$ \nu_n = \frac{1}{\lambda_n}\sqrt{\frac{E}{\rho}} = \frac{2n+1}{4L}\sqrt{\frac{E}{\rho}} $$
+
+</div>
+<h3>L7 · Slajd 22 — Šipka učvršćena sa obe strane (formule)</h3>
+<div class="formula-box">
+$$ L = (n+1)\frac{\lambda_n}{2} \;,\qquad n=0,1,2,\dots $$
+
+</div>
+<div class="formula-box">
+$$ \nu_n = \frac{n+1}{2L}\sqrt{\frac{E}{\rho}} $$
+
+</div>
+<div class="formula-box">
+$$ \nu_0 = \frac{1}{2L}\sqrt{\frac{E}{\rho}} \;,\qquad \nu_1 = \frac{1}{L}\sqrt{\frac{E}{\rho}} = 2\nu_0 $$
+
+</div>
+<h3>L7 · Slajd 24 — Šipka učvršćena na sredini (formule)</h3>
+<div class="formula-box">
+$$ L = (2n+1)\frac{\lambda_n}{2} \;,\qquad n=0,1,2,\dots $$
+
+</div>
+<div class="formula-box">
+$$ \nu_n = \frac{2n+1}{2L}\sqrt{\frac{E}{\rho}} $$
+
+</div>
+<div class="formula-box">
+$$ \nu_0 = \frac{1}{2L}\sqrt{\frac{E}{\rho}} \;,\quad \nu_1 = \frac{3}{2L}\sqrt{\frac{E}{\rho}} \;,\quad \nu_2 = \frac{5}{2L}\sqrt{\frac{E}{\rho}} $$
+
+</div>
+<h3>L7 · Slajd 26 — Cev otvorena sa obe strane (formule)</h3>
+<div class="formula-box">
+$$ L = (n+1)\frac{\lambda_n}{2} \;,\qquad n=0,1,2,\dots $$
+
+</div>
+<div class="formula-box">
+$$ \nu_n = \frac{n+1}{2L}\sqrt{\frac{\kappa p}{\rho}} $$
+
+</div>
+<h3>L7 · Slajd 29 — Dopler: izvor se kreće (izvođenje)</h3>
+<div class="formula-box">
+$$ \lambda_1 = \frac{(v_0-v_i)\Delta t}{\nu_0\Delta t} = \frac{v_0-v_i}{\nu_0} $$
+
+</div>
+<h3>L7 · Slajd 30 — Dopler: frekvencije (izvor se kreće)</h3>
+<div class="formula-box">
+$$ \nu_1 = \frac{v_0}{v_0-v_i}\,\nu_0 \quad(\text{viša — izvor prilazi}) $$
+
+</div>
+<div class="formula-box">
+$$ \nu_2 = \frac{v_0}{v_0+v_i}\,\nu_0 \quad(\text{niža — izvor se udaljava}) $$
+
+</div>
+<h3>L7 · Slajd 31 — Dopler: opšti slučaj</h3>
+<div class="formula-box">
+$$ \nu = \frac{v_0 \pm v_p}{v_0 \mp v_i}\,\nu_0 \qquad (7.13) $$
+
+</div>
+<h3>L7 · Slajd 33 — Maksvelove jednačine</h3>
+<div class="formula-box">
+$$ \mathrm{div}\,\vec{E} = 0 \;,\qquad \mathrm{div}\,\vec{B} = 0 $$
+    $$ \mathrm{rot}\,\vec{E} = -\frac{\partial\vec{B}}{\partial t} \;,\qquad \mathrm{rot}\,\vec{B} = \frac{1}{c^2}\frac{\partial\vec{E}}{\partial t} $$
+
+</div>
+<h3>L7 · Slajd 36 — Jednačine EM talasa</h3>
+<div class="formula-box">
+$$ E_x(z,t) = E_0\cos(\omega t - kz) \qquad (7.14a) $$
+    $$ B_y(z,t) = B_0\cos(\omega t - kz) \qquad (7.14b) $$
+
+</div>
+<div class="formula-box">
+$$ k = \frac{2\pi}{\lambda} = \frac{\omega}{v_0} $$
+
+</div>
+<h3>L7 · Slajd 37 — Brzina EM talasa i indeks prelamanja</h3>
+<div class="formula-box">
+$$ v_0 = \frac{1}{\sqrt{\varepsilon_0\varepsilon_r\mu_0\mu_r}} \qquad (7.15) $$
+
+</div>
+<div class="formula-box">
+$$ c = \frac{1}{\sqrt{\varepsilon_0\mu_0}} \approx 3\cdot10^8\,\tfrac{\text{m}}{\text{s}} \;,\qquad v_0 = \frac{c}{\sqrt{\varepsilon_r\mu_r}} = \frac{c}{n} \qquad (7.16) $$
+
+</div>
+<h3>L7 · Slajd 38 — Apsorpcija EM talasa</h3>
+<div class="formula-box">
+$$ R + A + T = 1 $$
+
+</div>
+<h3>L7 · Slajd 39 — Lamberov zakon (postavka)</h3>
+<div class="formula-box">
+$$ dI = -k I\,dx \quad\Rightarrow\quad \frac{dI}{I} = -k\,dx $$
+
+</div>
+<h3>L7 · Slajd 40 — Lamberov zakon (rezultat)</h3>
+<div class="formula-box">
+$$ \int_{I_0}^{I_t}\frac{dI}{I} = -k\int_0^D dx \quad\Rightarrow\quad \ln\frac{I_t}{I_0} = -kD $$
+
+</div>
+<div class="formula-box">
+$$ I_t = I_0\,e^{-kD} \qquad (7.17) $$
+
+</div>
+<h3>L7 · Slajd 41 — Prenos energije EM talasom</h3>
+<div class="formula-box">
+$$ \tfrac12\varepsilon_0 E_0^2 = \tfrac12\mu_0 H_0^2 \qquad (7.18) $$
+
+</div>
+<div class="formula-box">
+$$ \frac{F_e}{F_m} = \frac{c}{v} \quad\Rightarrow\quad F_e \gg F_m \quad(\text{jer } v\ll c) $$
+
+</div>
+<h3>L7 · Slajd 42 — Spektar: talasna dužina i frekvencija</h3>
+<div class="formula-box">
+$$ v_0 = \lambda\cdot\nu = \frac{\omega}{k} $$
+
+</div>
+<h2 id="osmo_predavanje">Osmo predavanje</h2>
+<h3>L8 · Slajd 4 — Fermaov princip (matematički)</h3>
+<div class="formula-box">
+$$dt = \frac{ds}{v_0}$$
+Vreme potrebno za taj delić.
+<div class="podsetnik">Podsetnik: $ds$ = mala dužina puta, $v_0$ = brzina svetlosti <b>u toj sredini</b>, $dt$ = vremenski delić.</div>
+</div>
+<div class="formula-box">
+$$n = \frac{c}{v_0}$$
+Apsolutni indeks prelamanja.
+<div class="podsetnik">Podsetnik: $c$ = brzina svetlosti u vakuumu (≈ 300 000 km/s), $v_0$ = brzina u datoj sredini, $n$ = bezdimenzioni broj koji kaže "koliko je puta svetlost sporija u toj sredini". Za vakuum $n=1$, za vodu $n\approx1{,}33$, za staklo $n\approx1{,}5$.</div>
+</div>
+<div class="formula-box">
+$$\tau = \frac{1}{c}\int_1^2 n\,ds \quad\Rightarrow\quad L \equiv \tau c = \int_1^2 n\,ds = n\,s$$
+<div class="podsetnik">Podsetnik: $\tau$ = ukupno vreme putovanja, $L$ = <b>optička</b> dužina puta (geometrijski put pomnožen indeksom $n$), $s$ = <b>geometrijski</b> (stvarni) pređeni put, $n$ = indeks prelamanja sredine.</div>
+</div>
+<h3>L8 · Slajd 7 — Zakon odbijanja (izvod preko Hajgensa)</h3>
+<div class="formula-box">
+$$\alpha = \alpha'$$
+Zakon odbijanja: upadni ugao = ugao odbijanja.
+<div class="podsetnik">Podsetnik: $\alpha$ = upadni ugao (od normale), $\alpha'$ = ugao odbijanja (od normale).</div>
+</div>
+<h3>L8 · Slajd 8 — Zakon odbijanja (zaključak izvoda)</h3>
+<div class="formula-box">
+Pun iskaz zakona odbijanja: svetlosni zraci se na graničnoj površini odbijaju pod istim uglom pod kojim padaju ($\alpha=\alpha'$). Pri tome upadni zrak, odbojni zrak i normala leže u istoj ravni.
+<div class="podsetnik">Podsetnik: $\alpha$ = upadni ugao (od normale), $\alpha'$ = ugao odbijanja (od normale).</div>
+</div>
+<h3>L8 · Slajd 11 — Prelamanje (refrakcija) svetlosti</h3>
+<div class="formula-box">
+
+<div class="podsetnik">Podsetnik: $n_1$ je indeks prelamanja prve (gornje) sredine, bezdimenzioni broj (bez jedinice); $n_2$ je indeks prelamanja druge (donje) sredine, bezdimenzioni broj (bez jedinice); $\alpha$ (alfa) je upadni ugao, ugao izmedju upadnog zraka i normale na granicu (stepeni, °); $\beta$ (beta) je prelomni ugao, ugao izmedju prelomljenog zraka i normale (stepeni, °).</div>
+</div>
+<h3>L8 · Slajd 12 — Zakon prelamanja svetlosti</h3>
+<div class="formula-box">
+$$ \overline{DC} = \overline{AC}\,\sin\alpha = v_1\,t \,, \qquad \overline{AB} = \overline{AC}\,\sin\beta = v_2\,t \,, $$
+<div class="podsetnik">Podsetnik: $\overline{DC}$, $\overline{AB}$ i $\overline{AC}$ su duzine odgovarajucih duzi u geometrijskoj konstrukciji (m); $\alpha$ (alfa) je upadni ugao izmedju upadnog zraka i normale na granicnu povrsinu (stepeni ili rad); $\beta$ (beta) je prelomni ugao izmedju prelomljenog zraka i normale (stepeni ili rad); $v_1$ je brzina svetlosti u prvoj sredini (m/s); $v_2$ je brzina svetlosti u drugoj sredini (m/s); $t$ je vreme za koje front predje navedeni put (s).</div>
+</div>
+<div class="formula-box">
+$$ \frac{\sin\alpha}{\sin\beta} = \frac{v_1}{v_2} = \frac{n_2}{n_1} \quad\Rightarrow\quad n_1\,\sin\alpha = n_2\,\sin\beta \,. $$
+<div class="podsetnik">Podsetnik: $\alpha$ (alfa) je upadni ugao (stepeni ili rad); $\beta$ (beta) je prelomni ugao (stepeni ili rad); $v_1$ je brzina svetlosti u prvoj sredini (m/s); $v_2$ je brzina svetlosti u drugoj sredini (m/s); $n_1$ je indeks prelamanja prve sredine (bezdimenziono); $n_2$ je indeks prelamanja druge sredine (bezdimenziono).</div>
+</div>
+<h3>L8 · Slajd 13 — Prelamanje svetlosti</h3>
+<div class="formula-box">
+$$ n_1  n_2 \;\Rightarrow\; \beta > \alpha $$
+<div class="podsetnik">Podsetnik: $n_1$ je indeks prelamanja prve (upadne) sredine iz koje zrak dolazi (bezdimenziona veličina); $n_2$ je indeks prelamanja druge sredine u koju zrak prelazi (bezdimenziona veličina); $\alpha$ (alfa) je upadni ugao, ugao između upadnog zraka i normale na graničnu površinu (° ili rad); $\beta$ (beta) je prelomni ugao, ugao između prelomljenog zraka i normale (° ili rad); $\Rightarrow$ znači „iz čega sledi".</div>
+</div>
+<h3>L8 · Slajd 17 — Odbijanje i prelamanje svetlosti – Fermaov princip</h3>
+<div class="formula-box">
+$$ \alpha = \alpha' $$
+<div class="podsetnik">Podsetnik: $\alpha$ (alfa) je upadni ugao, ugao između upadnog zraka i normale na površinu u tački pada O (stepen, °); $\alpha'$ (alfa prim) je odbojni ugao, ugao između odbijenog zraka i normale (stepen, °). Po Fermaovom principu svetlost bira put najkraćeg vremena, pa su ova dva ugla jednaka.</div>
+</div>
+<h3>L8 · Slajd 18 — Odbijanje i prelamanje svetlosti – Fermaov princip</h3>
+<div class="formula-box">
+$$ \alpha = \alpha' $$
+<div class="podsetnik">Podsetnik: $\alpha$ (alfa) je upadni ugao, ugao izmedju upadnog zraka i normale na povrsinu MN u tacki odbijanja O (stepeni, °); $\alpha'$ (alfa prim) je odbojni ugao, ugao izmedju odbijenog zraka i iste normale (stepeni, °).</div>
+</div>
+<h3>L8 · Slajd 19 — Odbijanje i prelamanje svetlosti – Fermaov princip</h3>
+<div class="formula-box">
+$$ n_1 < n_2 $$
+<div class="podsetnik">Podsetnik: $n_1$ je indeks prelamanja prve (gornje) sredine (bezdimenziona veličina, bez jedinice); $n_2$ je indeks prelamanja druge (donje) sredine (bezdimenziono); ovde je donja sredina optički gušća. $S$ je izvorna tačka iz koje polazi zrak; $P$ je krajnja tačka u drugoj sredini; $\alpha$ (alfa) je upadni ugao, meren od normale na granicu (° ili rad); $\beta$ (beta) je prelomni ugao, meren od normale (° ili rad); $s_1$ je dužina puta zraka u prvoj sredini (m); $s_2$ je dužina puta zraka u drugoj sredini (m); $a_1$ je normalno rastojanje tačke $S$ od granice (m); $a_2$ je normalno rastojanje tačke $P$ od granice (m); $x$ je rastojanje duž granice od podnožja normale iz $S$ do tačke prelamanja (m); $b$ je ukupno rastojanje duž granice između podnožja normala iz $S$ i iz $P$ (m).</div>
+</div>
+<h3>L8 · Slajd 20 — Odbijanje i prelamanje svetlosti – Fermaov princip</h3>
+<div class="formula-box">
+$$ L = n_1\,s_1 + n_2\,s_2 = n_1\sqrt{a_1^2 + x^2} + n_2\sqrt{a_2^2 + (b-x)^2} $$
+<div class="podsetnik">Podsetnik: $L$ je opticki predjeni put (m); $n_1$ i $n_2$ su indeksi prelamanja prve i druge sredine (bezdimenzioni); $s_1$ i $s_2$ su predjeni putevi zraka u prvoj i drugoj sredini (m); $a_1$ je normalno rastojanje izvora $S$ od granicne povrsine (m); $a_2$ je normalno rastojanje tacke $P$ od granicne povrsine (m); $b$ je rastojanje izmedju podnozja te dve normale duz granice (m); $x$ je rastojanje od podnozja prve normale do tacke prelaza na granici (m).</div>
+</div>
+<div class="formula-box">
+$$ \frac{dL}{dx} = \frac{n_1\,x}{\sqrt{a_1^2 + x^2}} - \frac{n_2\,(b-x)}{\sqrt{a_2^2 + (b-x)^2}} = n_1\,\frac{x}{s_1} - n_2\,\frac{b-x}{s_2} = 0 $$
+<div class="podsetnik">Podsetnik: $\dfrac{dL}{dx}$ je izvod optickog puta po $x$ (bezdimenziono); $n_1$, $n_2$ su indeksi prelamanja (bezdimenzioni); $x$ i $b-x$ su rastojanja duz granicne povrsine (m); $a_1$, $a_2$ su normalna rastojanja izvora i prijemnika od granice (m); $s_1$, $s_2$ su putevi zraka u sredinama (m).</div>
+</div>
+<div class="formula-box">
+$$ \frac{x}{s_1} = \sin\alpha \qquad \text{i} \qquad \frac{b-x}{s_2} = \sin\beta $$
+<div class="podsetnik">Podsetnik: $\alpha$ (alfa) je upadni ugao (stepen ili rad); $\beta$ (beta) je ugao prelamanja (stepen ili rad); $x$, $b-x$ su rastojanja duz granice (m); $s_1$, $s_2$ su putevi zraka (m).</div>
+</div>
+<div class="formula-box">
+$$ n_1\,\sin\alpha = n_2\,\sin\beta $$
+<div class="podsetnik">Podsetnik: $n_1$ je indeks prelamanja prve sredine (bezdimenzioni); $n_2$ je indeks prelamanja druge sredine (bezdimenzioni); $\alpha$ (alfa) je upadni ugao (stepen ili rad); $\beta$ (beta) je ugao prelamanja (stepen ili rad).</div>
+</div>
+<h3>L8 · Slajd 21 — Totalna refleksija</h3>
+<div class="formula-box">
+$$ \alpha \equiv \alpha_g \;\Rightarrow\; \beta = 90^\circ $$
+$$ \alpha' > \alpha_g \;\Rightarrow\; \text{totalna refleksija} $$
+<div class="podsetnik">Podsetnik: $\alpha$ (alfa) je upadni ugao u optički gušćoj sredini, meren od normale na graničnu površinu (stepeni, °); $\beta$ (beta) je prelomni ugao u optički ređoj sredini, takođe meren od normale (°); $\alpha_g$ je granični ugao, upadni ugao pri kome prelomni ugao dostiže 90° (°); $\alpha'$ (alfa prim) je upadni ugao veći od graničnog (°); $n_1$ je indeks prelamanja optički gušće (donje) sredine (bezdimenziona veličina); $n_2$ je indeks prelamanja optički ređe (gornje) sredine (bezdimenziona veličina).</div>
+</div>
+<h3>L8 · Slajd 22 — Totalna refleksija</h3>
+<div class="formula-box">
+$$ n_1 \sin\alpha_g = n_2 \sin 90^\circ \quad\Rightarrow\quad \sin\alpha_g = \frac{n_2}{n_1} \quad\Rightarrow\quad \alpha_g = \arcsin\frac{n_2}{n_1} $$
+<div class="podsetnik">Podsetnik: $\alpha_g$ (alfa-g) je granicni ugao totalne refleksije, upadni ugao za koji je ugao prelamanja $90^\circ$ (stepeni, °); $\beta$ (beta) je ugao prelamanja, ovde uzet kao $90^\circ$ (stepeni, °); $n_1$ je indeks prelamanja sredine iz koje svetlost dolazi (bezdimenziona velicina); $n_2$ je indeks prelamanja sredine u koju svetlost prelazi (bezdimenziona velicina); $\sin$ je sinus, a $\arcsin$ je njemu inverzna funkcija (arkus sinus), koja iz vrednosti sinusa vraca ugao.</div>
+</div>
+<h3>L8 · Slajd 23 — Totalna refleksija – primer</h3>
+<div class="formula-box">
+$$ n_0 \sin\alpha = n \sin\beta \quad\Rightarrow\quad \sin\beta = \frac{\sin\alpha}{n} $$
+<div class="podsetnik">Podsetnik: $n_0$ je indeks prelamanja prve sredine (vazduha), ovde $n_0 = 1$ (bezdimenziono); $n$ je indeks prelamanja tečnosti u koju zrak prelazi (bezdimenziono); $\alpha$ (alfa) je upadni ugao, meren od normale na površinu, ovde $25^\circ$ (stepeni, °); $\beta$ (beta) je prelomni ugao, meren od normale (stepeni, °); $\alpha_g$ (alfa-ge) je granični ugao totalne refleksije, upadni ugao pri kom je prelomljeni zrak pod $90^\circ$, ovde $47{,}33^\circ$ (stepeni, °).</div>
+</div>
+<h3>L8 · Slajd 24 — Totalna refleksija – primer</h3>
+<div class="formula-box">
+$$ n\,\sin\alpha_g = n_0\,\sin 90^\circ = 1 \;\Rightarrow\; n = \frac{1}{\sin\alpha_g} = \frac{1}{\sin\left(47,33^\circ\right)} = 1,36 $$
+<div class="podsetnik">Podsetnik: $n$ je indeks prelamanja sredine koji se trazi (bezdimenziona velicina); $\alpha_g$ (alfa-g) je granicni ugao totalne refleksije, ovde $47,33^\circ$ (stepeni, °); $n_0$ je indeks prelamanja okolne sredine, ovde $n_0=1$ (bezdimenziono); $90^\circ$ je ugao prelamanja u granicnom slucaju (stepeni, °).</div>
+</div>
+<div class="formula-box">
+$$ \beta = \arcsin\!\left(\frac{\sin\alpha}{n}\right) = \arcsin\!\left(\frac{\sin 25^\circ}{1,36}\right) = 18,1^\circ $$
+<div class="podsetnik">Podsetnik: $\beta$ (beta) je ugao prelamanja koji se trazi (stepeni, °); $\alpha$ (alfa) je upadni ugao, ovde $25^\circ$ (stepeni, °); $n$ je indeks prelamanja, ovde $1,36$ (bezdimenziono); $\arcsin$ je arkus sinus, inverzna funkcija sinusu.</div>
+</div>
+<h3>L8 · Slajd 26 — Primena totalne refleksije</h3>
+<div class="formula-box">
+$$ 1000\,dB/km \;\longrightarrow\; 20\,dB/km $$
+<div class="podsetnik">Podsetnik: $dB$ (decibel) je jedinica kojom se izražava slabljenje signala, tj. koliko se snaga signala smanji duž puta; $km$ je kilometar, jedinica za dužinu ($1\,km = 1000\,m$); $dB/km$ je slabljenje po jednom pređenom kilometru — što je broj manji, to vlakno bolje provodi svetlost; strelica označava smanjenje gubitka sa $1000$ na $20$.</div>
+</div>
+<h3>L8 · Slajd 28 — Totalna refleksija</h3>
+<div class="formula-box">
+$$ \sin\theta_g = \frac{n_2}{n_1} $$
+<div class="podsetnik">Podsetnik: $\theta_g$ (theta) je granicni ugao totalne refleksije, mereno od normale na granicu (stepeni, °); $n_1$ je indeks prelamanja gusce sredine iz koje svetlost dolazi, npr. vode (bezdimenziono); $n_2$ je indeks prelamanja redje sredine, npr. vazduha (bezdimenziono); uslov za totalnu refleksiju je $n_1 > n_2$ i upadni ugao veci od $\theta_g$.</div>
+</div>
+<h3>L8 · Slajd 29 — Totalna refleksija u prirodi</h3>
+<div class="formula-box">
+$$ \sin \alpha_g = \frac{n_2}{n_1} $$
+<div class="podsetnik">Podsetnik: $\alpha_g$ (alfa-g) je granicni ugao, najveci upadni ugao pri kome svetlost jos izlazi iz gusce sredine (stepeni, °); $n_1$ je indeks prelamanja gusce sredine iz koje svetlost dolazi, npr. vode (bezdimenziono); $n_2$ je indeks prelamanja redje sredine ka kojoj svetlost ide, npr. vazduha (bezdimenziono); za upadne uglove vece od $\alpha_g$ nastaje totalna refleksija.</div>
+</div>
+<h3>L8 · Slajd 31 — Vrste sočiva</h3>
+<div class="formula-box">
+
+<div class="podsetnik">Podsetnik: $O$ i $O'$ su tačke kojima je obeležena optička osa sočiva (geometrijske oznake, bez merne jedinice); $F$ i $F'$ su žiže (fokusi) sočiva — kod sabirnog sočiva presek samih prelomljenih zraka, a kod rasipnog presek njihovih geometrijskih produžetaka (bez merne jedinice, to su tačke na osi); $f$ je žižna daljina, rastojanje od sočiva do žiže (m).</div>
+</div>
+<h3>L8 · Slajd 32 — Sabirno sočivo</h3>
+<div class="formula-box">
+$$ p > 2f \Rightarrow L  P $$
+<div class="podsetnik">Podsetnik: $p$ je rastojanje predmeta od sočiva (m); $f$ je žižna daljina, rastojanje žiže $F$ od centra $C$ (m); $\ell$ je rastojanje lika od sočiva (m); $P$ je veličina (visina) predmeta (m); $L$ je veličina (visina) lika (m); $F$ i $F'$ su žiže sočiva, $C$ optički centar, $O$–$O'$ optička osa; znak $\Rightarrow$ znači „odakle sledi”.</div>
+</div>
+<h3>L8 · Slajd 33 — Lupa</h3>
+<div class="formula-box">
+$$ p < f $$
+<div class="podsetnik">Podsetnik: $p$ je daljina predmeta, rastojanje predmeta od socivа (m); $f$ je zizina (zarisna) daljina socivа, rastojanje zarista $F$ od centra socivа (m); $\ell$ je daljina lika, rastojanje dobijenog imaginarnog lika od socivа (m); $F$ i $F'$ su zarista socivа; $C$ je opticki centar socivа; $P$ je predmet, a $L$ dobijeni lik.</div>
+</div>
+<h3>L8 · Slajd 34 — Rasipno sočivo</h3>
+<div class="formula-box">
+$$ p,\qquad f,\qquad \ell $$
+<div class="podsetnik">Podsetnik: $p$ je rastojanje predmeta $P$ od sočiva (m); $f$ je žižna (fokalna) daljina, rastojanje od centra $C$ do fokusa $F$ (m); $\ell$ je rastojanje lika $L$ od sočiva (m); $F$ i $F'$ su fokusi (žiže) sočiva; $C$ je centar (optički centar) sočiva; $P$ je predmet, $L$ je lik; $O$ i $O'$ označavaju optičku osu.</div>
+</div>
+<h3>L8 · Slajd 35 — Jednačina sfernih sočiva</h3>
+<div class="formula-box">
+$$ j\,[\mathrm{D}] = \frac{1}{f} = \frac{n_2 - n_1}{n_1}\left(\frac{1}{R_1} + \frac{1}{R_2}\right) $$
+<div class="podsetnik">Podsetnik: $j$ je optička jačina sočiva, izražena u dioptrijama ako je $f$ izraženo u metrima (D = 1/m); $f$ je žižna daljina sočiva (m); $n_2$ je indeks prelamanja materijala od koga je sočivo napravljeno (bezdimenziono); $n_1$ je indeks prelamanja sredine u kojoj se sočivo nalazi (bezdimenziono); $R_1$ i $R_2$ su poluprečnici zakrivljenosti sfernih površina sočiva (m).</div>
+</div>
+<h3>L8 · Slajd 36 — Konvencija o predznacima</h3>
+<div class="formula-box">
+$$ R_1,\quad R_2,\quad f $$
+<div class="podsetnik">Podsetnik: $R_1$ je poluprecnik krivine prve (prednje) sferne povrsi sociva (m); $R_2$ je poluprecnik krivine druge (zadnje) sferne povrsi sociva (m); $f$ je zarisna daljina sociva (m); $|R_1|$ i $|R_2|$ su apsolutne vrednosti poluprecnika, tj. njihove brojne velicine bez predznaka (m); oznaka $R\to\infty$ ("tezi beskonacnosti") znaci da je povrs ravna, a $\infty$ je simbol za beskonacnost.</div>
+</div>
+<h3>L8 · Slajd 37 — Jednačine sabirnih i rasipnih sočiva</h3>
+<div class="formula-box">
+$$ \frac{1}{f} = \frac{1}{p} + \frac{1}{\ell} $$
+<div class="podsetnik">Podsetnik: $f$ je žižna daljina sočiva, rastojanje od sočiva do žiže (m); $p$ je udaljenost predmeta od sočiva (m); $\ell$ je udaljenost lika od sočiva (m).</div>
+</div>
+<div class="formula-box">
+$$ -\frac{1}{f} = \frac{1}{p} - \frac{1}{\ell} $$
+<div class="podsetnik">Podsetnik: $f$ je žižna daljina sočiva (kod rasipnih sočiva imaginarna, sa negativnim predznakom) (m); $p$ je udaljenost predmeta od sočiva (m); $\ell$ je udaljenost lika od sočiva (kod rasipnih sočiva imaginarna, sa negativnim predznakom) (m).</div>
+</div>
+<div class="formula-box">
+$$ u = \frac{L}{P} = \frac{\ell}{p} $$
+<div class="podsetnik">Podsetnik: $u$ je linearno uvećanje, bezdimenziona veličina (bez jedinice); $L$ je veličina (visina) lika (m); $P$ je veličina (visina) predmeta (m); $\ell$ je udaljenost lika od sočiva (m); $p$ je udaljenost predmeta od sočiva (m).</div>
+</div>
+<h3>L8 · Slajd 38 — Talasna optika – Interferencija svetlosti</h3>
+<div class="formula-box">
+$$ y = y_1 + y_2 $$
+<div class="podsetnik">Podsetnik: $y$ je rezultujući pomeraj (talasna veličina) u datoj tački koji nastaje slaganjem oba talasa (jedinica zavisi od veličine, npr. za jačinu električnog polja V/m); $y_1$ je doprinos prvog talasa u toj tački (ista jedinica); $y_2$ je doprinos drugog talasa u toj tački (ista jedinica); $x_1$ je put koji pređe prvi talas do posmatrane tačke (m); $x_2$ je put koji pređe drugi talas do iste tačke (m).</div>
+</div>
+<h3>L8 · Slajd 39 — Talasna optika – Interferencija svetlosti</h3>
+<div class="formula-box">
+$$ \delta = k\,\lambda \,; \qquad k = 0, \pm 1, \pm 2, \dots $$
+<div class="podsetnik">Podsetnik: $\delta$ (delta) je putna razlika dva talasa, razlika preðenih puteva do tacke susreta (m); $k$ je celobrojni red interferencije, ceo broj (bez jedinice); $\lambda$ (lambda) je talasna duzina svetlosti (m); $\Delta\varphi$ (delta fi) je fazna razlika talasa (rad).</div>
+</div>
+<div class="formula-box">
+$$ \delta = (2k+1)\,\frac{\lambda}{2} \,; \qquad k = 0, \pm 1, \pm 2, \dots $$
+<div class="podsetnik">Podsetnik: $\delta$ (delta) je putna razlika dva talasa (m); $k$ je ceo broj, red minimuma (bez jedinice); $(2k+1)$ daje neparan umnozak (bez jedinice); $\lambda$ (lambda) je talasna duzina svetlosti (m); $\frac{\lambda}{2}$ je polovina talasne duzine (m); $\Delta\varphi$ (delta fi) je fazna razlika talasa (rad).</div>
+</div>
+<h3>L8 · Slajd 41 — Jangov eksperiment</h3>
+<div class="formula-box">
+$$ \delta = x_2 - x_1 \simeq d\sin\alpha $$
+<div class="podsetnik">Podsetnik: $\delta$ (delta) je putna razlika, razlika dužina puteva dva zraka do tačke $M$ (m); $x_1$ je dužina puta zraka iz otvora $S_1$ do tačke $M$ (m); $x_2$ je dužina puta zraka iz otvora $S_2$ do tačke $M$ (m); $d$ je rastojanje između otvora $S_1$ i $S_2$ (m); $\alpha$ (alfa) je ugao pod kojim se tačka $M$ vidi u odnosu na osu sistema (rad ili °); $\sin\alpha$ je sinus tog ugla (bez jedinice).</div>
+</div>
+<h3>L8 · Slajd 42 — Jangov eksperiment</h3>
+<div class="formula-box">
+$$ \delta = d \sin\alpha = k\,\lambda $$
+<div class="podsetnik">Podsetnik: $\delta$ (delta) je razlika puteva dva svetlosna zraka do tacke M (m); $d$ je rastojanje izmedju dva proreza (m); $\alpha$ (alfa) je ugao pod kojim se posmatra tacka M (rad ili °); $\sin\alpha$ je sinus tog ugla (bez jedinice); $k$ je red interferencije, ceo broj $0, \pm1, \pm2, ...$ (bez jedinice); $\lambda$ (lambda) je talasna duzina svetlosti (m); $\Delta\varphi$ je fazna razlika talasa (rad); $\pi$ (pi) je broj $\approx 3{,}14$ (bez jedinice).</div>
+</div>
+<div class="formula-box">
+$$ \delta = d \sin\alpha = (2k+1)\,\frac{\lambda}{2} $$
+<div class="podsetnik">Podsetnik: $\delta$ (delta) je razlika puteva dva svetlosna zraka do tacke M (m); $d$ je rastojanje izmedju dva proreza (m); $\alpha$ (alfa) je ugao pod kojim se posmatra tacka M (rad ili °); $k$ je ceo broj $0, \pm1, \pm2, ...$ (bez jedinice); $(2k+1)$ daje neparan broj; $\lambda$ (lambda) je talasna duzina svetlosti (m); $\frac{\lambda}{2}$ je polovina talasne duzine (m).</div>
+</div>
+<h3>L8 · Slajd 43 — Jangov eksperiment</h3>
+<div class="formula-box">
+$$ y_k = k\,\frac{\lambda D}{d} $$
+<div class="podsetnik">Podsetnik: $y_k$ je rastojanje $k$-tog maksimuma od centralnog maksimuma na zastoru (m); $k$ je red maksimuma, ceo broj $k = 0, 1, 2, \dots$ (bez jedinice); $\lambda$ (lambda) je talasna duzina svetlosti (m); $D$ je rastojanje od proreza do zastora (m); $d$ je rastojanje izmedju dva proreza (m).</div>
+</div>
+<div class="formula-box">
+$$ y_k = (2k+1)\,\frac{\lambda D}{2d} $$
+<div class="podsetnik">Podsetnik: $y_k$ je rastojanje $k$-tog minimuma od centralnog maksimuma (m); $(2k+1)$ daje neparne brojeve, gde je $k$ ceo broj $k = 0, 1, 2, \dots$ (bez jedinice); $\lambda$ (lambda) je talasna duzina svetlosti (m); $D$ je rastojanje od proreza do zastora (m); $d$ je rastojanje izmedju dva proreza (m).</div>
+</div>
+<h3>L8 · Slajd 44 — Geometrijska i optička razlika puteva</h3>
+<div class="formula-box">
+$$ \delta = n\, s $$
+<div class="podsetnik">Podsetnik: $\delta$ (delta) je optički pređeni put (optička dužina puta) (m); $n$ je indeks prelamanja sredine kroz koju talas prolazi (bezdimenziona veličina, čist broj); $s$ je geometrijski pređeni put, stvarno rastojanje koje talas prevali u sredini (m).</div>
+</div>
+<h3>L8 · Slajd 45 — Geometrijska i optička razlika puteva</h3>
+<div class="formula-box">
+$$ \delta = s + \frac{\lambda}{2} $$
+<div class="podsetnik">Podsetnik: $\delta$ (delta) je optička razlika puta, korigovani pređeni put posle refleksije od gušće sredine (m); $s$ je stvarni (geometrijski) pređeni put zraka (m); $\lambda$ (lambda) je talasna dužina svetlosti (m); $\Delta\varphi = \pi$ (pi) je skok faze pri refleksiji od optički gušće sredine (rad).</div>
+</div>
+<h3>L8 · Slajd 46 — Interferencija na tankom prozirnom sloju</h3>
+<div class="formula-box">
+
+<div class="podsetnik">Podsetnik: $d$ je debljina sloja, rastojanje izmedju gornje i donje povrsine (m); $n$ je indeks prelamanja sloja, bezdimenziona velicina, ovde $n > 1$ (sloj opticki gusci od okoline); $n_0$ je indeks prelamanja okolne sredine, bezdimenzion, $n_0 \approx 1$ (vazduh); $\alpha$ (alfa) je upadni ugao, jednak uglu odbijanja (stepen ili rad); $\beta$ (beta) je ugao prelamanja u sloju (stepen ili rad); $Z_1$ je zrak koji ulazi u sloj i izlazi posle refleksije od donje povrsine; $Z_2$ je zrak reflektovan od gornje povrsine sloja; A, B, C, D su karakteristicne tacke putanje zrakova.</div>
+</div>
+<h3>L8 · Slajd 47 — Interferencija na tankom prozirnom sloju</h3>
+<div class="formula-box">
+$$ \delta = n \cdot (\overline{AB} + \overline{BC}) - \left(\overline{DC} + \frac{\lambda}{2}\right) . $$
+<div class="podsetnik">Podsetnik: $\delta$ (delta) je opticka razlika puteva dva zraka (m); $n$ je indeks prelamanja sloja, bezdimenziona velicina; $\overline{AB}$ i $\overline{BC}$ su geometrijske duzine dela puta zraka kroz sloj (m); $\overline{DC}$ je geometrijska duzina dela puta drugog zraka u vazduhu (m); $\lambda$ (lambda) je talasna duzina svetlosti (m), a $\frac{\lambda}{2}$ je dodatna razlika usled promene faze pri odbijanju (m).</div>
+</div>
+<div class="formula-box">
+$$ \cos\beta = \frac{d}{\overline{AB}} \;\Rightarrow\; \overline{AB} = \overline{BC} = \frac{d}{\cos\beta} , $$
+$$ \operatorname{tg}\beta = \frac{\overline{AC}}{2d}, \quad \sin\alpha = \frac{\overline{DC}}{\overline{AC}} \;\Rightarrow\; \overline{DC} = 2d\sin\alpha\,\operatorname{tg}\beta . $$
+<div class="podsetnik">Podsetnik: $d$ je debljina tankog sloja (m); $\beta$ (beta) je ugao prelamanja u sloju (stepeni ili radijani); $\alpha$ (alfa) je upadni ugao zraka (stepeni ili radijani); $\overline{AC}$ je vodoravno rastojanje izmedju izlaznih tacaka na povrsini sloja (m); $\overline{AB}$, $\overline{BC}$, $\overline{DC}$ su duzine delova puta zraka (m).</div>
+</div>
+<div class="formula-box">
+$$ \delta = \frac{2nd}{\cos\beta} - 2d\sin\alpha\,\operatorname{tg}\beta - \frac{\lambda}{2} . $$
+<div class="podsetnik">Podsetnik: $\delta$ (delta) je opticka razlika puteva (m); $n$ je indeks prelamanja sloja, bezdimenziono; $d$ je debljina sloja (m); $\beta$ (beta) je ugao prelamanja u sloju; $\alpha$ (alfa) je upadni ugao; $\lambda$ (lambda) je talasna duzina svetlosti (m).</div>
+</div>
+<h3>L8 · Slajd 48 — Interferencija na tankom prozirnom sloju</h3>
+<div class="formula-box">
+$$ \delta = 2d\sqrt{n^2-\sin^2\alpha} - \frac{\lambda}{2} $$
+<div class="podsetnik">Podsetnik: $\delta$ (delta) je optička putna razlika dva interferirajuća zraka (m); $d$ je debljina tankog sloja (m); $n$ je indeks prelamanja sloja (bezdimenziono); $\alpha$ (alfa) je upadni ugao (rad ili °); $\beta$ (beta) je prelomni ugao (rad ili °); $\lambda$ (lambda) je talasna duzina svetlosti (m).</div>
+</div>
+<div class="formula-box">
+$$ (2k+1)\,\frac{\lambda}{2} = 2d\sqrt{n^2-\sin^2\alpha} \qquad (k=0,1,2,3,\dots) $$
+<div class="podsetnik">Podsetnik: $k$ je red interferencije, ceo broj (bezdimenziono); $\lambda$ (lambda) je talasna duzina svetlosti (m); $d$ je debljina sloja (m); $n$ je indeks prelamanja (bezdimenziono); $\alpha$ (alfa) je upadni ugao (rad ili °).</div>
+</div>
+<div class="formula-box">
+$$ k\,\lambda = 2d\sqrt{n^2-\sin^2\alpha} \qquad (k=1,2,3,\dots) $$
+<div class="podsetnik">Podsetnik: $k$ je red interferencije, ceo broj (bezdimenziono); $\lambda$ (lambda) je talasna duzina svetlosti (m); $d$ je debljina sloja (m); $n$ je indeks prelamanja (bezdimenziono); $\alpha$ (alfa) je upadni ugao (rad ili °).</div>
+</div>
+<h3>L8 · Slajd 49 — Interferencija na tankom prozirnom sloju</h3>
+<div class="formula-box">
+$$ \alpha = 0^\circ, \qquad n_0 \approx 1, \qquad n > 1 $$
+<div class="podsetnik">Podsetnik: $\alpha$ (alfa) je upadni ugao snopa u odnosu na normalu na sloj (stepen, °); ovde je $\alpha = 0^\circ$, tj. snop pada normalno. $n_0$ je indeks prelamanja okolne sredine, priblizno kao kod vazduha, $n_0 \approx 1$ (bezdimenziona velicina). $n$ je indeks prelamanja tankog sloja, veci od jedinice, $n > 1$ (bezdimenziona velicina). $d$ je debljina tankog sloja (m).</div>
+</div>
+<h3>L8 · Slajd 50 — Interferencija na tankom prozirnom sloju – primer</h3>
+<div class="formula-box">
+$$ n = 1{,}35, \qquad n_0 \approx 1, \qquad \lambda = 620\ \mathrm{nm}, \qquad d = ? $$
+<div class="podsetnik">Podsetnik: $n$ je indeks prelamanja opne od sapunice, bezdimenziona velicina, ovde $1{,}35$; $n_0$ je indeks prelamanja okolnog vazduha, bezdimenziono, $\approx 1$; $\lambda$ (lambda) je talasna duzina svetlosti u vazduhu, ovde $620\ \mathrm{nm} = 620 \cdot 10^{-9}\ \mathrm{m}$ (m); $d$ je trazena (najmanja) debljina opne (m).</div>
+</div>
+<h3>L8 · Slajd 51 — Interferencija na tankom prozirnom sloju – primer</h3>
+<div class="formula-box">
+$$ \delta = 2nd - \frac{\lambda}{2} \qquad 2nd - \frac{\lambda}{2} = k\cdot\lambda $$
+$$ 2nd = k\,\lambda + \frac{\lambda}{2} = 2k\,\frac{\lambda}{2} + \frac{\lambda}{2} \;\Rightarrow\; d = \frac{(2k+1)\,\lambda}{4n} \quad (k=0,1,2,\dots) $$
+<div class="podsetnik">Podsetnik: $\delta$ (delta) je optička razlika pređenih puteva dva reflektovana zraka (m); $n$ je indeks prelamanja opne od sapunice (bezdimenziono); $d$ je debljina sloja sapunice (m); $\lambda$ (lambda) je talasna dužina svetlosti (m); $k$ je red interferencije, ceo broj $0,1,2,\dots$ (bezdimenziono); $2nd$ je dvostruki optički put kroz sloj (m); član $\tfrac{\lambda}{2}$ je dodatna razlika puta usled faznog skoka pri refleksiji od gušće sredine (m); izraz $(2k+1)$ je neparan broj.</div>
+</div>
+<div class="formula-box">
+$$ d_{min} = \frac{\lambda}{4n} = \frac{6{,}2\cdot 10^{-7}\,\text{m}}{4\cdot 1{,}35} = 1{,}15\cdot 10^{-7}\,\text{m} = 0{,}115\,\mu\text{m} $$
+<div class="podsetnik">Podsetnik: $d_{min}$ je minimalna debljina sloja sapunice za maksimalno pojačanje, dobijena za $k=0$ (m); $\lambda = 6{,}2\cdot 10^{-7}$ m je talasna dužina svetlosti (m); $n = 1{,}35$ je indeks prelamanja sapunice (bezdimenziono); $\mu\text{m}$ (mikrometar) je $10^{-6}$ m.</div>
+</div>
+<h3>L8 · Slajd 52 — Interferencija na tankom prozirnom sloju – primer</h3>
+<div class="formula-box">
+
+<div class="podsetnik">Podsetnik: $n$ je indeks prelamanja opne od sapunice, $n = 1{,}35$ (bezdimenziono); $n_s$ je indeks prelamanja stakla, $n_s = 1{,}8$ (bezdimenziono); $n_0$ je indeks prelamanja vazduha, $n_0 \approx 1$ (bezdimenziono); $d$ je debljina tankog sloja opne (m).</div>
+</div>
+<h3>L8 · Slajd 53 — Interferencija na tankom prozirnom sloju – primer</h3>
+<div class="formula-box">
+$$ \delta = 2nd + \frac{\lambda}{2} - \frac{\lambda}{2} = 2nd $$
+<div class="podsetnik">Podsetnik: $\delta$ (delta) je optička putna razlika dva zraka (m); $n$ je indeks prelamanja sloja, bezdimenzioni broj (nema jedinicu); $d$ je debljina sloja (m); $\lambda$ (lambda) je talasna dužina svetlosti (m); članovi $+\lambda/2$ i $-\lambda/2$ su skokovi faze pri refleksiji od optički gušće sredine, po jedan za svaki zrak, i ovde se međusobno poništavaju (m).</div>
+</div>
+<div class="formula-box">
+$$ 2nd = k \cdot \lambda \qquad\Longrightarrow\qquad d = \frac{k \cdot \lambda}{2n} \quad (k = 1, 2, 3 \ldots) $$
+<div class="podsetnik">Podsetnik: $n$ je indeks prelamanja sloja (bez jedinice); $d$ je debljina sloja (m); $\lambda$ (lambda) je talasna dužina svetlosti (m); $k$ je red interferencije, prirodan broj (bez jedinice).</div>
+</div>
+<div class="formula-box">
+$$ d_{min} = \frac{\lambda}{2n} = 0{,}23 \,\mu m $$
+<div class="podsetnik">Podsetnik: $d_{min}$ je minimalna debljina sloja, dobijena za $k=1$, izražena u mikrometrima ($\mu m$, $1\,\mu m = 10^{-6}$ m); $\lambda$ (lambda) je talasna dužina svetlosti (m); $n$ je indeks prelamanja sloja (bez jedinice).</div>
+</div>
+<h3>L8 · Slajd 56 — Difrakcija svetlosti</h3>
+<div class="formula-box">
+$$ d \sim \lambda $$
+<div class="podsetnik">Podsetnik: $d$ je dimenzija (sirina) prepreke ili otvora (m); $\sim$ znaci „istog reda velicine kao"; $\lambda$ (lambda) je talasna duzina svetlosti (m). Difrakcija je jasno uocljiva tek kada je $d$ uporedivo sa $\lambda$.</div>
+</div>
+<h3>L8 · Slajd 57 — Optička rešetka</h3>
+<div class="formula-box">
+$$ n\lambda = a\,\sin\theta_n \;, \qquad n = 0,\ \pm 1,\ \pm 2,\dots $$
+<div class="podsetnik">Podsetnik: $n$ je red difrakcije, ceo broj ($0, \pm 1, \pm 2, \dots$) (bezdimenziono); $\lambda$ (lambda) je talasna dužina svetlosti (m); $a$ je konstanta optičke rešetke, rastojanje između dve susedne pukotine (m); $\theta_n$ (teta) je ugao difrakcije $n$-tog reda (rad ili °); $\delta = a\,\sin\theta$ je putna razlika zraka iz dve susedne pukotine (m).</div>
+</div>
+<h3>L8 · Slajd 58 — Difrakcija na optičkoj rešetci</h3>
+<div class="formula-box">
+$$ n\lambda = a\,\frac{\Delta z_n}{\sqrt{\ell^2 + \Delta z_n^{\,2}}} \approx \frac{a\,\Delta z_n}{\ell} $$
+<div class="podsetnik">Podsetnik: $n$ je red maksimuma, ceo broj $0, 1, 2, \dots$ (bezdimenziono); $\lambda$ (lambda) je talasna dužina svetlosti (m); $a$ je konstanta rešetke, rastojanje između dve susedne pukotine (m); $\Delta z_n$ je rastojanje maksimuma reda $n$ od centralnog maksimuma na zaklonu (m); $\ell$ je rastojanje od rešetke do zaklona (m); $\sqrt{\ell^2 + \Delta z_n^{\,2}}$ je dužina zraka od pukotine do maksimuma, hipotenuza (m); $\theta_n$ (theta) je ugao pod kojim se vidi maksimum reda $n$ (rad ili °); $\approx$ je znak približne jednakosti, koji važi kao aproksimacija kada je $\Delta z_n \ll \ell$, pa je $\sqrt{\ell^2 + \Delta z_n^{\,2}} \approx \ell$.</div>
+</div>
+<h3>L8 · Slajd 59 — Difrakcija na optičkoj rešetci – primer</h3>
+<div class="formula-box">
+$$ a \cdot \sin\theta_n = n \cdot \lambda $$
+<div class="podsetnik">Podsetnik: $a$ je konstanta rešetke, rastojanje između dva susedna zareza (m); $\theta_n$ je difrakcioni ugao maksimuma reda $n$, meren od pravca upadne svetlosti (stepeni ili radijani); $n$ je red maksimuma, ovde $n=4$ (bezdimenziono); $\lambda$ (lambda) je talasna dužina svetlosti, ovde 600 nm (m).</div>
+</div>
+<div class="formula-box">
+$$ \tan\theta_4 = \frac{\Delta z_4}{\ell} $$
+<div class="podsetnik">Podsetnik: $\theta_4$ je difrakcioni ugao četvrtog maksimuma (stepeni ili radijani); $\Delta z_4$ je rastojanje na zaklonu od nultog do četvrtog maksimuma, ovde 25 cm (m); $\ell$ je tražena udaljenost zaklona od rešetke (m).</div>
+</div>
+<h3>L8 · Slajd 60 — Difrakcija na optičkoj rešetci – primer</h3>
+<div class="formula-box">
+$$ n\lambda = a\,\sin\theta_n = \frac{1}{N}\,\sin\theta_n \quad\Rightarrow\quad \sin\theta_4 = 4\lambda N . $$
+<div class="podsetnik">Podsetnik: $n$ je red difrakcionog maksimuma (bezdimenzioni ceo broj); $\lambda$ (lambda) je talasna dužina svetlosti (m); $a$ je konstanta rešetke, rastojanje između susednih proreza (m); $\theta_n$ (theta) je ugao pod kojim se javlja maksimum $n$-tog reda (rad ili stepen); $N = 1/a$ je broj proreza po jedinici dužine (1/m).</div>
+</div>
+<div class="formula-box">
+$$ \sin\theta_4 = \frac{\Delta z_4}{\sqrt{\ell^2 + \Delta z_4^2}} , $$
+<div class="podsetnik">Podsetnik: $\Delta z_4$ je rastojanje maksimuma 4. reda od centra na zaklonu (m); $\ell$ je rastojanje od rešetke do zaklona (m).</div>
+</div>
+<div class="formula-box">
+$$ \frac{\Delta z_4}{\sqrt{\ell^2 + \Delta z_4^2}} = 4\lambda N , $$
+<div class="podsetnik">Podsetnik: $\Delta z_4$ je položaj maksimuma 4. reda na zaklonu (m); $\ell$ je rastojanje rešetka–zaklon (m); $\lambda$ je talasna dužina (m); $N$ je broj proreza po jedinici dužine (1/m).</div>
+</div>
+<div class="formula-box">
+$$ \ell = \Delta z_4 \cdot \sqrt{\frac{1}{(4\lambda N)^2}} \approx 100\,cm = 1\,m . $$
+<div class="podsetnik">Podsetnik: $\ell$ je rastojanje od rešetke do zaklona (m); $\Delta z_4$ je položaj maksimuma 4. reda na zaklonu (m); $\lambda$ je talasna dužina svetlosti (m); $N$ je broj proreza po jedinici dužine rešetke (1/m).</div>
+</div>
+<h3>L8 · Slajd 61 — Difrakcija na optičkoj rešetci – primer</h3>
+<div class="formula-box">
+$$ n\lambda = a \sin\theta_n = \frac{1}{N}\sin\theta_n \qquad (n = 0, \pm 1, \pm 2, \ldots) $$
+<div class="podsetnik">Podsetnik: $n$ je red maksimuma, ceo broj (bez jedinice); $\lambda$ (lambda) je talasna dužina svetlosti (m); $a$ je konstanta rešetke, rastojanje između susednih proreza (m); $\theta_n$ (theta) je ugao pod kojim se javlja maksimum reda $n$ (rad ili °); $N$ je broj proreza po jedinici dužine, pa je $a = 1/N$ (1/m, ovde 1/mm).</div>
+</div>
+<div class="formula-box">
+$$ n_{max}\,\lambda = \frac{1}{N} = \frac{1}{10^{5}\,m^{-1}\cdot 6\cdot 10^{-7}\,m} = 16{,}7 \mapsto 16 $$
+<div class="podsetnik">Podsetnik: $n_{max}$ je najveći mogući red maksimuma, zaokružen naniže na ceo broj (bez jedinice); $\lambda$ je talasna dužina ($6\cdot10^{-7}\,m$); $N$ je broj proreza po metru ($10^{5}\,m^{-1}$).</div>
+</div>
+<div class="formula-box">
+$$ m = 2\cdot 16 + 1 = 33 $$
+<div class="podsetnik">Podsetnik: $m$ je ukupan broj maksimuma na zaklonu (bez jedinice); $16$ je $n_{max}$ na jednoj strani; množilac $2$ uračunava levu i desnu stranu, a $+1$ je centralni maksimum ($n=0$).</div>
+</div>
+<h3>L8 · Slajd 64 — Disperzija svetlosti</h3>
+<div class="formula-box">
+$$ n = n(\lambda) $$
+<div class="podsetnik">Podsetnik: $n$ je indeks prelamanja sredine (prizme), bezdimenziona veličina (nema jedinicu); $\lambda$ (lambda) je talasna dužina svetlosti (m). Zapis $n(\lambda)$ znači da indeks prelamanja zavisi od talasne dužine, pa se zraci različitih boja prelamaju pod različitim uglovima i svetlost se razlaže po talasnim dužinama.</div>
+</div>
+<h3>L8 · Slajd 65 — Disperzija svetlosti</h3>
+<div class="formula-box">
+$$ n = \frac{c}{v_0} $$
+<div class="podsetnik">Podsetnik: $n$ je apsolutni indeks prelamanja sredine (bezdimenziona veličina); $c$ je brzina svetlosti u vakuumu (m/s); $v_0$ je brzina prostiranja svetlosti u datoj sredini (m/s); $\omega_0$ (omega nula) je sopstvena frekvencija oscilovanja čestica oko ravnotežnog položaja (rad/s); $\omega$ (omega) je frekvencija prinudnih oscilacija koju nameće upadni svetlosni talas (rad/s); $\lambda_c$ je talasna dužina crvene svetlosti (nm = nanometar = $10^{-9}$ m); $\lambda_{lj}$ je talasna dužina ljubičaste svetlosti (nm).</div>
+</div>
+<h3>L8 · Slajd 66 — Disperzija svetlosti</h3>
+<div class="formula-box">
+$$ n = \frac{c}{v_0} = f(\lambda) $$
+<div class="podsetnik">Podsetnik: $n$ je apsolutni indeks prelamanja sredine (bezdimenziona velicina); $c$ je brzina svetlosti u vakuumu (m/s); $v_0$ je brzina svetlosti u datoj sredini (m/s); $f(\lambda)$ oznacava da je $n$ funkcija talasne duzine $\lambda$ (lambda), izrazene u metrima (m).</div>
+</div>
+<div class="formula-box">
+$$ n^2 = f(\omega) $$
+<div class="podsetnik">Podsetnik: $n^2$ je kvadrat apsolutnog indeksa prelamanja (bezdimenziono); $f(\omega)$ oznacava da je velicina funkcija kruzne frekvencije; $\omega$ (omega) je kruzna (ugaona) frekvencija svetlosnog talasa, $\omega = 2\pi\nu$ (rad/s); $\nu$ (ni) je frekvencija svetlosti (Hz = 1/s).</div>
+</div>
+<h3>L8 · Slajd 67 — Disperzija svetlosti</h3>
+<div class="formula-box">
+$$ n^2 = f(\omega) $$
+<div class="podsetnik">Podsetnik: $n$ je indeks prelamanja sredine (bezdimenziona veličina, bez jedinice); $n^2$ je kvadrat indeksa prelamanja, koji je na grafiku na vertikalnoj osi (bezdimenziono); $\omega$ (omega) je kružna frekvencija svetlosti (rad/s); $\omega_0$ (omega nula) je posebna frekvencija oko koje se javlja anomalna disperzija (rad/s).</div>
+</div>
+<h3>L8 · Slajd 72 — Spektri</h3>
+<div class="formula-box">
+$$ n = n(\lambda) $$
+<div class="podsetnik">Podsetnik: $n$ je indeks prelamanja sredine (bezdimenziona veličina, nema jedinicu); $\lambda$ (lambda) je talasna dužina svetlosti (m). Zapis $n(\lambda)$ znači da indeks prelamanja zavisi od talasne dužine, tj. od boje svetlosti, pa se boje prelamaju pod različitim uglovima.</div>
+</div>
+<h3>L8 · Slajd 74 — Disperzija svetlosti u prirodi</h3>
+<div class="formula-box">
+$$ n(\lambda) = \frac{c}{v(\lambda)} $$
+<div class="podsetnik">Podsetnik: $n(\lambda)$ je indeks prelamanja sredine, ovde napisan kao funkcija boje da se naglasi da zavisi od talasne duzine (bezdimenziona velicina, bez jedinice); $\lambda$ (lambda) je talasna duzina svetlosti (m, u praksi nm); $c$ je brzina svetlosti u vakuumu, oko $3\cdot10^{8}$ (m/s); $v(\lambda)$ je brzina svetlosti date boje u sredini (m/s). Posto je $v$ razlicito za svaku boju, i $n$ je razlicito za svaku boju — to je disperzija.</div>
+</div>
+<h3>L8 · Slajd 76 — Polarizacija svetlosti</h3>
+<div class="formula-box">
+$$ \vec{E} \perp \vec{B}, \qquad \vec{E} \perp \vec{v}, \qquad \vec{B} \perp \vec{v} $$
+<div class="podsetnik">Podsetnik: $\vec{E}$ je vektor jačine električnog polja svetlosnog talasa (V/m); $\vec{B}$ je vektor magnetne indukcije istog talasa (T = tesla); $\vec{v}$ je vektor brzine prostiranja talasa, pravac i smer kretanja svetlosti (m/s); $\perp$ znači "upravno na", pod uglom od $90^\circ$. Električno polje, magnetno polje i pravac prostiranja međusobno su pod pravim uglom.</div>
+</div>
+<h3>L8 · Slajd 80 — Polarizacija refleksijom</h3>
+<div class="formula-box">
+$$ n_2 > n_1 $$
+<div class="podsetnik">Podsetnik: $n_1$ je indeks prelamanja prve (gornje) sredine iz koje dolazi svetlost — bezdimenziona veličina; $n_2$ je indeks prelamanja druge (donje) sredine — bezdimenziona veličina; $\alpha$ (alfa) je upadni ugao, jednak uglu odbijanja, meren od normale na granicu (stepen °); $\beta$ (beta) je ugao prelamanja, ugao prelomljenog zraka prema normali (stepen °).</div>
+</div>
+<h3>L8 · Slajd 81 — Brusterov zakon</h3>
+<div class="formula-box">
+$$ \operatorname{tg}\alpha_B = \frac{n_2}{n_1} \quad\Rightarrow\quad \alpha_B = \operatorname{arctg}\frac{n_2}{n_1} $$
+<div class="podsetnik">Podsetnik: $\alpha_B$ (alfa B) je Brusterov upadni ugao, ugao izmedju upadnog zraka i normale pri kome je odbijena svetlost potpuno polarizovana (stepeni $^\circ$ ili radijani); $\beta$ (beta) je prelomni ugao, ugao izmedju prelomljenog zraka i normale (stepeni $^\circ$ ili radijani); $n_1$ je indeks prelamanja prve sredine iz koje svetlost dolazi (bezdimenziona velicina, cist broj); $n_2$ je indeks prelamanja druge sredine, pri cemu je $n_2 > n_1$ (bezdimenziona velicina, cist broj); $\operatorname{tg}$ je tangens, a $\operatorname{arctg}$ njegova inverzna funkcija (arkus tangens), obe bez jedinice.</div>
+</div>
+<h3>L8 · Slajd 82 — Brusterov zakon – primer</h3>
+<div class="formula-box">
+$$ \alpha_B + \beta = 90^\circ $$
+<div class="podsetnik">Podsetnik: $\alpha_B$ (alfa B) je Brusterov upadni ugao, ugao izmedju upadnog zraka i normale na granicnu povrsinu, pri kojem je odbijena svetlost maksimalno polarizovana (stepeni, °); $\beta$ (beta) je ugao prelamanja, ugao izmedju prelomljenog zraka i normale (stepeni, °); $90^\circ$ je vrednost zbira ta dva ugla po Brusterovom zakonu, sto znaci da su odbijeni i prelomljeni zrak medjusobno normalni; $n_0 \approx 1$ je indeks prelamanja vazduha (bezdimenziono); $n = 1{,}54$ je indeks prelamanja kvarca (bezdimenziono).</div>
+</div>
+<h3>L8 · Slajd 83 — Brusterov zakon – primer</h3>
+<div class="formula-box">
+$$ n_0 \sin\alpha_B = n \sin\beta $$
+<div class="podsetnik">Podsetnik: $n_0$ je indeks prelamanja prve sredine (vazduh), $n_0 \approx 1$ (bezdimenziono); $n$ je indeks prelamanja druge sredine (kvarc) (bezdimenziono); $\alpha_B$ je upadni (Brusterov) ugao, meren od normale (°); $\beta$ je prelomni ugao (°).</div>
+</div>
+<div class="formula-box">
+$$ \sin\alpha_B = n \sin\beta = n \sin(90^\circ - \alpha_B) = n \cos\alpha_B $$
+<div class="podsetnik">Podsetnik: korišćen je uslov $\alpha_B + \beta = 90^\circ$, odakle je $\beta = 90^\circ - \alpha_B$; $\alpha_B$ je Brusterov ugao (°); $n$ je indeks prelamanja kvarca (bezdimenziono); $\sin(90^\circ-\alpha_B)=\cos\alpha_B$.</div>
+</div>
+<div class="formula-box">
+$$ \mathrm{tg}\,\alpha_B = n \qquad \alpha_B = \mathrm{arctg}(n) = 57^\circ $$
+<div class="podsetnik">Podsetnik: $\mathrm{tg}\,\alpha_B$ je tangens Brusterovog ugla (bezdimenziono); $\alpha_B$ je Brusterov ugao (°); $n$ je indeks prelamanja kvarca (bezdimenziono); $\mathrm{arctg}$ je arkus tangens (inverzna funkcija tangensa).</div>
+</div>
+<div class="formula-box">
+$$ 90^\circ - \alpha_B = 33^\circ $$
+<div class="podsetnik">Podsetnik: $90^\circ - \alpha_B$ je ugao pod kojim Sunce treba da se nalazi prema horizontu (°); $\alpha_B$ je Brusterov ugao, ovde $57^\circ$ (°).</div>
+</div>
+<h3>L8 · Slajd 84 — Dvojno prelamanje</h3>
+<div class="formula-box">
+$$ \vec{E}_r \perp \vec{E}_n $$
+<div class="podsetnik">Podsetnik: $\vec{E}_r$ je vektor jačine električnog polja redovnog zraka, oscilacije su normalne na glavnu ravan kristala (V/m); $\vec{E}_n$ je vektor jačine električnog polja neredovnog zraka, oscilacije leže u glavnoj ravni (V/m); znak $\perp$ znači da su pravci oscilovanja (ravni polarizacije) ta dva zraka međusobno normalni (pod uglom od $90^\circ$).</div>
+</div>
+<h3>L8 · Slajd 88 — Malusov zakon</h3>
+<div class="formula-box">
+$$ E_A = E_0 \cos\theta $$
+<div class="podsetnik">Podsetnik: $E_A$ je amplituda komponente električnog polja u pravcu ose analizatora, jedina koja prolazi kroz analizator (V/m — volt po metru); $E_0$ je amplituda vektora električnog polja po izlasku iz polarizatora (V/m); $\theta$ (theta) je ugao koji zaklapaju pravci ose polarizatora i ose analizatora (° ili rad); $\cos\theta$ je kosinus tog ugla (bezdimenziono, vrednost između $-1$ i $1$).</div>
+</div>
+<h3>L8 · Slajd 89 — Malusov zakon</h3>
+<div class="formula-box">
+$$ E_A = E_0 \, \cos\theta $$
+<div class="podsetnik">Podsetnik: $E_A$ je amplituda elektricnog polja koja prolazi kroz analizator (V/m); $E_0$ je amplituda elektricnog polja svetlosti koja dolazi u analizator (V/m); $\theta$ (theta) je ugao izmedju ravni polarizacije svetlosti i ose analizatora (rad ili °); $\cos\theta$ je kosinus tog ugla (bez jedinice, projekcija na osu analizatora).</div>
+</div>
+<div class="formula-box">
+$$ I = I_0 \, \cos^2 \theta $$
+<div class="podsetnik">Podsetnik: $I$ je intenzitet svetlosti koju propusta analizator (W/m²); $I_0$ je intenzitet svetlosti koja dolazi u analizator (W/m²); $\theta$ (theta) je ugao izmedju ravni polarizacije svetlosti i ose analizatora (rad ili °); $\cos^2\theta$ je kvadrat kosinusa tog ugla (bez jedinice, vrednosti od 0 do 1).</div>
+</div>
+<h3>L8 · Slajd 90 — Malusov zakon – primer</h3>
+<div class="formula-box">
+$$ I = I_0 \cos^2 \theta $$
+<div class="podsetnik">Podsetnik: $I$ je intenzitet svetlosti posle analizatora (W/m²); $I_0$ je intenzitet svetlosti koja pada na analizator, tj. koju je propustio polarizator (W/m²); $\theta$ (theta) je ugao izmedju ravni polarizacije polarizatora i analizatora (° ili rad); $\cos^2\theta$ je kvadrat kosinusa tog ugla (bezdimenziono).</div>
+</div>
+<div class="formula-box">
+$$ \theta = \arccos\!\left(\sqrt{0{,}373}\right) = 52{,}4^\circ $$
+<div class="podsetnik">Podsetnik: $\theta$ (theta) je trazeni ugao izmedju ravni polarizacije polarizatora i analizatora (°); $\arccos$ je arkus kosinus, inverzna funkcija kosinusa (daje ugao, bezdimenziono); $\sqrt{0{,}373}$ je vrednost $\cos\theta$ dobijena iz odnosa intenziteta (bezdimenziono); $0{,}373$ je preostali deo intenziteta, tj. 37,3% pocetnog (bezdimenziono).</div>
+</div>
+<h3>L8 · Slajd 91 - Optička aktivnost: zakretanje ravni polarizacije</h3>
+<div class="formula-box">
+$$ \alpha = K(\lambda,\,T)\cdot \ell $$
+<div class="podsetnik">Podsetnik: $\alpha$ (grčko slovo "alfa") je ugao optičkog zakretanja ravni polarizacije, izražen u stepenima ($^\circ$) ili u radijanima (rad); to je ono što merimo. $K(\lambda,\,T)$ je <b>specifična rotaciona sposobnost</b> (naziva se i "obrtna moć") supstance - to je broj koji govori koliko snažno baš ta supstanca zavrće ravan polarizacije po jedinici dužine; jedinica mu je tipično $^\circ/\text{mm}$ ili $^\circ/\text{m}$ (stepen po jedinici dužine). U zagradi piše da $K$ zavisi od dve veličine: $\lambda$ (grčko "lambda") je <b>talasna dužina</b> upotrebljene svetlosti, merena u metrima (m) ili nanometrima (nm) - dakle, sposobnost zavisi od boje svetlosti; $T$ je <b>temperatura</b> supstance, izražena u kelvinima (K) ili stepenima Celzijusa ($^\circ$C) - sposobnost se menja sa temperaturom. $\ell$ (kurzivno slovo "el") je <b>dužina puta</b> svetlosti kroz supstancu, to jest debljina sloja kroz koji svetlost prolazi, merena u metrima (m) ili milimetrima (mm). Tačka $\cdot$ označava obično množenje.</div>
+</div>
+<div class="formula-box">
+$$ \alpha = K(\lambda,\,T)\, c\, \ell $$
+<div class="podsetnik">Podsetnik: $\alpha$ je opet ugao optičkog zakretanja ravni polarizacije, u stepenima ($^\circ$) ili radijanima (rad). $K(\lambda,\,T)$ je specifična rotaciona sposobnost (obrtna moć) rastvorene aktivne supstance, koja i ovde zavisi od talasne dužine $\lambda$ (boje svetlosti, u m ili nm) i temperature $T$ (u K ili $^\circ$C); jedinica $K$ je sada takva da ceo proizvod $K\,c\,\ell$ ponovo daje ugao - obično $^\circ \cdot \text{cm}^2/\text{g}$ ili slično (često se naziva i <b>specifična rotacija</b>), jer mora da "potroši" i jedinicu koncentracije i jedinicu dužine. $c$ (malo slovo "ce") je <b>koncentracija</b> optički aktivne supstance u rastvoru, to jest koliko ima rastvorene materije po jedinici zapremine; merna jedinica je obično $\text{g}/\text{cm}^3$ ili $\text{kg}/\text{m}^3$ (masa rastvorene supstance po jedinici zapremine rastvora). $\ell$ je ponovo <b>dužina puta</b> svetlosti kroz rastvor (debljina sloja kroz koji svetlost prolazi), u metrima (m) ili centimetrima (cm).</div>
+</div>
+<h3>L8 · Slajd 94 - Tečni kristali i kako radi LCD ekran</h3>
+<div class="formula-box">
+$$ I = I_0 \cdot \cos^2\theta $$
+<div class="podsetnik">Podsetnik: $I$ je intenzitet (jacina) svetlosti koja <em>prodje</em> kroz analizator, izrazen u vatima po kvadratnom metru ($\mathrm{W/m^2}$); $I_0$ je intenzitet svetlosti koja <em>pada</em> na analizator (vec polarizovana, takodje u $\mathrm{W/m^2}$); $\theta$ (grcko slovo "teta") je ugao izmedju ravni polarizacije dolazece svetlosti i ose analizatora, izrazen u stepenima ($^\circ$) ili radijanima ($\mathrm{rad}$); $\cos$ je trigonometrijska funkcija kosinus, a $\cos^2\theta$ znaci $(\cos\theta)^2$, dakle kosinus na kvadrat. Posto je intenzitet uvek nenegativan, a kvadrat kosinusa nikad nije veci od $1$, prolazni intenzitet ide od $0$ (kada je $\theta = 90^\circ$) do $I_0$ (kada je $\theta = 0^\circ$).</p></div>
+</div>
+<h3>L8 · Slajd 95 - Tečni kristali: kako radi LCD ekran</h3>
+<div class="formula-box">
+$$ I = I_0 \cdot \cos^2\theta $$
+<div class="podsetnik">Podsetnik: $I$ je intenzitet (jačina) svetlosti koja izađe iz analizatora, izražen u vatima po kvadratnom metru ($\mathrm{W/m^2}$); $I_0$ je intenzitet svetlosti koja stigne do analizatora pošto je već prošla kroz prvi polarizator (takođe u $\mathrm{W/m^2}$); $\theta$ (grčko slovo "teta") je ugao između pravca propuštanja polarizatora i pravca propuštanja analizatora, izražen u stepenima ($^\circ$) ili radijanima; $\cos^2\theta$ je kvadrat kosinusa tog ugla (broj bez jedinice, između $0$ i $1$).</div>
+</div>
+<div class="formula-box">
+$$ I = I_0 \cdot \cos^2(90^\circ) = I_0 \cdot 0 = 0 $$
+<div class="podsetnik">Podsetnik: $I$ je izlazni intenzitet svetlosti ($\mathrm{W/m^2}$); $I_0$ je intenzitet svetlosti pre analizatora ($\mathrm{W/m^2}$); $90^\circ$ je ugao između dva ukrštena polarizatora; $\cos(90^\circ) = 0$ je kosinus tog ugla, pa ceo proizvod postaje nula. Rezultat $I = 0$ znači da kroz par ukrštenih polarizatora <strong>ne prolazi nikakva svetlost</strong> - sve se apsorbuje.</div>
+</div>
+<h3>L8 · Slajd 96 - Polarizacija u prirodi: zašto je nebo plavo i delimično polarizovano</h3>
+<div class="formula-box">
+$$ I_{\text{rasejano}} \propto \frac{1}{\lambda^4} $$
+<div class="podsetnik">Podsetnik: $I_{\text{rasejano}}$ je intenzitet (jačina) rasejane svetlosti, to jest koliko svetlosti se raspe u stranu (meri se u vatima po kvadratnom metru, $\mathrm{W/m^2}$); $\propto$ je oznaka za "proporcionalno je" (raste/opada zajedno sa); $\lambda$ (grčko slovo lambda) je talasna dužina svetlosti, to jest dužina jednog "talasa" date boje, izražena u metrima ($\mathrm{m}$), a u praksi u nanometrima ($\mathrm{nm}$, gde je $1\ \mathrm{nm} = 10^{-9}\ \mathrm{m}$); $\lambda^4$ znači talasnu dužinu na četvrti stepen, dakle pomnoženu samu sa sobom četiri puta ($\lambda \cdot \lambda \cdot \lambda \cdot \lambda$).</div>
+</div>
+<h2 id="deveto_predavanje">Deveto predavanje</h2>
+<h3>L9 · Slajd 9 — Toplotno zračenje</h3>
+<div class="formula-box">
+$$\varepsilon_{\lambda,T} = \frac{E}{S\,t} = \frac{P}{S} \equiv I \quad \left[\mathrm{W/m^2}\right] \tag{9.1}$$
+<div class="podsetnik">Podsetnik:</strong><br>
+$\varepsilon_{\lambda,T}$ — emisiona moć tela; zavisi od talasne dužine $\lambda\,[\mathrm{m}]$ i apsolutne temperature $T\,[\mathrm{K}]$; jedinica: $\mathrm{W/m^2}$<br>
+$E$ — energija toplotnog zračenja emitovana sa površine $[\mathrm{J}]$<br>
+$S$ — površina tela sa koje se emituje $[\mathrm{m^2}]$<br>
+$t$ — vreme $[\mathrm{s}]$<br>
+$P = E/t$ — snaga toplotnog zračenja $[\mathrm{W}]$<br>
+$I$ — intenzitet zračenja, alternativna oznaka za emisionu moć $[\mathrm{W/m^2}]$</div>
+</div>
+<h3>L9 · Slajd 10 — Toplotno zracenje</h3>
+<div class="formula-box">
+$$a_{\lambda,T} = \frac{E_{\lambda}^{(\text{aps})}}{E_{\lambda}^{(\text{up})}}$$
+
+</div>
+<h3>L9 · Slajd 12 — Spektar toplotnog zračenja</h3>
+<div class="formula-box">
+$$\varepsilon_{\lambda,T} \quad \left[10^{13} \, \frac{\text{W}}{\text{m}^3}\right]$$
+
+</div>
+<h3>L9 · Slajd 13 — Zakoni toplotnog zracenja</h3>
+<div class="formula-box">
+$$\varepsilon = \sigma T^4$$
+
+</div>
+<h3>L9 · Slajd 14 — Zakoni toplotnog zračenja</h3>
+<div class="formula-box">
+$$\lambda_m = \frac{b}{T}$$
+<div class="podsetnik">Podsetnik: $\lambda_m$ — talasna dužina maksimuma zračenja [m]; $b = 2{,}9 \cdot 10^{-3}\ \text{K·m}$ — Vinova konstanta; $T$ — apsolutna temperatura tela [K].</div>
+</div>
+<div class="formula-box">
+$$\frac{\varepsilon_{\lambda,T}}{a_{\lambda,T}} = f(\lambda, T)$$
+<div class="podsetnik">Podsetnik: $\varepsilon_{\lambda,T}$ — emisiona (spektralna) moć tela — energija koju telo emituje po jedinici površine, talasne dužine i vremena $[\text{W·m}^{-3}]$; $a_{\lambda,T}$ — apsorpciona moć tela — bezdimenzionalni koeficijent (0 do 1) koji govori koliki deo upadnog zračenja telo apsorbuje; $f(\lambda, T)$ — univerzalna funkcija, ista za sva tela; za apsolutno crno telo: $\varepsilon_{\lambda,T} = f(\lambda,T)$ jer je $a_{\lambda,T} = 1$; $\lambda$ — talasna dužina [m]; $T$ — apsolutna temperatura [K].</div>
+</div>
+<h3>L9 · Slajd 16 — Plankova hipoteza</h3>
+<div class="formula-box">
+$$\epsilon_f = h\nu = \frac{hc}{\lambda}$$
+
+</div>
+<div class="formula-box">
+$$E = N \cdot \epsilon_f = Nh\nu = N\frac{hc}{\lambda}, \quad N = 1, 2, 3, \ldots$$
+
+</div>
+<div class="formula-box">
+$$\varepsilon_{\lambda,T} = \frac{2\pi c^2 h}{\lambda^5} \cdot \frac{1}{e^{\frac{hc}{\lambda kT}} - 1}$$
+
+</div>
+<h3>L9 · Slajd 18 — Fotoelektrični efekat</h3>
+<div class="formula-box">
+$$E_{k,\text{max}} = eU_k$$
+
+</div>
+<h3>L9 · Slajd 19 — Fotoelektrični efekat</h3>
+<div class="formula-box">
+$$I_s \propto \Phi$$
+
+</div>
+<h3>L9 · Slajd 20 — Fotoelektrični efekat</h3>
+<div class="formula-box">
+$$\frac{1}{2} m_e v^2 = e U_k$$
+
+</div>
+<h3>L9 · Slajd 23 — Ajnštajnovo objašnjenje fotoefekta</h3>
+<div class="formula-box">
+$$h\nu = A + E_{\text{kin}}$$
+
+</div>
+<div class="formula-box">
+$$\frac{hc}{\lambda} = A + \frac{1}{2}m_e v^2 \tag{9.10}$$
+
+</div>
+<h3>L9 · Slajd 24 — Ajnštajnovo objašnjenje fotoefekta</h3>
+<div class="formula-box">
+$$h\nu_g = A \quad \Rightarrow \quad \frac{hc}{\lambda_g} = A$$
+
+</div>
+<h3>L9 · Slajd 25 — Komptonov efekat</h3>
+<div class="formula-box">
+$$\Delta\lambda = \lambda' - \lambda = \frac{h}{m_0 c}(1 - \cos\theta) = \lambda_c(1 - \cos\theta)$$
+
+</div>
+<h3>L9 · Slajd 26 — Komptonov efekat</h3>
+<div class="formula-box">
+$$\epsilon_f \sim \frac{1}{\lambda'}$$
+
+</div>
+<h3>L9 · Slajd 29 — Atomski spektri</h3>
+<div class="formula-box">
+$$\frac{1}{\lambda} = R \left( \frac{1}{k^2} - \frac{1}{n^2} \right)$$
+
+</div>
+<div class="formula-box">
+$$\frac{1}{\lambda} = R \, Z^2 \left( \frac{1}{k^2} - \frac{1}{n^2} \right)$$
+
+</div>
+<h3>L9 · Slajd 33 — Raderfordov model atoma</h3>
+<div class="formula-box">
+$$A = Z + N$$
+
+</div>
+<div class="formula-box">
+$$e = 1{,}602 \cdot 10^{-19} \, \text{C}$$
+
+</div>
+<div class="formula-box">
+$$m_p \approx 1836 \cdot m_e$$
+
+</div>
+<h3>L9 · Slajd 34 — Raderfordov model atoma</h3>
+<div class="formula-box">
+$$\frac{1}{4\pi\varepsilon_0} \frac{Z e^2}{r^2} = \frac{m_e v^2}{r} \qquad (9.15)$$
+
+</div>
+<h3>L9 · Slajd 36 — Borovi postulati</h3>
+<div class="formula-box">
+$$L = m_e \, v \, r = n \hbar \,, \qquad (n = 1, 2, 3, \ldots)$$
+
+</div>
+<h3>L9 · Slajd 37 — Borovi postulati</h3>
+<div class="formula-box">
+$$h\nu = |E_n - E_k|$$
+
+</div>
+<h3>L9 · Slajd 38 — Borovi postulati</h3>
+<div class="formula-box">
+$$E_{\text{foton}} = h\nu = E_{n_2} - E_{n_1}$$
+
+</div>
+<h3>L9 · Slajd 39 — Borova teorija jednoelektronskih atoma</h3>
+<div class="formula-box">
+$$\frac{m_e v_n^2}{r_n} = \frac{1}{4\pi\varepsilon_0}\,\frac{Ze^2}{r_n^2}$$
+
+</div>
+<div class="formula-box">
+$$m_e\, v_n\, r_n = n\hbar \;; \quad n = 1, 2, 3, \ldots$$
+
+</div>
+<div class="formula-box">
+$$r_n = \frac{\varepsilon_0 h^2}{\pi\, m_e Z e^2}\,n^2 = \frac{4\pi\varepsilon_0\hbar^2}{Z m_e e^2}\,n^2 \qquad v_n = \frac{Ze^2}{2\varepsilon_0 h}\,\frac{1}{n} = \frac{Ze^2}{4\pi\varepsilon_0\hbar}\,\frac{1}{n}$$
+
+</div>
+<h3>L9 · Slajd 40 — Borova teorija jednoelektronskih atoma</h3>
+<div class="formula-box">
+$$E_n = E_n^{kin} + E_n^{pot} = \frac{m_e v_n^2}{2} - \frac{Ze^2}{4\pi\varepsilon_0 r_n} = -\frac{m_e Z^2 e^4}{8\varepsilon_0^2 h^2} \cdot \frac{1}{n^2}$$
+
+</div>
+<div class="formula-box">
+$$(h\nu)_{n\to k} = E_n - E_k = -\frac{m_e Z^2 e^4}{8\varepsilon_0^2 h^2}\left(\frac{1}{n^2} - \frac{1}{k^2}\right)$$
+
+</div>
+<div class="formula-box">
+$$\left(\frac{1}{\lambda}\right)_{n\to k} = Z^2 R_H \left(\frac{1}{k^2} - \frac{1}{n^2}\right)$$
+
+</div>
+<h3>L9 · Slajd 41 — Spektralne serije</h3>
+<div class="formula-box">
+$$\frac{1}{\lambda} = R_H \left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right), \quad n_2 > n_1$$
+
+</div>
+<h3>L9 · Slajd 42 — Spektralne serije</h3>
+<div class="formula-box">
+$$\lambda_{2\to1} = \frac{1}{Z^2 R_H \left(\dfrac{1}{1^2} - \dfrac{1}{2^2}\right)}$$
+
+</div>
+<div class="formula-box">
+$$\left(\frac{1}{\lambda}\right)_{n\to2} = Z^2 R_H \left(\frac{1}{2^2} - \frac{1}{n^2}\right)$$
+
+</div>
+<h3>L9 · Slajd 43 — Fotoni i njihove osobine</h3>
+<div class="formula-box">
+$$\epsilon_f = h \cdot \nu = \frac{h\, c}{\lambda}$$
+
+</div>
+<h3>L9 · Slajd 44 — Fotoni i njihove osobine</h3>
+<div class="formula-box">
+$$\epsilon_f = m c^2$$
+
+</div>
+<div class="formula-box">
+$$\lambda = \frac{h}{p}$$
+
+</div>
+<h3>L9 · Slajd 45 — Priroda svetlosti</h3>
+<div class="formula-box">
+$$\ell_f = c \cdot \tau_e \sim 0{,}3\,\text{m}$$
+
+</div>
+<h3>L9 · Slajd 46 — Priroda svetlosti</h3>
+<div class="formula-box">
+$$E = E_0 \sin(\omega t - kx)$$
+
+</div>
+<h3>L9 · Slajd 48 — Može li se foton podeliti?</h3>
+<div class="formula-box">
+$$\epsilon_f = h\nu = \hbar\omega$$
+
+</div>
+<h2 id="deseto_predavanje">Deseto predavanje</h2>
+<h3>L10 · Slajd 3 — Dualistička priroda mikroobjekata</h3>
+<div class="formula-box">
+$$ \epsilon_f = h\,\nu = \frac{h\,c}{\lambda}\,, \qquad \epsilon_f = m\,c^2 $$
+<div class="podsetnik">Podsetnik: $\epsilon_f$ je energija fotona (džul, J); $h$ je Plankova konstanta ($6{,}626 \cdot 10^{-34}$ J·s); $\nu$ (grčko "ni") je frekvencija svetlosti (Hz = 1/s); $c$ je brzina svetlosti u vakuumu ($\approx 3 \cdot 10^{8}$ m/s); $\lambda$ (grčko "lambda") je talasna dužina (metar, m); $m$ je masa pridružena fotonu (kilogram, kg). Iskorišćeno je i $\nu = c/\lambda$ — veza frekvencije i talasne dužine talasa.</div>
+</div>
+<div class="formula-box">
+$$ \lambda = \frac{h}{m\,c} = \frac{h}{p} $$
+<div class="podsetnik">Podsetnik: $\lambda$ je talasna dužina fotona (metar, m); $h$ je Plankova konstanta ($6{,}626 \cdot 10^{-34}$ J·s); $m$ je masa pridružena fotonu (kg); $c$ je brzina svetlosti ($\approx 3 \cdot 10^{8}$ m/s); $p = m\,c$ je impuls (količina kretanja) fotona (kg·m/s).</div>
+</div>
+<h3>L10 · Slajd 4 — De Broljeva hipoteza</h3>
+<div class="formula-box">
+$$\lambda = \frac{h}{p} = \frac{h}{m\,v} \qquad (10.1)$$
+
+</div>
+<h3>L10 · Slajd 5 — De Broljeva hipoteza</h3>
+<div class="formula-box">
+$$ \mathcal{O}_n = 2\pi r_n $$
+<div class="podsetnik">Podsetnik: $\mathcal{O}_n$ je obim $n$-te orbite (metar, m); $r_n$ je poluprečnik $n$-te stacionarne orbite (m); $n$ je redni broj orbite ($1, 2, 3, \dots$, bez jedinice); $2\pi$ je čist broj (formula za obim kruga).</div>
+</div>
+<div class="formula-box">
+$$ \mathcal{O}_n = n\,\frac{h}{p_n} = n\,\frac{h}{m_e\,v_n} $$
+<div class="podsetnik">Podsetnik: $n$ je broj talasnih dužina na orbiti (ceo broj, bez jedinice); $h$ je Plankova konstanta ($6{,}626 \cdot 10^{-34}$ J·s); $p_n = m_e v_n$ je impuls elektrona na $n$-toj orbiti (kg·m/s); $m_e$ je masa elektrona ($9{,}11 \cdot 10^{-31}$ kg); $v_n$ je brzina elektrona na $n$-toj orbiti (m/s).</div>
+</div>
+<div class="formula-box">
+$$ 2\pi r_n = n\,\frac{h}{m_e\,v_n} \quad \Rightarrow \quad m_e\,r_n\,v_n = n\,\frac{h}{2\pi} $$
+<div class="podsetnik">Podsetnik: $m_e$ je masa elektrona ($9{,}11 \cdot 10^{-31}$ kg); $r_n$ je poluprečnik orbite (m); $v_n$ je brzina elektrona (m/s); proizvod $m_e\,r_n\,v_n$ je moment impulsa elektrona $L_n$ (jedinica kg·m²/s = J·s); $n$ je ceo broj (bez jedinice); $h$ je Plankova konstanta ($6{,}626 \cdot 10^{-34}$ J·s); $\Rightarrow$ znači "iz ovoga sledi".</div>
+</div>
+<h3>L10 · Slajd 6 — Potvrda De Broljeve hipoteze</h3>
+<div class="formula-box">
+$$ \lambda = \frac{h}{p} = \frac{h}{\sqrt{2meU}} \approx 10^{-10}\ \text{m} $$
+<div class="podsetnik">Podsetnik: $\lambda$ je De Broljeva talasna dužina elektrona (metar, m); $h$ je Plankova konstanta ($6{,}626 \cdot 10^{-34}$ J·s); $p$ je impuls elektrona (kg·m/s); $m$ je masa elektrona ($9{,}11 \cdot 10^{-31}$ kg); $e$ je elementarno naelektrisanje ($1{,}6 \cdot 10^{-19}$ C); $U$ je ubrzavajući napon (volt, V); izraz $\sqrt{2meU}$ dolazi iz $E_k = eU = p^2/(2m)$.</div>
+</div>
+<h3>L10 · Slajd 7 — Potvrda De Brojleve hipoteze</h3>
+<div class="formula-box">
+$$\lambda = \frac{h}{p} = \frac{h}{mv}$$
+
+</div>
+<h3>L10 · Slajd 8 — Potvrda De Broljeve hipoteze</h3>
+<div class="formula-box">
+$$\lambda = \frac{h}{mv} = \frac{6{,}626 \cdot 10^{-34} \, \text{Js}}{10^{-2} \, \text{kg} \cdot 700 \, \frac{\text{m}}{\text{s}}} \approx 10^{-34} \, \text{m}$$
+
+</div>
+<h3>L10 · Slajd 13 — Relacije neodređenosti</h3>
+<div class="formula-box">
+$$\Delta x \cdot \Delta p_x \geq \frac{\hbar}{2} \,, \quad \Delta y \cdot \Delta p_y \geq \frac{\hbar}{2} \,, \quad \Delta z \cdot \Delta p_z \geq \frac{\hbar}{2}$$
+
+</div>
+<div class="formula-box">
+$$\Delta E \cdot \Delta t \geq \frac{\hbar}{2}$$
+
+</div>
+<h3>L10 · Slajd 14 — Talasna funkcija</h3>
+<div class="formula-box">
+$$\Psi(\vec{r},\, t) \equiv \Psi(x, y, z, t)$$
+
+</div>
+<div class="formula-box">
+$$\Psi(\vec{r}) \equiv \Psi(x, y, z)$$
+
+</div>
+<h3>L10 · Slajd 15 — Fizički smisao talasne funkcije</h3>
+<div class="formula-box">
+$$\rho = \Psi(\vec{r}, t) \cdot \Psi^*(\vec{r}, t) = |\Psi(\vec{r}, t)|^2 = \frac{dP}{dV}$$
+
+</div>
+<div class="formula-box">
+$$dP = |\Psi(\vec{r}, t)|^2 \, dV$$
+
+</div>
+<h3>L10 · Slajd 18 — Smisao relacija neodređenosti</h3>
+<div class="formula-box">
+$$p = \frac{h}{\lambda}$$
+
+</div>
+<h3>L10 · Slajd 19 — Superpozicija stanja</h3>
+<div class="formula-box">
+$$\Psi = a \cdot \Psi_1 + b \cdot \Psi_2$$
+
+</div>
+<div class="formula-box">
+$$|a|^2 + |b|^2 = 1$$
+
+</div>
+<div class="formula-box">
+$$\Psi = \sum_{i=1}^{n} c_i \Psi_i \qquad , \qquad \sum_{i=1}^{n} |c_i|^2 = 1$$
+
+</div>
+<h3>L10 · Slajd 20 — Šredingerova jednačina</h3>
+<div class="formula-box">
+$$-\frac{\hbar^2}{2m}\frac{\partial^2 \Psi(x,t)}{\partial x^2} + U(x,t)\,\Psi(x,t) = i\hbar\,\frac{\partial \Psi(x,t)}{\partial t}$$
+
+</div>
+<div class="formula-box">
+$$-\frac{\hbar^2}{2m}\frac{d^2 \Psi(x)}{dx^2} + U(x)\,\Psi(x) = E\,\Psi(x)$$
+
+</div>
+<h3>L10 · Slajd 23 — Čestica u beskonačno dubokoj potencijalnoj jami</h3>
+<div class="formula-box">
+$$\Psi(x=0) = 0 \qquad \text{i} \qquad \Psi(x=L) = 0$$
+
+</div>
+<h3>L10 · Slajd 24 — Čestica u beskonačno dubokoj potencijalnoj jami</h3>
+<div class="formula-box">
+$$\lambda_n = \frac{2L}{n}, \quad n = 1, 2, 3, \ldots$$
+<div class="podsetnik">Podsetnik:</strong> $\lambda_n$ — talasna dužina De Broljevog talasa čestice u $n$-tom stanju [m]; $L$ — širina potencijalne jame [m]; $n$ — kvantni broj (ceo pozitivan broj, bez dimenzije).</p></div>
+</div>
+<div class="formula-box">
+$$p_n = \frac{nh}{2L}$$
+<div class="podsetnik">Podsetnik:</strong> $p_n$ — impuls čestice u $n$-tom stanju [kg·m/s]; $n$ — kvantni broj; $h$ — Plankova konstanta [$h \approx 6{,}626 \times 10^{-34}$ J·s]; $L$ — širina jame [m].</p></div>
+</div>
+<div class="formula-box">
+$$E_n = \frac{p_n^2}{2m} = \frac{h^2}{8mL^2} \cdot n^2 = \frac{\pi^2 \hbar^2}{2mL^2} \cdot n^2$$
+<div class="podsetnik">Podsetnik:</strong> $E_n$ — energija čestice u $n$-tom kvantnom stanju [J]; $m$ — masa čestice [kg]; $L$ — širina jame [m]; $h$ — Plankova konstanta [J·s]; $\hbar = h/(2\pi)$ — reducirana Plankova konstanta [J·s]; $n$ — kvantni broj (1, 2, 3, …).</p></div>
+</div>
+<h3>L10 · Slajd 25 — Čestica u beskonačno dubokoj potencijalnoj jami</h3>
+<div class="formula-box">
+$$E_{n_x, n_y, n_z} = \frac{\pi^2 \hbar^2}{2mL^2} \cdot \left(n_x^2 + n_y^2 + n_z^2\right)$$
+
+</div>
+<h3>L10 · Slajd 26 — Tunel-efekat</h3>
+<div class="formula-box">
+$$\frac{1}{2}mv^2 + mgh \geq mgH$$
+
+</div>
+<h3>L10 · Slajd 29 — Primena tunel-efekta – STM</h3>
+<div class="formula-box">
+$$I_T \sim e^{-2kd}$$
+
+</div>
+<h3>L10 · Slajd 32 — Bozoni i fermioni</h3>
+<div class="formula-box">
+$$S = \hbar\sqrt{s(s+1)}$$
+
+</div>
+<h3>L10 · Slajd 35 — Kvantni brojevi</h3>
+<div class="formula-box">
+$$n = 1, 2, 3, \ldots$$
+
+</div>
+<div class="formula-box">
+$$\ell = 0,\ 1,\ 2,\ 3,\ \ldots,\ n-1$$
+
+</div>
+<h3>L10 · Slajd 36 — Kvantni brojevi</h3>
+<div class="formula-box">
+$$m = 0, \pm 1, \pm 2, \pm 3, \ldots, \pm \ell$$
+
+</div>
+<div class="formula-box">
+$$s = +\tfrac{1}{2}, \quad s = -\tfrac{1}{2}$$
+
+</div>
+<div class="formula-box">
+Paulijev princip isključenja: u atomu ne mogu postojati dva elektrona sa jednakim vrednostima sva četiri kvantna broja $(n,\, \ell,\, m,\, s)$.
+
+</div>
+
+</body>
+</html>
