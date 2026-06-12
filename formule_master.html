@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matične formule + legenda — Fizika</title>
+<script>
+MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+* { box-sizing:border-box; }
+body { font-family:'Segoe UI',Arial,sans-serif; max-width:900px; margin:0 auto; padding:26px 18px 70px; background:#f5f6fa; color:#1a1a2e; line-height:1.65; }
+h1 { text-align:center; color:#5a0010; margin:0 0 4px; font-size:2.1em; }
+.sub { text-align:center; color:#888; margin-bottom:30px; }
+h2.sec { color:#1a237e; border-bottom:3px solid #1a237e; padding-bottom:6px; margin:38px 0 14px; }
+.intro { background:#eef1fb; border-left:4px solid #1a237e; border-radius:8px; padding:12px 16px; font-size:.95em; }
+table { border-collapse:collapse; width:100%; margin:10px 0 20px; font-size:.92em; background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 1px 5px rgba(0,0,0,.06); }
+th { background:#1a237e; color:#fff; text-align:left; padding:8px 12px; }
+td { padding:7px 12px; border-top:1px solid #e6e6ef; vertical-align:top; }
+tr:nth-child(even) td { background:#fafbff; }
+.fam { background:#fff; border-radius:12px; padding:16px 20px; margin:16px 0; box-shadow:0 2px 10px rgba(0,0,0,.07); border-left:5px solid #c2185b; }
+.fam h3 { margin:0 0 8px; color:#5a0010; font-size:1.2em; }
+.matica { background:#fdeef0; border-left:4px solid #7a0010; border-radius:6px; padding:10px 16px; margin:8px 0; font-size:1.05em; }
+.simb { font-size:.88em; color:#555; margin:6px 0 10px; }
+.sled { font-size:.93em; }
+.sled b { color:#1a237e; }
+.sled ul { margin:6px 0 0; padding-left:22px; }
+.sled li { margin:4px 0; }
+.napom { font-style:italic; color:#777; font-size:.85em; margin-top:8px; }
+@media print { h2.sec{page-break-before:always;} .fam{break-inside:avoid;} }
+</style>
+</head>
+<body>
+<h1>Matične formule + legenda</h1>
+<div class="sub">Umesto 265 formula — ~13 "matičnih" + sve što iz njih sledi · predavanja 6–10</div>
+
+<div class="intro">
+<b>Ideja:</b> većina formula su <b>specijalni slučajevi</b> nekoliko matičnih. Ako naučiš matičnu formulu i pravilo kako se grana, pamtiš desetak ideja umesto stotina izraza. Crveni okvir = matična formula; ispod „→ iz ove slede" su njene primene i posledice.
+</div>
+
+<h2 class="sec">Legenda simbola</h2>
+<table>
+<tr><th>Simbol</th><th>Značenje</th><th>Jedinica</th></tr>
+<tr><td>$x,\ \psi,\ \xi$</td><td>pomeraj (oscilatora / čestice u talasu)</td><td>m</td></tr>
+<tr><td>$x_0,\ \psi_0,\ A$</td><td>amplituda (najveći pomeraj)</td><td>m</td></tr>
+<tr><td>$T$</td><td>period (trajanje jedne oscilacije)</td><td>s</td></tr>
+<tr><td>$\nu$ (ili $f$)</td><td>frekvencija (broj oscilacija u sekundi)</td><td>Hz = 1/s</td></tr>
+<tr><td>$\omega$</td><td>kružna (ugaona) frekvencija, $\omega=2\pi\nu$</td><td>rad/s</td></tr>
+<tr><td>$\varphi$</td><td>početna faza</td><td>rad</td></tr>
+<tr><td>$\tilde k$</td><td>krutost opruge (koeficijent elastičnosti)</td><td>N/m</td></tr>
+<tr><td>$\lambda$</td><td>talasna dužina (razmak dva brega)</td><td>m</td></tr>
+<tr><td>$k$</td><td>talasni broj, $k=2\pi/\lambda$</td><td>rad/m</td></tr>
+<tr><td>$v,\ v_0$</td><td>brzina prostiranja talasa u sredini</td><td>m/s</td></tr>
+<tr><td>$c$</td><td>brzina svetlosti u vakuumu ($3\cdot10^8$)</td><td>m/s</td></tr>
+<tr><td>$n$</td><td>indeks prelamanja, $n=c/v_0$</td><td>—</td></tr>
+<tr><td>$\alpha,\ \beta$</td><td>upadni / prelomni ugao (od normale)</td><td>° ili rad</td></tr>
+<tr><td>$\delta$</td><td>putna (ili optička) razlika dva talasa</td><td>m</td></tr>
+<tr><td>$I$</td><td>intenzitet (snaga po površini)</td><td>W/m²</td></tr>
+<tr><td>$E$</td><td>energija; <i>ili</i> jačina električnog polja; <i>ili</i> Jangov modul — zavisi od konteksta</td><td>J; V/m; Pa</td></tr>
+<tr><td>$B$</td><td>jačina magnetnog polja</td><td>T</td></tr>
+<tr><td>$h$</td><td>Plankova konstanta ($6{,}626\cdot10^{-34}$)</td><td>J·s</td></tr>
+<tr><td>$\hbar$</td><td>redukovana Plankova, $\hbar=h/2\pi$</td><td>J·s</td></tr>
+<tr><td>$p$</td><td>impuls (količina kretanja)</td><td>kg·m/s</td></tr>
+<tr><td>$\Psi$</td><td>kvantna talasna funkcija</td><td>—</td></tr>
+<tr><td>$\rho$</td><td>gustina (sredine) / gustina verovatnoće</td><td>kg/m³ / 1/m³</td></tr>
+<tr><td>$\sigma,\ b,\ R$</td><td>Štefanova, Vinova, Ridbergova konstanta</td><td>—</td></tr>
+</table>
+
+<h2 class="sec">Matične formule (po familijama)</h2>
+
+<div class="fam">
+<h3>1 · Harmonijska oscilacija</h3>
+<div class="matica">$$x = x_0\sin(\omega t+\varphi),\qquad \omega = 2\pi\nu=\frac{2\pi}{T}=\sqrt{\frac{\tilde k}{m}}$$</div>
+<p class="simb">$x$ – pomeraj (m); $x_0$ – amplituda (m); $\omega$ – kružna frekvencija (rad/s); $\varphi$ – faza (rad); $\tilde k$ – krutost (N/m); $m$ – masa (kg).</p>
+<div class="sled"><b>→ iz ove slede:</b>
+<ul>
+<li>brzina $v=\omega x_0\cos(\omega t+\varphi)$, ubrzanje $a=-\omega^2 x$ (izvodi po vremenu);</li>
+<li>održanje energije $\dfrac{mv^2}{2}+\dfrac{\tilde k x^2}{2}=\dfrac{\tilde k x_0^2}{2}=$ const;</li>
+<li>matematičko klatno $T=2\pi\sqrt{l/g}$;</li>
+<li>električne oscilacije (LC-kolo) — ista matematika: $\omega=\dfrac{1}{\sqrt{LC}}$.</li>
+</ul></div>
+</div>
+
+<div class="fam">
+<h3>2 · Talas (kinematika)</h3>
+<div class="matica">$$\psi(x,t)=\psi_0\cos(\omega t - kx),\qquad k=\frac{2\pi}{\lambda},\qquad v_0=\frac{\omega}{k}=\lambda\nu=\frac{\lambda}{T}$$</div>
+<p class="simb">$\psi$ – pomeraj čestice (m); $k$ – talasni broj (rad/m); $\lambda$ – talasna dužina (m); $v_0$ – brzina talasa (m/s); $\nu$ – frekvencija (Hz).</p>
+<div class="sled"><b>→ iz ove slede:</b>
+<ul>
+<li>brzina čestice $u=\partial\psi/\partial t=-\omega\psi_0\sin(\omega t-kx)$;</li>
+<li><b>$v_0=\lambda\nu$ je univerzalno</b> — važi za žicu, zvuk, svetlost i ceo EM spektar.</li>
+</ul></div>
+</div>
+
+<div class="fam">
+<h3>3 · Talasna jednačina (univerzalna)</h3>
+<div class="matica">$$\frac{\partial^2\psi}{\partial t^2}=v_0^2\,\frac{\partial^2\psi}{\partial x^2}$$</div>
+<p class="simb">Istog oblika za <b>svaki</b> talas; menja se samo šta je brzina $v_0$.</p>
+<div class="sled"><b>→ iz ove slede (brzina zavisi od sredine):</b>
+<ul>
+<li>zategnuta žica: $v_0=\sqrt{F/\gamma}$ ($F$ – sila, $\gamma$ – podužna masa);</li>
+<li>zvuk u čvrstom telu: $v_0=\sqrt{E/\rho}$ ($E$ – Jangov modul);</li>
+<li>zvuk u gasu: $v_0=\sqrt{\kappa RT/M}$;</li>
+<li>EM talas: ista jednačina za polja $E_x$ i $B_y$ (vidi familiju 7).</li>
+</ul></div>
+</div>
+
+<div class="fam">
+<h3>4 · Energija i intenzitet talasa</h3>
+<div class="matica">$$I=\tfrac12\,\rho\, v_0\,\omega^2\psi_0^2$$</div>
+<p class="simb">$I$ – intenzitet (W/m²); $\rho$ – gustina sredine (kg/m³); $\psi_0$ – amplituda (m).</p>
+<div class="sled"><b>→ iz ove slede:</b>
+<ul>
+<li>nivo zvuka (decibeli) $L=10\log_{10}(I/I_0)$, $I_0=10^{-12}$ W/m²;</li>
+<li>akustički pritisak $\Delta p_{max}=\rho v_0\,\omega\,\psi_0$;</li>
+<li>apsorpcija u sredini (Lamberov zakon) $\ln(I_t/I_0)=-kD$.</li>
+</ul></div>
+</div>
+
+<div class="fam">
+<h3>5 · Interferencija — putna razlika</h3>
+<div class="matica">$$\text{maksimum: } \delta=k\lambda,\qquad \text{minimum: } \delta=(2k+1)\tfrac{\lambda}{2}$$</div>
+<p class="simb">$\delta$ – razlika pređenih puteva dva talasa (m); $k$ – ceo broj (red); $\lambda$ – talasna dužina (m).</p>
+<div class="sled"><b>→ iz ove slede (samo se $\delta$ drugačije računa):</b>
+<ul>
+<li>Jangov ogled: $\delta=d\sin\alpha=k\lambda$, položaj pruga $y_k=k\dfrac{\lambda D}{d}$;</li>
+<li>optička rešetka: $a\sin\theta_n=n\lambda$;</li>
+<li>optička dužina puta: $\delta=n\,s$ (geometrijski put $\times$ indeks);</li>
+<li>tanki sloj: $\delta=2d\sqrt{n^2-\sin^2\alpha}-\dfrac{\lambda}{2}$;</li>
+<li>stojeći talas (zbir dva suprotna): čvorovi/trbusi, npr. cev/šipka $L=n\dfrac{\lambda}{2}$.</li>
+</ul></div>
+</div>
+
+<div class="fam">
+<h3>6 · Doplerov efekat</h3>
+<div class="matica">$$\nu=\frac{v_0\pm v_p}{v_0\mp v_i}\,\nu_0$$</div>
+<p class="simb">$\nu$ – frekvencija koju čuje posmatrač; $\nu_0$ – frekvencija izvora; $v_0$ – brzina zvuka; $v_p,v_i$ – brzine posmatrača i izvora (m/s).</p>
+<div class="sled"><b>Pravilo znakova:</b> zbližavanje → viši ton (kraće $\lambda$); udaljavanje → niži ton.</div>
+</div>
+
+<div class="fam">
+<h3>7 · Elektromagnetni talas (Maksvel)</h3>
+<div class="matica">$$c=\frac{1}{\sqrt{\varepsilon_0\mu_0}},\qquad E=cB,\qquad c=\lambda\nu$$</div>
+<p class="simb">$c$ – brzina svetlosti (m/s); $\varepsilon_0,\mu_0$ – konstante vakuuma; $E,B$ – električno i magnetno polje.</p>
+<div class="sled"><b>→ iz ove slede:</b>
+<ul>
+<li>u sredini: $v_0=\dfrac{1}{\sqrt{\varepsilon_0\varepsilon_r\mu_0\mu_r}}$, pa indeks $n=c/v_0$ (most ka optici);</li>
+<li>bilans pri prolasku: $R+A+T=1$ (odbijeno + apsorbovano + propušteno).</li>
+</ul></div>
+</div>
+
+<div class="fam">
+<h3>8 · Geometrijska optika (Snelijus / Fermat)</h3>
+<div class="matica">$$n_1\sin\alpha=n_2\sin\beta,\qquad \alpha=\alpha'$$</div>
+<p class="simb">$n_1,n_2$ – indeksi prelamanja; $\alpha$ – upadni, $\beta$ – prelomni, $\alpha'$ – odbojni ugao (svi od normale).</p>
+<div class="sled"><b>→ iz ove slede:</b>
+<ul>
+<li>indeks prelamanja $n=c/v_0$;</li>
+<li>totalna refleksija $\sin\alpha_g=n_2/n_1$ (optička vlakna);</li>
+<li>Brusterov ugao $\operatorname{tg}\alpha_B=n_2/n_1$;</li>
+<li>jednačina sočiva $\dfrac1f=\dfrac1p+\dfrac1\ell$, jačina $\dfrac1f=(n_2-n_1)\!\left(\dfrac1{R_1}+\dfrac1{R_2}\right)$;</li>
+<li>disperzija: $n=n(\lambda)$ → prizma, duga.</li>
+</ul></div>
+</div>
+
+<div class="fam">
+<h3>9 · Polarizacija</h3>
+<div class="matica">$$I=I_0\cos^2\theta \quad(\text{Malusov zakon})$$</div>
+<p class="simb">$I$ – intenzitet posle analizatora; $I_0$ – upadni; $\theta$ – ugao između polarizatora i analizatora.</p>
+<div class="sled"><b>→ srodno:</b>
+<ul>
+<li>polarizacija refleksijom (Brusterov ugao);</li>
+<li>optička aktivnost $\alpha=K(\lambda,T)\,\ell$ (zakretanje ravni — osnova LCD-a);</li>
+<li>Rejlijevo rasejanje $I\propto 1/\lambda^4$ (zašto je nebo plavo).</li>
+</ul></div>
+</div>
+
+<div class="fam">
+<h3>10 · Zračenje zagrejanog tela</h3>
+<div class="matica">$$\varepsilon=\sigma T^4 \quad(\text{Štefan–Bolcman}),\qquad \lambda_m=\frac{b}{T}\quad(\text{Vin})$$</div>
+<p class="simb">$\varepsilon$ – emisiona moć (W/m²); $T$ – apsolutna temperatura (K); $\lambda_m$ – talasna dužina maksimuma (m).</p>
+<div class="sled"><b>→ vodi do:</b> klasična fizika ne može da objasni spektar („ultraljubičasta katastrofa") → <b>Plankova hipoteza</b> (familija 11).</div>
+</div>
+
+<div class="fam">
+<h3>11 · Foton — kvantni most</h3>
+<div class="matica">$$E=h\nu=\frac{hc}{\lambda},\qquad p=\frac{h}{\lambda}$$</div>
+<p class="simb">$E$ – energija fotona (J); $h$ – Plankova konstanta; $\nu$ – frekvencija; $\lambda$ – talasna dužina; $p$ – impuls fotona.</p>
+<div class="sled"><b>→ iz ove slede:</b>
+<ul>
+<li>fotoelektrični efekat (Ajnštajn) $h\nu=A+E_{k}$, crvena granica $h\nu_g=A$;</li>
+<li>Komptonov efekat $\Delta\lambda=\lambda_c(1-\cos\theta)$ (foton ima impuls);</li>
+<li>energija fotona $E=mc^2$.</li>
+</ul></div>
+</div>
+
+<div class="fam">
+<h3>12 · Bohrov atom</h3>
+<div class="matica">$$m_e v r=n\hbar,\qquad h\nu=|E_n-E_k|$$</div>
+<p class="simb">$m_e$ – masa elektrona; $r$ – poluprečnik orbite; $n$ – glavni kvantni broj; $E_n$ – energija nivoa.</p>
+<div class="sled"><b>→ iz ove slede:</b>
+<ul>
+<li>energije nivoa $E_n=-\dfrac{m_e Z^2 e^4}{8\varepsilon_0^2 h^2 n^2}\propto -\dfrac{Z^2}{n^2}$;</li>
+<li>spektralne serije (Ridberg) $\dfrac1\lambda=R_H\!\left(\dfrac1{n_1^2}-\dfrac1{n_2^2}\right)$.</li>
+</ul></div>
+</div>
+
+<div class="fam">
+<h3>13 · Kvantna mehanika</h3>
+<div class="matica">$$\lambda=\frac{h}{p}=\frac{h}{mv}\ \text{(de Brolj)},\qquad -\frac{\hbar^2}{2m}\frac{\partial^2\Psi}{\partial x^2}+U\Psi=i\hbar\frac{\partial\Psi}{\partial t}\ \text{(Šredinger)}$$</div>
+<p class="simb">$\lambda$ – talasna dužina čestice (m); $p=mv$ – impuls; $\Psi$ – talasna funkcija; $U$ – potencijalna energija (J).</p>
+<div class="sled"><b>→ iz ove slede:</b>
+<ul>
+<li>relacije neodređenosti $\Delta x\,\Delta p_x\ge\dfrac{\hbar}{2}$;</li>
+<li>gustina verovatnoće $\rho=|\Psi|^2=dP/dV$;</li>
+<li>čestica u jami: $\lambda_n=\dfrac{2L}{n}$, energija kvantovana $E_n\propto n^2$;</li>
+<li>tunel-efekat: verovatnoća prolaza $\sim e^{-2kd}$.</li>
+</ul></div>
+</div>
+
+<div id="disclaimer-napomena" style="max-width:860px;margin:50px auto 24px;padding:18px 22px;background:#16182e;color:#c2c7e0;border-radius:10px;border:1px solid #2a2c50;font-family:'Segoe UI',Arial,sans-serif;font-size:13px;line-height:1.7;">
+<b style="color:#ffd24d;">⚠️ Napomena (Disclaimer)</b><br>
+Ovo <b>nije</b> zvaničan sajt Fakulteta tehničkih nauka, niti zvaničan sajt predmeta, katedre ili profesora — i ni na koji način nije povezan sa njima. Ovo su <b>lične beleške i objašnjenja</b> koja je student napravio isključivo za sopstveno učenje i postavio na internet samo radi lakšeg pristupa sa različitih uređaja. <b>Ne polažem nikakva autorska prava</b> na originalne prezentacije, slajdove i materijale — sva prava pripadaju njihovim autorima (nastavnicima / FTN-u). Materijal je neslužben, može sadržati greške i ne predstavlja zvaničan izvor za ispit. Na zahtev autora ili nadležnih, sporni sadržaj se <b>odmah uklanja</b>. Ovaj sajt je <b>potpuno nekomercijalan</b>: ne ostvarujem nikakvu zaradu niti bilo kakvu materijalnu korist od njega (nema reklama, naplate, pretplate ni donacija).
+</div>
+
+</body>
+</html>
