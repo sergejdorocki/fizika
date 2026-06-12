@@ -52,8 +52,8 @@ MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] }, svg: {
       → tanka: <b>zajednička veličina</b>
     </div>
     <div class="slider-box">
-      <label>Razmak između formula: <b id="vRazmak">270</b></label>
-      <input type="range" id="razmak" min="120" max="650" value="270">
+      <label>Razmak između formula: <b id="vRazmak">65</b></label>
+      <input type="range" id="razmak" min="20" max="400" value="65">
       <label>Elastičnost veza: <b id="vElast">0.06</b></label>
       <input type="range" id="elast" min="1" max="20" value="6">
     </div>
@@ -79,8 +79,8 @@ function texCard(tex, color, imp){
   const aspect = (vb[2] && vb[3]) ? vb[2]/vb[3] : 3;
   // Bitnije formule (imp) su vece i sa debljom ivicom. Siroke formule se skaliraju da stanu.
   const pad = 14;
-  const Hbox = imp ? 178 : 58, Hf = imp ? 94 : 28, Wmin = imp ? 460 : 160, Wmax = imp ? 740 : 240;
-  const bw = imp ? 7 : 2.5, rx = imp ? 22 : 12;
+  const Hbox = imp ? 116 : 56, Hf = imp ? 60 : 28, Wmin = imp ? 320 : 158, Wmax = imp ? 500 : 238;
+  const bw = imp ? 5 : 2.5, rx = imp ? 16 : 12;
   let fW = Hf * aspect, fH = Hf;
   const availW = Wmax - pad*2;
   if (fW > availW){ const s = availW / fW; fW = availW; fH = Hf * s; }
@@ -109,7 +109,7 @@ MathJax.startup.promise.then(function(){
     return {
       id:n.id, label:n.label, group:n.group,
       shape:'image', image: texCard(n.tex, groupColors[n.group], n.imp),
-      font:{ color:'#eef0ff', size:(n.imp?26:12), face:'Segoe UI', vadjust:8, multi:false, bold:n.imp },
+      font:{ color:'#eef0ff', size:(n.imp?19:12), face:'Segoe UI', vadjust:7, multi:false, bold:n.imp },
       shadow:{ enabled:true, size:12, x:3, y:4, color:'rgba(0,0,0,.45)' },
       tex:n.tex, desc:n.desc
     };
@@ -124,8 +124,9 @@ MathJax.startup.promise.then(function(){
     };
   }));
   NET = new vis.Network(container, { nodes:nodes, edges:edges }, {
-    physics:{ barnesHut:{ gravitationalConstant:-24000, centralGravity:0.3, springLength:270, springConstant:0.04, damping:0.9, avoidOverlap:1.0 },
-              minVelocity:1.0, maxVelocity:35, stabilization:{ enabled:true, iterations:600, updateInterval:25, fit:true } },
+    layout:{ randomSeed:7 },
+    physics:{ barnesHut:{ gravitationalConstant:-4500, centralGravity:0.45, springLength:65, springConstant:0.05, damping:0.9, avoidOverlap:1.0 },
+              minVelocity:1.0, maxVelocity:35, stabilization:{ enabled:true, iterations:700, updateInterval:25, fit:true } },
     interaction:{ hover:true, tooltipDelay:99999, navigationButtons:false, dragNodes:true }
   });
   function freeze(){ NET.setOptions({ physics:false }); phys=false; }
@@ -134,6 +135,26 @@ MathJax.startup.promise.then(function(){
   NET.on('stabilized', freeze);
   NET.on('stabilizationIterationsDone', freeze);
   // Prevlacenje: fizika je zamrznuta, pa kartica OSTAJE tacno gde je pustis (bez vracanja).
+
+  // Velika okrugla senka u boji lekcije iza GLAVNE formule (prati je kad je pomeris)
+  var MAIN = [
+    { id:'shm_eq',      c:groupColors['l6']  },
+    { id:'maxwell',     c:groupColors['l7']  },
+    { id:'snell',       c:groupColors['l8']  },
+    { id:'planck',      c:groupColors['l9']  },
+    { id:'schrodinger', c:groupColors['l10'] }
+  ];
+  function hexA(h,a){ var n=parseInt(h.slice(1),16); return 'rgba('+((n>>16)&255)+','+((n>>8)&255)+','+(n&255)+','+a+')'; }
+  NET.on('beforeDrawing', function(ctx){
+    for (var i=0;i<MAIN.length;i++){
+      var m=MAIN[i], p=NET.getPositions([m.id])[m.id]; if(!p) continue;
+      var R=430, g=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,R);
+      g.addColorStop(0, hexA(m.c,0.55));
+      g.addColorStop(0.45, hexA(m.c,0.22));
+      g.addColorStop(1, hexA(m.c,0));
+      ctx.fillStyle=g; ctx.beginPath(); ctx.arc(p.x,p.y,R,0,2*Math.PI); ctx.fill();
+    }
+  });
 
   // klizaci za razmak (springLength) i elasticnost (springConstant)
   var rz = document.getElementById('razmak'), el = document.getElementById('elast');
