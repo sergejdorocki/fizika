@@ -131,8 +131,7 @@ MathJax.startup.promise.then(function(){
   // Zamrzni mapu cim se rasporedi (da se NE pomera stalno). Elasticnost samo dok prevlacis karticu.
   NET.on('stabilized', freeze);
   NET.on('stabilizationIterationsDone', freeze);
-  NET.on('dragStart', function(){ NET.setOptions({ physics:true }); phys=true; });
-  NET.on('dragEnd', function(){ NET.stabilize(150); });
+  // Prevlacenje: fizika je zamrznuta, pa kartica OSTAJE tacno gde je pustis (bez vracanja).
 
   // klizaci za razmak (springLength) i elasticnost (springConstant)
   var rz = document.getElementById('razmak'), el = document.getElementById('elast');
