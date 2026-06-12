@@ -79,8 +79,8 @@ function texCard(tex, color, imp){
   const aspect = (vb[2] && vb[3]) ? vb[2]/vb[3] : 3;
   // Bitnije formule (imp) su vece i sa debljom ivicom. Siroke formule se skaliraju da stanu.
   const pad = 14;
-  const Hbox = imp ? 128 : 58, Hf = imp ? 66 : 28, Wmin = imp ? 340 : 160, Wmax = imp ? 560 : 240;
-  const bw = imp ? 6 : 2.5, rx = imp ? 18 : 12;
+  const Hbox = imp ? 178 : 58, Hf = imp ? 94 : 28, Wmin = imp ? 460 : 160, Wmax = imp ? 740 : 240;
+  const bw = imp ? 7 : 2.5, rx = imp ? 22 : 12;
   let fW = Hf * aspect, fH = Hf;
   const availW = Wmax - pad*2;
   if (fW > availW){ const s = availW / fW; fW = availW; fH = Hf * s; }
@@ -109,7 +109,7 @@ MathJax.startup.promise.then(function(){
     return {
       id:n.id, label:n.label, group:n.group,
       shape:'image', image: texCard(n.tex, groupColors[n.group], n.imp),
-      font:{ color:'#eef0ff', size:(n.imp?20:12), face:'Segoe UI', vadjust:7, multi:false, bold:n.imp },
+      font:{ color:'#eef0ff', size:(n.imp?26:12), face:'Segoe UI', vadjust:8, multi:false, bold:n.imp },
       shadow:{ enabled:true, size:12, x:3, y:4, color:'rgba(0,0,0,.45)' },
       tex:n.tex, desc:n.desc
     };
