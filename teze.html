@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teze za ponavljanje — Fizika (6–10)</title>
+<script>
+MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+* { box-sizing:border-box; }
+body { font-family:'Segoe UI',Arial,sans-serif; max-width:880px; margin:0 auto; padding:26px 18px 70px; background:#f5f6fa; color:#1a1a2e; line-height:1.6; }
+h1 { text-align:center; color:#5a0010; margin:0 0 4px; font-size:2.1em; }
+.sub { text-align:center; color:#888; margin-bottom:28px; }
+h2 { color:#fff; padding:11px 18px; border-radius:8px; margin:34px 0 14px; font-size:1.35em; }
+.l6 { background:linear-gradient(135deg,#1565c0,#1e88e5); }
+.l7 { background:linear-gradient(135deg,#00897b,#26a69a); }
+.l8 { background:linear-gradient(135deg,#ef6c00,#fb8c00); }
+.l9 { background:linear-gradient(135deg,#7b1fa2,#9c27b0); }
+.l10 { background:linear-gradient(135deg,#c2185b,#e91e63); }
+ol.teze { list-style:none; counter-reset:t; padding:0; }
+ol.teze li { counter-increment:t; background:#fff; border-radius:9px; padding:11px 16px 11px 46px; margin:9px 0; position:relative; box-shadow:0 1px 5px rgba(0,0,0,.06); }
+ol.teze li::before { content:counter(t); position:absolute; left:12px; top:11px; width:24px; height:24px; background:#5a0010; color:#fff; border-radius:50%; text-align:center; line-height:24px; font-size:.8em; font-weight:700; }
+ol.teze b { color:#5a0010; }
+.intro { background:#eef1fb; border-left:4px solid #1a237e; border-radius:8px; padding:12px 16px; font-size:.95em; margin-bottom:10px; }
+.must { background:#fff8e1; border-left:4px solid #f9a825; border-radius:8px; padding:8px 14px; margin:12px 0 0; font-size:.92em; }
+@media print { h2 { page-break-before:always; } ol.teze li { break-inside:avoid; } }
+</style>
+</head>
+<body>
+<h1>Teze za ponavljanje</h1>
+<div class="sub">Najbitnije iz predavanja 6–10 · za brzo ponavljanje pred ispit</div>
+<div class="intro"><b>Kako koristiti:</b> ovo su sažete teze — pročitaj ih, i za svaku se seti <i>zašto</i> je tačna i koja formula stoji iza nje (detalji su u udžbeniku/mapi). Ako ti je teza odmah jasna — preskoči; ako nije — to je tema za doučavanje.</div>
+
+<h2 class="l6">Predavanje 6 — Harmonijske oscilacije i mehanički talasi</h2>
+<ol class="teze">
+<li><b>Harmonijska oscilacija</b> nastaje kad je sila uvek usmerena ka ravnoteži i srazmerna pomeraju: $F=-\tilde k x$. Rešenje je $x=x_0\sin(\omega t+\varphi)$.</li>
+<li><b>Kružna frekvencija</b> $\omega=\sqrt{\tilde k/m}=2\pi\nu=\dfrac{2\pi}{T}$ — zavisi samo od sistema (krutost i masa), ne od amplitude.</li>
+<li><b>Energija oscilatora se održava</b> i stalno prelazi iz kinetičke u potencijalnu: $E=\tfrac12\tilde k x_0^2=$ const.</li>
+<li><b>LC-kolo je električni „klatno"</b> — ista matematika kao opruga, $\omega=\dfrac{1}{\sqrt{LC}}$.</li>
+<li><b>Talas prenosi energiju, ne materiju.</b> Čestice samo titraju oko svog mesta. $\psi=\psi_0\cos(\omega t-kx)$, $k=\dfrac{2\pi}{\lambda}$.</li>
+<li><b>Osnovna relacija talasa:</b> $v=\lambda\nu=\dfrac{\omega}{k}$ — važi za svaki talas (zvuk, svetlost…).</li>
+<li><b>Brzina talasa zavisi od sredine, ne od izvora:</b> u čvrstom $v=\sqrt{E/\rho}$, u gasu $v=\sqrt{\kappa RT/M}$ (raste sa temperaturom).</li>
+<li><b>Talasna jednačina</b> $\dfrac{\partial^2\psi}{\partial t^2}=v^2\dfrac{\partial^2\psi}{\partial x^2}$ je univerzalna — isti oblik za žicu, zvuk i EM talas.</li>
+<li><b>Transverzalni</b> talas titra okomito na pravac širenja, <b>longitudinalni</b> (zvuk) duž pravca širenja.</li>
+</ol>
+
+<h2 class="l7">Predavanje 7 — Mehanički talasi (II) i elektromagnetni talasi</h2>
+<ol class="teze">
+<li><b>Intenzitet</b> je snaga po površini, $I=\tfrac12\rho v\omega^2\psi_0^2$ — raste sa kvadratom amplitude i frekvencije.</li>
+<li><b>Decibeli</b> $L=10\log_{10}(I/I_0)$ — logaritamska skala jer uho čuje logaritamski; $I_0=10^{-12}$ W/m² je prag čujnosti.</li>
+<li><b>Interferencija:</b> talasi se pojačavaju kad je putna razlika $\delta=k\lambda$, poništavaju kad je $\delta=(2k+1)\dfrac{\lambda}{2}$.</li>
+<li><b>Stojeći talas</b> nastaje superpozicijom dva suprotna talasa — ima <b>čvorove</b> (uvek miruju) i <b>trbuhe</b> (najveće titranje).</li>
+<li><b>Rezonancija</b> = pobuda na sopstvenoj frekvenciji sistema → velika amplituda (otud stojeći talasi u žicama, cevima).</li>
+<li><b>Doplerov efekat:</b> relativno kretanje izvora/posmatrača menja frekvenciju; zbližavanje → viši ton, udaljavanje → niži.</li>
+<li><b>Maksvel:</b> promenljivo električno polje stvara magnetno i obrnuto → samoodrživi <b>elektromagnetni talas</b>.</li>
+<li><b>Svetlost je EM talas;</b> $E$ i $B$ su uzajamno okomiti i okomiti na pravac širenja; brzina $c=\dfrac{1}{\sqrt{\varepsilon_0\mu_0}}$.</li>
+<li><b>Ceo EM spektar</b> (radio → γ) su isti talasi, razlikuju se samo po $\lambda$ i $\nu$; uvek $c=\lambda\nu$.</li>
+</ol>
+
+<h2 class="l8">Predavanje 8 — Geometrijska i talasna optika</h2>
+<ol class="teze">
+<li><b>Fermaov princip:</b> svetlost bira put za koji joj treba najmanje vremena — iz njega slede svi zakoni optike.</li>
+<li><b>Odbijanje:</b> $\alpha=\alpha'$. <b>Prelamanje (Snelijus):</b> $n_1\sin\alpha=n_2\sin\beta$, gde je $n=\dfrac{c}{v}$.</li>
+<li><b>Iz gušće u ređu sredinu</b> i ugao veći od graničnog → <b>totalna refleksija</b> ($\sin\alpha_g=n_2/n_1$); osnova optičkih vlakana.</li>
+<li><b>Sočiva:</b> $\dfrac1f=\dfrac1p+\dfrac1\ell$. Sabirno ($f>0$) skuplja zrake, rasipno ($f<0$) ih razilazi.</li>
+<li><b>Interferencija svetlosti (Jangov ogled)</b> je dokaz da je svetlost <b>talas</b>; svetle pruge na $y_k=k\dfrac{\lambda D}{d}$.</li>
+<li><b>Difrakcija</b> (skretanje oko prepreka/proreza) i <b>optička rešetka</b> $a\sin\theta=k\lambda$ — razlaže svetlost na boje.</li>
+<li><b>Polarizacija</b> dokazuje da je svetlost <b>transverzalna</b>; Malusov zakon $I=I_0\cos^2\theta$.</li>
+<li><b>Disperzija:</b> indeks $n$ zavisi od $\lambda$ → prizma razlaže belu svetlost, otud i duga.</li>
+</ol>
+
+<h2 class="l9">Predavanje 9 — Kvantna optika i atomska fizika</h2>
+<ol class="teze">
+<li><b>Zračenje zagrejanog tela:</b> $\varepsilon=\sigma T^4$ (Štefan), maksimum na $\lambda_m=b/T$ (Vin). Klasična fizika nije mogla da objasni spektar („UV katastrofa").</li>
+<li><b>Plankova hipoteza (početak kvantne fizike):</b> energija se emituje u <b>kvantima</b> $E=h\nu=\dfrac{hc}{\lambda}$.</li>
+<li><b>Fotoelektrični efekat:</b> svetlost se ponaša kao <b>fotoni</b>; $h\nu=A+E_{kin}$. Ispod granične frekvencije nema efekta ma kako jaka svetlost — dokaz čestične prirode svetlosti.</li>
+<li><b>Komptonov efekat:</b> foton ima impuls $p=\dfrac{h}{\lambda}$ — još jedan dokaz da je svetlost i čestica.</li>
+<li><b>Atomski spektri su diskretni</b> (linije, ne kontinuum) — klasični model atoma to ne može da objasni.</li>
+<li><b>Borovi postulati:</b> elektron je samo na dozvoljenim orbitama ($m_e v r=n\hbar$); pri prelazu zrači/upija foton $h\nu=|E_n-E_k|$.</li>
+<li><b>Energije nivoa</b> $E_n\propto -\dfrac{Z^2}{n^2}$ (kvantovane, negativne); Borov model tačno predviđa spektar vodonika (Ridbergova formula).</li>
+</ol>
+
+<h2 class="l10">Predavanje 10 — Osnove kvantne mehanike</h2>
+<ol class="teze">
+<li><b>Dualizam:</b> i svetlost i čestice imaju <b>i talasnu i čestičnu</b> prirodu — koja se pokaže zavisi od eksperimenta.</li>
+<li><b>De Broljeva hipoteza:</b> svaka čestica ima talasnu dužinu $\lambda=\dfrac{h}{p}=\dfrac{h}{mv}$; potvrđeno difrakcijom elektrona.</li>
+<li><b>Kod makro tela dualizam se ne primećuje</b> jer je $\lambda$ neizmerno mala (masa velika).</li>
+<li><b>Relacije neodređenosti (Hajzenberg):</b> $\Delta x\,\Delta p_x\ge\dfrac{\hbar}{2}$ — položaj i impuls se ne mogu istovremeno tačno znati. To je <b>svojstvo prirode</b>, ne mana instrumenata.</li>
+<li><b>Talasna funkcija $\Psi$</b> opisuje stanje čestice; $|\Psi|^2$ je <b>gustina verovatnoće</b> da je nađemo (Bornovo tumačenje).</li>
+<li><b>Superpozicija:</b> čestica može biti u „mešavini" više stanja istovremeno.</li>
+<li><b>Šredingerova jednačina</b> je osnovna jednačina kvantne mehanike (kao Njutnov zakon za mikrosvet).</li>
+<li><b>Čestica u jami:</b> energija je <b>kvantovana</b> ($E_n=\dfrac{h^2}{8mL^2}n^2$); ni najniže stanje nema energiju nula.</li>
+<li><b>Tunel-efekat:</b> čestica može proći kroz barijeru koju klasično ne bi mogla — osnova skenirajućeg tunelskog mikroskopa (STM).</li>
+<li><b>Kvantni brojevi</b> $n,\ell,m,s$ opisuju stanje elektrona; <b>Paulijev princip</b> — dva elektrona ne mogu imati isti skup.</li>
+</ol>
+
+<div id="disclaimer-napomena" style="max-width:860px;margin:50px auto 24px;padding:18px 22px;background:#16182e;color:#c2c7e0;border-radius:10px;border:1px solid #2a2c50;font-family:'Segoe UI',Arial,sans-serif;font-size:13px;line-height:1.7;">
+<b style="color:#ffd24d;">⚠️ Napomena (Disclaimer)</b><br>
+Ovo <b>nije</b> zvaničan sajt Fakulteta tehničkih nauka, niti zvaničan sajt predmeta, katedre ili profesora — i ni na koji način nije povezan sa njima. Ovo su <b>lične beleške i objašnjenja</b> koja je student napravio isključivo za sopstveno učenje i postavio na internet samo radi lakšeg pristupa sa različitih uređaja. <b>Ne polažem nikakva autorska prava</b> na originalne prezentacije, slajdove i materijale — sva prava pripadaju njihovim autorima (nastavnicima / FTN-u). Materijal je neslužben, može sadržati greške i ne predstavlja zvaničan izvor za ispit. Na zahtev autora ili nadležnih, sporni sadržaj se <b>odmah uklanja</b>. Ovaj sajt je <b>potpuno nekomercijalan</b>: ne ostvarujem nikakvu zaradu niti bilo kakvu materijalnu korist od njega (nema reklama, naplate, pretplate ni donacija).
+</div>
+
+</body>
+</html>
