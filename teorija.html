@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teorija — Fizika (predavanja 6–10)</title>
+<script>
+MathJax = { tex: { inlineMath: [['$','$']], displayMath: [['$$','$$']] } };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+* { box-sizing:border-box; }
+body { font-family:'Segoe UI',Arial,sans-serif; max-width:900px; margin:0 auto; padding:26px 18px 70px; background:#f5f6fa; color:#1a1a2e; line-height:1.7; }
+h1 { text-align:center; color:#5a0010; margin:0 0 4px; font-size:2.1em; }
+.sub { text-align:center; color:#888; margin-bottom:26px; }
+h2 { color:#fff; padding:12px 18px; border-radius:8px; margin:42px 0 16px; font-size:1.4em; scroll-margin-top:10px; }
+.l6 { background:linear-gradient(135deg,#1565c0,#1e88e5); }
+.l7 { background:linear-gradient(135deg,#00897b,#26a69a); }
+.l8 { background:linear-gradient(135deg,#ef6c00,#fb8c00); }
+.l9 { background:linear-gradient(135deg,#7b1fa2,#9c27b0); }
+.l10 { background:linear-gradient(135deg,#c2185b,#e91e63); }
+h3 { color:#5a0010; border-bottom:2px solid #e3c2c7; padding-bottom:5px; margin:26px 0 8px; font-size:1.18em; scroll-margin-top:10px; }
+p { margin:9px 0; }
+.formula { background:#fff; border-left:4px solid #1565c0; border-radius:6px; padding:11px 16px; margin:12px 0; box-shadow:0 1px 5px rgba(0,0,0,.06); font-size:.97em; }
+.toc { background:#fff; border:1px solid #e6d3d6; border-radius:10px; padding:16px 22px; margin-bottom:30px; box-shadow:0 2px 10px rgba(0,0,0,.05); }
+.toc-t { font-size:1.2em; color:#5a0010; font-weight:700; margin-bottom:8px; }
+.toc a { display:block; text-decoration:none; color:#2a2a3a; padding:2px 0; }
+.toc a:hover { color:#5a0010; text-decoration:underline; }
+.toc .l1 { font-weight:700; color:#5a0010 !important; margin-top:9px; }
+.toc .l2 { padding-left:18px !important; font-size:.92em; color:#555; }
+@media print { h2 { page-break-before:always; } .formula,h3 { break-inside:avoid; } .toc{display:none;} }
+</style>
+</head>
+<body>
+<h1>Teorija za ispit</h1>
+<div class="sub">Detaljna objašnjenja po temama · predavanja 6–10</div>
+<div class="toc"><div class="toc-t">Sadržaj</div>
+<a class="l1" href="#pred6">Predavanje 6 — Harmonijske oscilacije i mehanički talasi</a>
+<a class="l2" href="#h_1">1. Periodično i oscilatorno kretanje; harmonijsko oscilovanje</a>
+<a class="l2" href="#h_2">2. Restituciona (elastična) sila i jednačina kretanja tega na opruzi</a>
+<a class="l2" href="#h_3">3. Zakon održanja energije harmonijskog oscilatora i izraz za brzinu</a>
+<a class="l2" href="#h_4">4. Kružna frekvencija, period i frekvencija</a>
+<a class="l2" href="#h_5">5. Jednačina kretanja harmonijskog oscilatora (zakon kretanja)</a>
+<a class="l2" href="#h_6">6. Brzina, ubrzanje i energija harmonijskog oscilatora</a>
+<a class="l2" href="#h_7">7. Oscilatorno (LC) kolo kao analogija mehaničkom oscilatoru</a>
+<a class="l2" href="#h_8">8. Nastanak mehaničkog talasa iz niza povezanih oscilatora</a>
+<a class="l2" href="#h_9">9. Talasna funkcija i ravan progresivni talas</a>
+<a class="l2" href="#h_10">10. Osnovna relacija talasnog kretanja ($v=\lambda\nu$)</a>
+<a class="l2" href="#h_11">11. Talasna jednačina — izvođenje i smisao</a>
+<a class="l2" href="#h_12">12. Univerzalnost talasne jednačine (žica, vazduh, EM talas)</a>
+<a class="l2" href="#h_13">13. Brzina mehaničkih talasa: Njutnov i Laplasov obrazac; brzina zvuka</a>
+<a class="l2" href="#h_14">14. Vrste talasa: transverzalni i longitudinalni; podele po sredini i frontu</a>
+<a class="l1" href="#pred7">Predavanje 7 — Mehanički talasi (II) i elektromagnetni talasi</a>
+<a class="l2" href="#h_15">Intenzitet (jačina) zvuka i veza sa amplitudom i frekvencijom</a>
+<a class="l2" href="#h_16">Fiziološki intenzitet zvuka (čujnost) i decibeli</a>
+<a class="l2" href="#h_17">Interferencija talasa (uslovi maksimuma i minimuma)</a>
+<a class="l2" href="#h_18">Stojeći talasi (čvorovi i trbusi, izvođenje)</a>
+<a class="l2" href="#h_19">Rezonancija</a>
+<a class="l2" href="#h_20">Doplerov efekat (izvođenje i smisao)</a>
+<a class="l2" href="#h_21">Maksvelove jednačine i nastanak elektromagnetnih talasa</a>
+<a class="l2" href="#h_22">Osobine elektromagnetnih talasa ($\vec{E}\perp\vec{B}$, brzina $c$)</a>
+<a class="l2" href="#h_23">Apsorpcija elektromagnetnih talasa i Lamberov zakon</a>
+<a class="l2" href="#h_24">Spektar elektromagnetnih talasa</a>
+<a class="l1" href="#pred8">Predavanje 8 — Geometrijska i talasna optika</a>
+<a class="l2" href="#h_25">Geometrijska optika i Fermaov princip</a>
+<a class="l2" href="#h_26">Zakon odbijanja (refleksije) svetlosti</a>
+<a class="l2" href="#h_27">Zakon prelamanja (Snelijus–Dekartov zakon)</a>
+<a class="l2" href="#h_28">Totalna refleksija i optička vlakna</a>
+<a class="l2" href="#h_29">Sočiva — jednačina sočiva, sabirna i rasipna, jačina</a>
+<a class="l2" href="#h_30">Talasna optika i interferencija svetlosti (Jangov ogled)</a>
+<a class="l2" href="#h_31">Interferencija na tankom sloju</a>
+<a class="l2" href="#h_32">Difrakcija i optička rešetka</a>
+<a class="l2" href="#h_33">Disperzija svetlosti</a>
+<a class="l2" href="#h_34">Polarizacija svetlosti (Malusov i Brusterov zakon, LCD)</a>
+<a class="l1" href="#pred9">Predavanje 9 — Kvantna optika i atomska fizika</a>
+<a class="l2" href="#h_35">Toplotno zračenje, apsolutno crno telo, Štefan–Bolcmanov i Vinov zakon</a>
+<a class="l2" href="#h_36">Ultraljubičasta katastrofa i Plankova hipoteza (kvant energije)</a>
+<a class="l2" href="#h_37">Fotoelektrični efekat i Ajnštajnovo objašnjenje</a>
+<a class="l2" href="#h_38">Komptonov efekat</a>
+<a class="l2" href="#h_39">Atomski spektri (Balmerova i Ridbergova formula)</a>
+<a class="l2" href="#h_40">Raderfordov model atoma i njegov problem</a>
+<a class="l2" href="#h_41">Borovi postulati i Borova teorija (energije nivoa, poluprečnici)</a>
+<a class="l2" href="#h_42">Spektralne serije (Ridbergova formula)</a>
+<a class="l2" href="#h_43">Dualistička priroda svetlosti / fotoni</a>
+<a class="l1" href="#pred10">Predavanje 10 — Osnove kvantne mehanike</a>
+<a class="l2" href="#h_44">Dualistička (talasno-čestična) priroda mikroobjekata</a>
+<a class="l2" href="#h_45">De Broljeva hipoteza i njena potvrda (difrakcija elektrona)</a>
+<a class="l2" href="#h_46">Zašto se dualizam ne primećuje kod makroskopskih tela</a>
+<a class="l2" href="#h_47">Relacije neodređenosti (smisao)</a>
+<a class="l2" href="#h_48">Talasna funkcija i njen fizički smisao ($|\Psi|^2$)</a>
+<a class="l2" href="#h_49">Superpozicija stanja</a>
+<a class="l2" href="#h_50">Šredingerova jednačina</a>
+<a class="l2" href="#h_51">Čestica u beskonačno dubokoj potencijalnoj jami (kvantizacija energije)</a>
+<a class="l2" href="#h_52">Tunel-efekat i primena (STM)</a>
+<a class="l2" href="#h_53">Bozoni i fermioni; kvantni brojevi (Paulijev princip)</a>
+</div>
+
+
+<h2 id="pred6" class="l6">Predavanje 6 — Harmonijske oscilacije i mehanički talasi</h2>
+
+<h3 id="h_1">1. Periodično i oscilatorno kretanje; harmonijsko oscilovanje</h3>
+
+<p>Kretanje koje se posle jednakih vremenskih intervala u potpunosti ponavlja naziva se <strong>periodično kretanje</strong> (npr. obrtanje kazaljki sata, kretanje planeta, otkucaji srca). Vremenski interval posle koga se kretanje ponovi naziva se <strong>period</strong> $T$. Ako se periodično kretanje pri tome odvija stalno po istoj putanji, ali tako da telo naizmenično menja smer kretanja („tamo-amo" duž iste linije), reč je o <strong>oscilatornom kretanju</strong>. Po uslovima pod kojima se odvijaju, oscilacije delimo na slobodne (koje mogu biti <em>harmonijske</em> — bez gubitaka energije, i <em>prigušene</em> — sa postepenim gubitkom energije) i prinudne.</p>
+
+<p>Idealizovano oscilovanje bez gubitaka energije naziva se <strong>harmonijsko oscilovanje</strong>: telo se neprekidno kreće između dva amplitudna (krajnja) položaja. Zašto baš sinusno? Suština je u prirodi <strong>restitucione (povratne) sile</strong>: ona je srazmerna otklonu i uvek usmerena ka ravnotežnom položaju. Upravo takav oblik sile (videti naredne teme) matematički vodi na sinusno rešenje, pa je elongacija tela harmonijska (sinusna) funkcija vremena — odatle i naziv. Ako se, naprotiv, energija troši (trenje, otpor sredine, viskoznost), amplituda eksponencijalno opada i oscilovanje je prigušeno.</p>
+
+<p>Značaj: harmonijsko oscilovanje je osnovni model za ogroman broj fizičkih pojava — od mehaničkih (teg na opruzi, klatno) preko električnih (LC kolo) do talasnih procesa, jer svaka čestica u talasu izvodi upravo harmonijsko oscilovanje.</p>
+
+<h3 id="h_2">2. Restituciona (elastična) sila i jednačina kretanja tega na opruzi</h3>
+
+<p>Posmatra se teg mase $m$ okačen o oprugu krutosti $\tilde{k}$. Dok teg miruje u ravnotežnom položaju, rezultujuća sila je nula. Čim ga izvedemo iz tog položaja, opruga deluje <strong>elastičnom (restitucionom, povratnom) silom</strong> koja teži da telo vrati nazad. Iskaz: sila je srazmerna otklonu i suprotnog smera.</p>
+
+<div class="formula">$$F = -\tilde{k}\,x$$<br>Podsetnik: $F$ — elastična (povratna) sila [N]; $\tilde{k}$ — koeficijent krutosti (elastičnosti) opruge [N/m]; $x$ — elongacija, trenutni otklon od ravnotežnog položaja [m]. Znak „$-$" znači da je sila uvek usmerena suprotno od pomeranja, tj. vuče telo nazad ka ravnoteži.</div>
+
+<p>Zašto baš ovakvo kretanje: polazi se od II Njutnovog zakona $m\,a = F$ i u njega se uvrsti povratna sila. Pošto je ubrzanje izvod brzine po vremenu ($a = dv/dt$), dobija se $m\,\dfrac{dv}{dt} = -\tilde{k}\,x$, odnosno $m\,\dfrac{dv}{dt} + \tilde{k}\,x = 0$. Množenjem cele jednačine sa $dx$ i korišćenjem $\dfrac{dx}{dt}=v$, jednačina prelazi u oblik $m\,v\,dv + \tilde{k}\,x\,dx = 0$, pogodan za integraciju (vodi na zakon održanja energije i konačno na sinusno rešenje).</p>
+
+<p>Značaj znaka minus: on je matematički „motor" oscilovanja. Bez negativnog znaka sila bi udaljavala telo od ravnoteže (nestabilnost); upravo zato što vraća telo nazad, telo „prebaci" ravnotežni položaj zbog inercije, ode na drugu stranu, opet ga sila vrati — i tako nastaje neprekidno oscilovanje.</p>
+
+<h3 id="h_3">3. Zakon održanja energije harmonijskog oscilatora i izraz za brzinu</h3>
+
+<p>Integracijom jednačine kretanja $m\,v\,dv + \tilde{k}\,x\,dx = 0$ dobija se $\dfrac{m v^2}{2} + \dfrac{\tilde{k}\,x^2}{2} = C_1$. Integracionu konstantu određujemo iz početnih uslova: u amplitudnom položaju ($x = x_0$) telo na trenutak miruje ($v=0$), pa je $C_1 = \tfrac{1}{2}\tilde{k}\,x_0^2$. Time se dobija <strong>zakon održanja ukupne mehaničke energije</strong> oscilatora.</p>
+
+<div class="formula">$$\frac{m v^2}{2} + \frac{\tilde{k}\,x^2}{2} = \frac{\tilde{k}\,x_0^2}{2} = \text{const}$$<br>Podsetnik: $\tfrac{m v^2}{2}$ — kinetička energija [J]; $\tfrac{\tilde{k} x^2}{2}$ — potencijalna (elastična) energija pri elongaciji $x$ [J]; $x_0$ — amplituda (najveća elongacija) [m]. Zbir je stalan.</div>
+
+<p>Fizičko objašnjenje: zbir kinetičke i potencijalne energije se ne menja tokom vremena — energija se samo preliva iz jednog oblika u drugi. U krajnjim (amplitudnim) položajima cela je potencijalna (jer je $v=0$), a u ravnotežnom položaju ($x=0$, gde sila $F=-\tilde{k}x$ iščezava) cela je kinetička. Iz tog zakona se izražava brzina u funkciji elongacije:</p>
+
+<div class="formula">$$v = \sqrt{\frac{\tilde{k}}{m}\left(x_0^2 - x^2\right)} = \omega\,\sqrt{x_0^2 - x^2}$$<br>Podsetnik: $v$ — brzina tega pri elongaciji $x$ [m/s]; $\omega = \sqrt{\tilde{k}/m}$ — kružna frekvencija; $x_0$ — amplituda [m]; $x$ — trenutna elongacija [m].</div>
+
+<p>Posledica: brzina je najveća u ravnotežnom položaju ($x=0$), a jednaka nuli u krajnjim položajima ($x=\pm x_0$) — što je potpuno saglasno sa razmenom energije.</p>
+
+<h3 id="h_4">4. Kružna frekvencija, period i frekvencija</h3>
+
+<p>Pri izvođenju brzine pojavila se veličina $\sqrt{\tilde{k}/m}$ koju nazivamo <strong>kružna (ugaona) frekvencija oscilovanja</strong> $\omega$. Ona je suštinska karakteristika oscilatora: određena je samo osobinama sistema (krutošću opruge i masom tega), a ne i amplitudom.</p>
+
+<div class="formula">$$\omega = \sqrt{\frac{\tilde{k}}{m}}\,, \qquad \omega = 2\pi\nu = \frac{2\pi}{T}\,, \qquad \nu = \frac{1}{T}$$<br>Podsetnik: $\omega$ — kružna frekvencija [rad/s]; $\tilde{k}$ — krutost opruge [N/m]; $m$ — masa [kg]; $\nu$ — frekvencija (broj oscilacija u sekundi) [Hz]; $T$ — period (vreme jedne pune oscilacije) [s].</div>
+
+<p>Fizičko značenje: što je opruga kruća (veće $\tilde{k}$) telo se brže vraća, pa oscilacije imaju veću frekvenciju; što je masa veća (veća inercija), oscilacije su sporije. Period i frekvencija su recipročni ($\nu = 1/T$), a kružna frekvencija je $2\pi$ puta veća od obične frekvencije jer odgovara „uglu" od $2\pi$ koji se opiše tokom jedne pune oscilacije. Posledica: frekvencija slobodnog oscilatora ne zavisi od toga koliko ga jako otklonimo (amplitude) — to je tzv. izohronost.</p>
+
+<h3 id="h_5">5. Jednačina kretanja harmonijskog oscilatora (zakon kretanja)</h3>
+
+<p>Da bismo dobili zavisnost elongacije od vremena, polazimo od $v = dx/dt = \omega\sqrt{x_0^2 - x^2}$, razdvojimo promenljive i integralimo. Integral leve strane je tablični (daje arkus-sinus), pa sledi $\arcsin(x/x_0) = \omega t + \varphi$, gde je $\varphi$ <strong>početna faza</strong> (integraciona konstanta). Primenom sinusa na obe strane dobija se zakon kretanja.</p>
+
+<div class="formula">$$x = x_0\,\sin\!\left(\omega t + \varphi\right)$$<br>Podsetnik: $x$ — elongacija (trenutni otklon) [m]; $x_0$ — amplituda (najveći otklon) [m]; $\Phi = \omega t + \varphi$ — faza oscilovanja [rad]; $\varphi$ — početna faza (vrednost faze u $t=0$) [rad]; $\omega$ — kružna frekvencija [rad/s]; $t$ — vreme [s].</div>
+
+<p>Fizičko objašnjenje: elongacija tokom vremena prati sinusni (harmonijski) zakon — odatle naziv. Faza $\Phi = \omega t + \varphi$ govori u kojoj se „tački" ciklusa oscilator nalazi, a $\varphi$ je vrednost te faze na samom početku. Ako telo polazi iz amplitudnog položaja ($x=x_0$ za $t=0$), iz $x_0 = x_0\sin\varphi$ sledi $\sin\varphi = 1$, tj. $\varphi = \pi/2$, pa jednačina prelazi u kosinusni oblik $x = x_0\cos(\omega t)$ (kosinus je u $t=0$ maksimalan, baš kako i treba).</p>
+
+<h3 id="h_6">6. Brzina, ubrzanje i energija harmonijskog oscilatora</h3>
+
+<p>Pošto poznajemo zakon kretanja, brzinu dobijamo kao prvi izvod položaja po vremenu, a ubrzanje kao izvod brzine: $v = \dfrac{dx}{dt} = \omega x_0\cos(\omega t+\varphi)$ i $a = \dfrac{dv}{dt} = -\omega^2 x_0\sin(\omega t+\varphi) = -\omega^2 x$.</p>
+
+<div class="formula">$$a = -\omega^2\,x$$<br>Podsetnik: $a$ — trenutno ubrzanje [m/s²]; $\omega$ — kružna frekvencija [rad/s]; $x$ — elongacija [m]. Ubrzanje je srazmerno elongaciji i suprotnog znaka — uvek usmereno ka ravnotežnom položaju.</div>
+
+<p>Rezultat $a = -\omega^2 x$ je matematička osobina po kojoj prepoznajemo harmonijsko oscilovanje. Energiju takođe izražavamo preko ovih veličina: kinetička je $E_k = \tfrac{1}{2}mv^2 = \tfrac{1}{2}m\omega^2(x_0^2-x^2)$, a potencijalna (rad povratne sile) $E_p = \tfrac{1}{2}\tilde{k}x^2 = \tfrac{1}{2}m\omega^2 x^2$ (jer je $\tilde{k}=m\omega^2$). Njihovim sabiranjem članovi sa $x^2$ se potru.</p>
+
+<div class="formula">$$E_u = E_k + E_p = \frac{1}{2}m\,\omega^2 x_0^2 = \text{const}$$<br>Podsetnik: $E_u$ — ukupna mehanička energija [J]; $m$ — masa [kg]; $\omega$ — kružna frekvencija [rad/s]; $x_0$ — amplituda [m].</div>
+
+<p>Posledica: ukupna energija zavisi samo od amplitude (i frekvencije), koja je stalna, pa je energija konstantna. U amplitudnim položajima ($\pm x_0$, $v=0$) sva energija je potencijalna i maksimalna; u ravnotežnom položaju ($x=0$, gde $F=-\tilde{k}x=0$, pa nema potencijalne energije) sva je kinetička i tu je brzina najveća. Grafik $E_p(x)$ je parabola sa minimumom u $x=0$, a razlika do horizontale ukupne energije u svakoj tački daje $E_k$.</p>
+
+<h3 id="h_7">7. Oscilatorno (LC) kolo kao analogija mehaničkom oscilatoru</h3>
+
+<p>Oscilovanje nije osobina samo mehaničkih sistema — javlja se i u električnim. Najprostiji primer je <strong>oscilatorno (LC) kolo</strong>: kondenzator kapacitivnosti $C$ i kalem induktivnosti $L$ vezani u zatvoreno kolo. Na početku je kondenzator naelektrisan ($q_0$); zatvaranjem kola naelektrisanje otiče kroz kalem i uspostavlja se struja. Primenom <strong>drugog Kirhofovog pravila</strong> (zbir padova napona u konturi je nula), uz pad napona na kondenzatoru $U=q/C$ i indukovanu elektromotornu silu kalema $\mathcal{E}=-L\,dI/dt$, dobija se jednačina kola $L\,\dfrac{dI}{dt} + \dfrac{q}{C} = 0$.</p>
+
+<p>Množenjem sa $dq$ (uz $\dfrac{dq}{dt}=I$) i integracijom dobija se zakon održanja elektromagnetne energije, potpuno analogan mehaničkom. Konstanta se određuje iz početnih uslova ($q=q_0$, $I=0$ u $t=0$).</p>
+
+<div class="formula">$$\frac{1}{2}L I^2 + \frac{1}{2}\frac{q^2}{C} = \frac{1}{2}\frac{q_0^2}{C}$$<br>Podsetnik: $\tfrac{1}{2}LI^2$ — energija magnetnog polja kalema [J]; $\tfrac{1}{2}q^2/C$ — energija električnog polja kondenzatora [J]; $L$ — induktivnost [H]; $I$ — struja [A]; $q$ — trenutno naelektrisanje [C]; $q_0$ — početno (maksimalno) naelektrisanje [C]; $C$ — kapacitivnost [F].</div>
+
+<p>Fizički smisao i analogija: energija se preliva iz električne (u kondenzatoru) u magnetnu (u kalemu) i nazad — kao kinetička i potencijalna kod mehaničkog oscilatora. Rešavanjem (uz $I=dq/dt$, razdvajanje promenljivih i integraciju koja daje arkus-sinus) dobija se da naelektrisanje osciluje po istom harmonijskom zakonu:</p>
+
+<div class="formula">$$q = q_0 \sin(\omega t + \varphi)\,, \qquad \omega = \frac{1}{\sqrt{LC}}$$<br>Podsetnik: $q$ — trenutno naelektrisanje [C]; $q_0$ — amplituda (maksimalno naelektrisanje) [C]; $\omega = 1/\sqrt{LC}$ — kružna frekvencija oscilovanja [rad/s]; $\varphi$ — početna faza [rad]; $L$ — induktivnost [H]; $C$ — kapacitivnost [F].</div>
+
+<p>Analogija je potpuna: $q \leftrightarrow x$, $L \leftrightarrow m$ (inercija), $1/C \leftrightarrow \tilde{k}$ (povratni efekat). Ako je $\varphi=\pi/2$ (kondenzator pun u $t=0$), dobija se $q=q_0\cos(\omega t)$. Značaj: pokazuje da je harmonijsko oscilovanje univerzalan zakon, nezavisan od fizičke prirode sistema.</p>
+
+<h3 id="h_8">8. Nastanak mehaničkog talasa iz niza povezanih oscilatora</h3>
+
+<p>Mehanički talas nastaje kada veliki broj oscilatora međusobno deluje jedan na drugog. Zamislimo niz jednakih atoma mase $\mu$ poređanih duž ose $x$ na ravnotežnim rastojanjima $r_0$ (položajima u kojima atom ne oseća rezultujuću silu od suseda). Ako jedan atom izvedemo iz ravnoteže transverzalno (normalno na $x$) za pomeraj $\psi$, među susedima se javlja povratna sila $f=-\tilde{k}\psi$ (srazmerna pomeraju, suprotnog smera), pa svaki atom izvodi <em>harmonijsko</em> oscilovanje.</p>
+
+<p>Zašto poremećaj putuje: atomi nisu nezavisni — povezani su silama. Kada se prvi atom pomeri, narušava ravnotežu sa susedom, pa se i sused pomera, ali sa malim <strong>zakašnjenjem</strong>; on zatim povlači trećeg, treći četvrtog i tako redom kroz ceo lanac. Tako se poremećaj prenosi <strong>konstantnom brzinom</strong> $v_0$ (ista za sve jer su svi elementi identični). Pri tome čestice samo osciluju oko svojih ravnotežnih položaja — ne putuju zajedno sa talasom; putuje samo poremećaj (i energija).</p>
+
+<div class="formula">$$\lambda = v_0\,T$$<br>Podsetnik: $\lambda$ — talasna dužina, rastojanje na koje poremećaj dospe za jedan pun period [m]; $v_0$ — brzina prostiranja talasa kroz sredinu [m/s]; $T$ — period oscilovanja jedne čestice [s].</div>
+
+<p>Geometrijski smisao talasne dužine: dok prva pobuđena čestica izvrši pun period $T$, talas dospe do rastojanja $v_0 T$, na koje se smesti tačno jedan pun oblik sinusne funkcije — to rastojanje zovemo <strong>talasna dužina</strong> $\lambda$. Ako prvi atom stalno osciluje (dovodimo energiju), talas se neograničeno širi.</p>
+
+<h3 id="h_9">9. Talasna funkcija i ravan progresivni talas</h3>
+
+<p>Oscilovanje celog niza opisujemo jednom veličinom — <strong>talasnom funkcijom</strong> $\psi(x,t)$, koja daje elongaciju bilo koje čestice na položaju $x$ u trenutku $t$. To je funkcija dve nezavisne promenljive (gde i kada). Prva čestica (na $x=0$) osciluje čisto harmonijski: $\psi(0,t)=\psi_0\cos(\omega t)$. Čestica na proizvoljnom položaju $x$ „čeka" da talas pređe to rastojanje, pa kasni za vreme $\Delta t = x/v_0$. Njena elongacija dobija se zamenom $t \to t-\Delta t$: $\psi(x,t)=\psi_0\cos[\omega(t - x/v_0)]$.</p>
+
+<p>Uvođenjem veze $\omega = 2\pi/T$ i $\lambda = v_0 T$ izraz se simetrizuje u $\psi=\psi_0\cos[2\pi(t/T - x/\lambda)]$. Konačno se uvodi <strong>talasni broj</strong> $k=2\pi/\lambda$ (prostorni analog kružne frekvencije: koliko se faza promeni po jedinici dužine), pa funkcija dobija najpregledniji oblik:</p>
+
+<div class="formula">$$\psi(x,t) = \psi_0\cos(\omega t - kx)\,, \qquad k = \frac{2\pi}{\lambda}$$<br>Podsetnik: $\psi(x,t)$ — elongacija čestice na položaju $x$ u trenutku $t$ [m]; $\psi_0$ — amplituda [m]; $\omega$ — kružna frekvencija [rad/s]; $k$ — talasni broj [rad/m]; $\lambda$ — talasna dužina [m]; $(\omega t - kx)$ — faza talasa [rad].</div>
+
+<p>Ovakav talas zove se <strong>ravan progresivni talas</strong> — „ravan" jer sve čestice sa istim $x$ osciluju u istoj fazi, „progresivni" jer napreduje u pozitivnom smeru $x$-ose. Treba razlikovati dve brzine: <strong>brzinu oscilovanja čestice</strong> $u = \partial\psi/\partial t = -\omega\psi_0\sin(\omega t - kx)$ (menja se u vremenu, nula u krajnjim položajima) i <strong>brzinu prostiranja talasa</strong> $v_0$ (konstantna). Ubrzanje čestice je $a = \partial^2\psi/\partial t^2 = -\omega^2\psi$ — opet osobina harmonijskog oscilovanja, sada unutar talasa.</p>
+
+<h3 id="h_10">10. Osnovna relacija talasnog kretanja ($v=\lambda\nu$)</h3>
+
+<p>Da bismo dobili brzinu talasa, pratimo jednu tačku talasnog oblika (npr. jedno „brdo") postavljajući uslov da je <strong>faza konstantna</strong>: $\omega t - kx = \text{const}$. Diferenciranjem ovog uslova sledi $\omega\,dt - k\,dx = 0$, pa je brzina tačke konstantne faze $\dfrac{dx}{dt}=v_0=\dfrac{\omega}{k}$. Uvrštavanjem $\omega = 2\pi\nu$ i $k = 2\pi/\lambda$ dolazi se do osnovne relacije.</p>
+
+<div class="formula">$$v_0 = \frac{\omega}{k} = \lambda\cdot\nu$$<br>Podsetnik: $v_0$ — brzina (fazna brzina) prostiranja talasa [m/s]; $\omega$ — kružna frekvencija [rad/s]; $k$ — talasni broj [rad/m]; $\lambda$ — talasna dužina [m]; $\nu$ — frekvencija talasa [Hz].</div>
+
+<p>Iskaz: proizvod talasne dužine i frekvencije jednak je brzini prostiranja talasa. Ova relacija povezuje prostornu karakteristiku talasa ($\lambda$) sa vremenskom ($\nu$) preko brzine kroz sredinu. Posledica: ako je brzina u datoj sredini stalna, veća frekvencija znači manju talasnu dužinu i obratno.</p>
+
+<h3 id="h_11">11. Talasna jednačina — izvođenje i smisao</h3>
+
+<p>Talasnu jednačinu izvodimo za longitudinalni talas u šipki preseka $S$, gustine $\rho$, Jangovog modula $E_Y$. Posmatramo tanak element debljine $dx$. Krajevi elementa se pomere za $\psi$ i $\psi+d\psi$, pa se element deformiše za $d\psi$. Po <strong>Hukovom zakonu</strong> (napon $\propto$ relativna deformacija) sila u preseku je $F = S\,E_Y\,\dfrac{\partial\psi}{\partial x}$. Sile na dva kraja elementa nisu jednake; njihova razlika je $dF = S\,E_Y\,\dfrac{\partial^2\psi}{\partial x^2}\,dx$ i upravo ona pokreće element.</p>
+
+<p>Tu istu rezultujuću silu izrazimo i preko <strong>drugog Njutnovog zakona</strong> $dF = dm\cdot a$, gde je masa elementa $dm=\rho\,S\,dx$, a ubrzanje $a = \partial^2\psi/\partial t^2$, pa je $dF = \rho\,S\,dx\,\dfrac{\partial^2\psi}{\partial t^2}$. Izjednačavanjem dva izraza za $dF$ i skraćivanjem zajedničkih faktora $S$ i $dx$ dobija se talasna jednačina.</p>
+
+<div class="formula">$$\frac{\partial^2 \psi}{\partial t^2} = v_0^2\,\frac{\partial^2 \psi}{\partial x^2}\,, \qquad v_0^2 = \frac{E_Y}{\rho}$$<br>Podsetnik: $\psi=\psi(x,t)$ — pomeranje sloja iz ravnotežnog položaja [m]; $\partial^2\psi/\partial t^2$ — drugi izvod po vremenu (ubrzanje) [m/s²]; $\partial^2\psi/\partial x^2$ — drugi izvod po položaju [1/m]; $E_Y$ — Jangov modul [Pa]; $\rho$ — gustina [kg/m³]; $v_0$ — brzina talasa [m/s].</div>
+
+<p>Smisao: to je parcijalna diferencijalna jednačina drugog reda u koju simetrično ulaze drugi izvodi po vremenu i po položaju. Analizom dimenzija pokazuje se da konstanta $E_Y/\rho$ ima jedinicu kvadrata brzine, pa je $v_0^2 = E_Y/\rho$ — što daje univerzalan oblik u kome figuriše samo brzina talasa. Rešenje jednačine je upravo ravan progresivni talas $\psi=\psi_0\cos(\omega t - kx)$. Pošto u jednačinu ulaze drugi izvodi (neosetljivi na promenu znaka $t$ i $x$), ona opisuje <strong>povratan proces</strong> — talas se može odbiti od kraja, interferirati i graditi stojeći talas.</p>
+
+<h3 id="h_12">12. Univerzalnost talasne jednačine (žica, vazduh, EM talas)</h3>
+
+<p>Talasna jednačina ima univerzalan karakter: u istom obliku $\partial^2\psi/\partial t^2 = v_0^2\,\partial^2\psi/\partial x^2$ opisuje veoma različite talase; menja se samo koja veličina osciluje i čime je određena brzina. Za <strong>transverzalni talas u zategnutoj žici</strong> osciluje poprečno odstupanje delića, a brzina je $v_0=\sqrt{F/\gamma}$ ($F$ — sila zatezanja, $\gamma=m/L$ — podužna gustina): jače zategnuta žica prenosi talas brže, teža po dužini sporije. Za <strong>longitudinalni zvučni talas u vazduhu</strong> osciluje pomeraj delića vazduha, a brzina je $v_0=\sqrt{\kappa p/\rho}$; indeks „ad" pokazuje da je proces adijabatski (zgušnjavanja/razređenja se dešavaju prebrzo za razmenu toplote).</p>
+
+<p>Za <strong>elektromagnetni talas</strong> ne osciluje materijalna čestica, već polja — električno $\vec{E}$ i magnetno $\vec{B}$, koja zadovoljavaju jednačine istog oblika i prostiru se istom brzinom, uzajamno upravna i upravna na pravac prostiranja, i to u fazi (zajedno dostižu maksimum i prolaze kroz nulu). Brzina EM talasa zavisi od dielektričnih i magnetnih osobina sredine:</p>
+
+<div class="formula">$$v_0 = \frac{1}{\sqrt{\varepsilon_0\varepsilon_r\mu_0\mu_r}} = \frac{c}{\sqrt{\varepsilon_r\mu_r}}$$<br>Podsetnik: $\varepsilon_0,\mu_0$ — permitivnost i permeabilnost vakuuma; $\varepsilon_r,\mu_r$ — relativne (bezdimenzione) vrednosti sredine; $c=3\cdot10^8$ m/s — brzina svetlosti u vakuumu ($c=1/\sqrt{\varepsilon_0\mu_0}$); $v_0$ — brzina EM talasa u sredini [m/s].</div>
+
+<p>Posledica: u sredini je brzina uvek manja od $c$ (jer su $\varepsilon_r,\mu_r\ge 1$), a u vakuumu ($\varepsilon_r=\mu_r=1$) jednaka $c$. Značaj univerzalnosti: čim prepoznamo veličinu koja osciluje i brzinu prostiranja, odmah znamo kako se talas ponaša — bez obzira na prirodu sredine.</p>
+
+<h3 id="h_13">13. Brzina mehaničkih talasa: Njutnov i Laplasov obrazac; brzina zvuka</h3>
+
+<p>Brzina kojom se talas prostire nije proizvoljna — određena je elastičnim osobinama i gustinom sredine. Za čvrsta i tečna tela važi <strong>Njutnov obrazac</strong> $v_0=\sqrt{E/\rho}$, gde je za longitudinalne talase $E$ Jangov modul, a za transverzalne modul smicanja. Suština: što je sredina krutija (veće $E$, jače povratne sile), talas je brži; što je gušća (veće $\rho$, veća inercija delića), talas je sporiji.</p>
+
+<div class="formula">$$v_0 = \sqrt{\frac{E}{\rho}} \quad(\text{čvrsta/tečna})\,, \qquad v_0 = \sqrt{\frac{\kappa\,p}{\rho}} = \sqrt{\frac{\kappa R T}{M}} \quad(\text{gasovi})$$<br>Podsetnik: $E$ — modul elastičnosti (Jangov ili modul smicanja) [Pa]; $\rho$ — gustina [kg/m³]; $\kappa=C_p/C_V$ — odnos molarnih toplotnih kapaciteta (eksponent adijabate, bez jedinice); $p$ — pritisak [Pa]; $R$ — univerzalna gasna konstanta [J/(mol·K)]; $M$ — molarna masa [kg/mol]; $T$ — apsolutna temperatura [K].</div>
+
+<p>Za gasove važi <strong>Laplasov obrazac</strong> $v_0=\sqrt{\kappa p/\rho}$. Uvrštavanjem pritiska iz jednačine stanja idealnog gasa ($p=\rho RT/M$) gustina se skraćuje i dobija se $v_0=\sqrt{\kappa RT/M}$. Posledica: brzina zvuka u gasu zavisi samo od vrste gasa (kroz $\kappa$ i $M$) i od temperature — ne od pritiska, jer se on eliminisao. Vezu sa poznatom vrednošću na $0\,^\circ$C daje $v_0 = c_0\sqrt{T/T_0}$ ($c_0 = 331{,}36$ m/s, $T_0=273{,}16$ K). Zato brzina zvuka raste sa temperaturom. (Kod gasova zvuk se prenosi sudarima molekula, pa je brzina zvuka povezana sa srednjom kvadratnom brzinom molekula relacijom $v_T=\sqrt{3/\kappa}\cdot v_0$.)</p>
+
+<h3 id="h_14">14. Vrste talasa: transverzalni i longitudinalni; podele po sredini i frontu</h3>
+
+<p>Pri prostiranju talasa delići sredine ne putuju sa talasom — samo osciluju oko ravnotežnih položaja, dok se prenosi poremećaj i energija. Talase delimo prema tome <em>kako</em> delići osciluju u odnosu na pravac prostiranja. Kod <strong>transverzalnog (poprečnog) talasa</strong> delići osciluju normalno na pravac prostiranja (npr. grba koja putuje duž zategnutog užeta: grba ide napred, a svaki delić se samo podigne i spusti). Kod <strong>longitudinalnog (uzdužnog) talasa</strong> delići osciluju u pravcu prostiranja, kroz naizmenična zgušnjenja i razređenja (npr. opruga „slinky", zvuk).</p>
+
+<p>Zašto baš određena vrsta nastaje: zavisi od elastičnih osobina sredine. Transverzalni talasi traže promenu <em>oblika</em> (smicanje, savijanje, torzija), a tome se opiru samo <strong>čvrste sredine</strong> — zato se transverzalni talasi šire jedino kroz čvrsta tela. Longitudinalni talasi traže promenu <em>zapremine</em> (sabijanje/istezanje), što je moguće u čvrstim, tečnim i gasovitim sredinama — zato se longitudinalni talasi (npr. zvuk) prostiru kroz sve tri.</p>
+
+<p>Postoje i druge podele. Prema napredovanju: <strong>progresivni</strong> talas (sve čestice imaju istu amplitudu, ali je dostižu u različitim trenucima — poremećaj putuje) i <strong>stojeći</strong> talas (čestice imaju različite amplitude, ali krajnje položaje dostižu istovremeno — nema vidljivog napredovanja). Prema obliku <strong>talasnog fronta</strong> (geometrijsko mesto tačaka koje osciluju u istoj fazi): <strong>sferni</strong> talasi (iz tačkastog izvora, front su sfere, zraci radijalni) i <strong>ravni</strong> talasi (daleko od izvora deo sfere je praktično ravan, frontovi paralelni).</p>
+
+<h2 id="pred7" class="l7">Predavanje 7 — Mehanički talasi (II) i elektromagnetni talasi</h2>
+
+<h3 id="h_15">Intenzitet (jačina) zvuka i veza sa amplitudom i frekvencijom</h3>
+
+<p>Fizički intenzitet zvuka definiše se kao energija koja u jedinici vremena prođe kroz jediničnu površinu postavljenu normalno (upravno) na pravac prostiranja talasa. To je dakle snaga $P$ koju talas nosi po jedinici površine $S$, i ona objektivno opisuje koliko je zvuk „jak“ u energetskom smislu. Jedinica intenziteta je vat po kvadratnom metru ($\text{W/m}^2$).</p>
+
+<p>Da bismo razumeli odakle potiče intenzitet, krenimo od toga da svaki molekul sredine pri prolasku talasa harmonijski osciluje. Srednja energija oscilovanja jednog molekula srazmerna je kvadratu kružne frekvencije i kvadratu amplitude: $\langle\epsilon\rangle=\tfrac12\mu\omega^2\psi_0^2$. Kada to pomnožimo brojem molekula u jedinici zapremine, dobijamo srednju gustinu energije $\langle w\rangle=\tfrac12\rho\,\omega^2\psi_0^2$, to jest energiju talasa po jedinici zapremine. Intuitivno: ako u svakoj jedinici zapremine ima energije $\langle w\rangle$, a ta zapremina protiče brzinom $v_0$, onda kroz jediničnu površinu u jedinici vremena prođe upravo proizvod te dve veličine. Tako dolazimo do osnovne formule intenziteta.</p>
+
+<div class="formula">
+$$ I = v_0\cdot\langle w\rangle \equiv \frac{P}{S} = \frac{1}{2}\,\rho\,v_0\,\omega^{2}\psi_0^{2} $$<br>
+Podsetnik: $I$ — fizički intenzitet zvuka ($\text{W/m}^2$); $v_0$ — brzina prostiranja talasa ($\text{m/s}$); $\langle w\rangle$ — srednja gustina energije ($\text{J/m}^3$); $\rho$ — gustina sredine ($\text{kg/m}^3$); $\omega$ — kružna frekvencija ($\text{rad/s}$); $\psi_0$ — amplituda oscilovanja ($\text{m}$).
+</div>
+
+<p>Ključna posledica formule jeste da je intenzitet srazmeran kvadratu amplitude i kvadratu frekvencije ($I\sim\omega^2\psi_0^2$). To znači da i mala promena amplitude ili frekvencije snažno menja jačinu zvuka. Intenzitet se može izraziti i preko akustičkog pritiska (malih promena pritiska koje talas izaziva u sredini): $I=\tfrac12\,\Delta p_{max}^2/(\rho v_0)$, jer je pritisak veličina koju lakše merimo od pomeranja molekula. Pri tome se uvodi akustički otpor sredine $\mathcal{R}_{ac}=\rho v_0$, koji pokazuje da ista amplituda pritiska daje različit intenzitet u sredinama različite gustine i brzine zvuka.</p>
+
+<h3 id="h_16">Fiziološki intenzitet zvuka (čujnost) i decibeli</h3>
+
+<p>Za razliku od fizičkog intenziteta, koji je objektivna i merljiva veličina, ljudsko uho ne reaguje na sve frekvencije podjednako. Zato se uvodi fiziološka jačina zvuka, odnosno čujnost — sposobnost uha da na datoj frekvenciji razlikuje bliske intenzitete. Dva tona istog fizičkog intenziteta, ali različitih frekvencija, čovek neće doživeti kao podjednako glasne. Uho najbolje reaguje na opseg od oko $800$ do $6000\,\text{Hz}$.</p>
+
+<p>Za svaku frekvenciju postoje dve granice. Donja je prag čujnosti — minimalni intenzitet koji uho uopšte može da registruje ($I_0=10^{-12}\,\text{W/m}^2$). Gornja je prag bola — maksimalni intenzitet koji uho izdrži bez bola ($I_{max}=1\,\text{W/m}^2$). Raspon između to dvoje obuhvata čak dvanaest redova veličine. Pošto je takav linearni raspon nepraktičan, čujnost se izražava logaritamski, u decibelima. Logaritamska skala je opravdana i time što uho i samo subjektivno reaguje na odnos intenziteta, a ne na njihovu razliku.</p>
+
+<div class="formula">
+$$ L\,[\text{dB}] = 10\,\log_{10}\frac{I}{I_0} $$<br>
+Podsetnik: $L$ — nivo (fiziološka jačina) zvuka ($\text{dB}$); $I$ — fizički intenzitet posmatranog zvuka ($\text{W/m}^2$); $I_0=10^{-12}\,\text{W/m}^2$ — referentni intenzitet (prag čujnosti).
+</div>
+
+<p>Provera na granicama pokazuje smisao skale: na pragu čujnosti je $I=I_0$, pa je $\log_{10}1=0$ i dobijamo $L=0\,\text{dB}$; na pragu bola je $I/I_0=10^{12}$, pa je $L=10\cdot 12=120\,\text{dB}$. Tako se ceo dvanaestoredni raspon fizičkih intenziteta preslikava na pregledan opseg od $0$ do $120\,\text{dB}$. Posledica je i da svako povećanje intenziteta deset puta podiže nivo za $10\,\text{dB}$ — zato i naizgled mali broj decibela odgovara velikoj promeni energije zvuka.</p>
+
+<h3 id="h_17">Interferencija talasa (uslovi maksimuma i minimuma)</h3>
+
+<p>Interferencija počiva na osobini aditivnosti (superpozicije) talasa: ako kroz neku tačku istovremeno prolazi više talasa iste prirode, ukupna elongacija u toj tački jednaka je zbiru pojedinačnih elongacija. Posledica je da se dva talasa u nekim tačkama prostora trajno pojačavaju, a u drugima trajno potiru. Da bi se ta slika stalno održavala na istim mestima, talasi moraju biti koherentni — da imaju jednaku frekvenciju i konstantnu faznu razliku u svakoj tački. Upravo stalna pojava uzajamnog pojačavanja i slabljenja koherentnih talasa naziva se interferencija.</p>
+
+<p>Koja će pojava nastati u datoj tački zavisi od razlike puteva $\delta$ — razlike rastojanja koja su dva talasa prešla do te tačke. Do maksimalnog pojačanja dolazi kada talasi stignu u fazi (fazna razlika $2n\pi$), tj. kada se maksimum jednog poklopi sa maksimumom drugog talasa, pa se njihova dejstva potpuno saberu. To se dešava kada je razlika puteva jednaka celom broju talasnih dužina.</p>
+
+<div class="formula">
+$$ \delta = n\,\lambda\,, \qquad n=0,\pm1,\pm2,\dots $$<br>
+Podsetnik: $\delta$ — razlika puteva dva talasa do posmatrane tačke ($\text{m}$); $\lambda$ — talasna dužina ($\text{m}$); $n$ — ceo broj (red maksimuma).
+</div>
+
+<p>Do maksimalnog slabljenja dolazi kada talasi stignu u protivfazi (fazna razlika $(2n+1)\pi$), tj. kada se maksimum jednog poklopi sa minimumom drugog, pa se dejstva oduzimaju. To se dešava kada je razlika puteva jednaka neparnom broju polovina talasne dužine. Praktičan značaj interferencije ogroman je: ona objašnjava pojačavanje i poništavanje zvuka u prostoriji, rad antišuma, kao i sve optičke pojave bojenja tankih slojeva.</p>
+
+<div class="formula">
+$$ \delta = (2n+1)\,\frac{\lambda}{2}\,, \qquad n=0,\pm1,\pm2,\dots $$<br>
+Podsetnik: $\delta$ — razlika puteva ($\text{m}$); $\lambda$ — talasna dužina ($\text{m}$); $\tfrac{\lambda}{2}$ — polovina talasne dužine; $n$ — ceo broj.
+</div>
+
+<h3 id="h_18">Stojeći talasi (čvorovi i trbusi, izvođenje)</h3>
+
+<p>Stojeći talas je specijalan slučaj interferencije koji nastaje kada se dva talasa jednakih talasnih dužina i amplituda kreću duž istog pravca, ali u suprotnim smerovima. Tipično nastaje pri odbijanju talasa od prepreke: odbijeni talas se kreće u suprotnom smeru i pritom menja fazu za $\pi$, pa se slaže sa upadnim talasom. Izvođenje polazi od jednačina upadnog talasa $\psi_+=\psi_0\cos(\omega t-kx)$ i odbijenog $\psi_-=\psi_0\cos(\omega t+kx)$. Sabiranjem po principu superpozicije i primenom adicione teoreme za zbir kosinusa dobija se rezultujući talas.</p>
+
+<div class="formula">
+$$ \psi = \psi_+ + \psi_- = 2\psi_0\cos(kx)\cos(\omega t) \equiv A(x)\cos(\omega t) $$<br>
+Podsetnik: $\psi$ — rezultujuća elongacija ($\text{m}$); $\psi_0$ — amplituda pojedinačnih talasa ($\text{m}$); $k$ — talasni broj ($\text{rad/m}$); $x$ — položaj tačke ($\text{m}$); $\omega$ — kružna frekvencija ($\text{rad/s}$); $A(x)=2\psi_0\cos(kx)$ — amplituda oscilovanja u tački $x$ ($\text{m}$).
+</div>
+
+<p>Ključna osobina je da amplituda $A(x)=2\psi_0\cos(kx)$ nije svuda ista, već zavisi od položaja po kosinusnoj funkciji. Zato postoje dve vrste posebnih tačaka. Čvorovi su tačke koje uopšte ne osciluju (amplituda je stalno nula, $\cos(kx)=0$), a nalaze se na neparnim umnošcima četvrtine talasne dužine: $x=(2n+1)\tfrac{\lambda}{4}$. Trbusi su tačke maksimalne amplitude $2\psi_0$ (gde je $\cos(kx)=\pm1$), a nalaze se na celobrojnim umnošcima polovine talasne dužine: $x=n\tfrac{\lambda}{2}$.</p>
+
+<div class="formula">
+$$ x_{\text{trbusi}} = n\,\frac{\lambda}{2}\,, \qquad x_{\text{čvorovi}} = (2n+1)\,\frac{\lambda}{4}\,; \qquad n=0,1,2,\dots $$<br>
+Podsetnik: $x$ — položaj trbuha odnosno čvora ($\text{m}$); $\lambda$ — talasna dužina ($\text{m}$); $n$ — redni broj (ceo broj).
+</div>
+
+<p>Pošto se trbusi i čvorovi ne pomeraju u prostoru — uvek su na istim mestima — talas se i naziva „stojećim“. On ima istu frekvenciju oscilovanja kao polazni talasi, ali se, za razliku od progresivnog talasa, ne kreće niti prenosi energiju duž pravca. Stojeći talasi su osnova rada svih žičanih i duvačkih instrumenata.</p>
+
+<h3 id="h_19">Rezonancija</h3>
+
+<p>Rezonancija je pojava naglog porasta amplitude oscilovanja koja nastaje kada na sistem deluje periodična (harmonijska) prinudna sila čija se frekvencija poklopi sa sopstvenom (prirodnom) frekvencijom sistema. Svaka supstanca sastoji se od atoma i molekula koji se stalno oscilatorno kreću oko ravnotežnih položaja, sa frekvencijom karakterističnom za taj sistem — to je sopstvena frekvencija. Kada se njoj prilagodi spoljašnja pobuda, energija se nagomilava ciklus za ciklusom i amplituda naglo skače.</p>
+
+<p>U kontekstu talasa, rezonancija je usko povezana sa stojećim talasima. Kada se talas više puta odbija od granica ograničene sredine (žice, šipke, vazdušnog stuba), odbijeni talasi se neprestano slažu sa upadnima. Samo za određene frekvencije se između granica „uklopi“ ceo broj polutalasa, čime se obezbeđuju potrebni čvorovi i trbusi i nastaje stabilan stojeći talas. Te frekvencije zovu se rezonantne; najniža je osnovni ton, a ostale su viši harmonici (overtonovi). Granični uslovi su pravilo: na učvršćenom kraju mora biti čvor (materijal je nepokretan), a na slobodnom kraju trbuh (najveća amplituda).</p>
+
+<div class="formula">
+$$ \nu_n = \frac{n+1}{2L}\sqrt{\frac{E}{\rho}}\,, \qquad n=0,1,2,\dots \quad (\text{šipka učvršćena sa obe strane}) $$<br>
+Podsetnik: $\nu_n$ — rezonantna frekvencija $n$-tog harmonika ($\text{Hz}$); $L$ — dužina šipke ($\text{m}$); $E$ — Jangov modul elastičnosti ($\text{Pa}$); $\rho$ — gustina materijala ($\text{kg/m}^3$); $n=0$ daje osnovni ton.
+</div>
+
+<p>Rezonancija ima i korisne i štetne posledice. Na njoj počivaju svi muzički instrumenti, radio-antene i mikrotalasne pećnice. Sa druge strane, može biti razorna: klasičan primer je rušenje mosta Takoma 1940. godine, kada je umeren vetar (oko $64\,\text{km/h}$) pobudio oscilacije čija se frekvencija poklopila sa sopstvenom frekvencijom mosta, amplituda je rasla dok konstrukcija nije popustila. Zato se pri projektovanju konstrukcija sopstvene frekvencije moraju poznavati i izbegavati u opsegu mogućih pobuda (npr. zemljotresa).</p>
+
+<h3 id="h_20">Doplerov efekat (izvođenje i smisao)</h3>
+
+<p>Doplerov efekat je pojava da se frekvencija koju registruje prijemnik razlikuje od frekvencije koju emituje izvor, kada se izvor i/ili prijemnik kreću jedan u odnosu na drugog. Smisao pojave je geometrijski: brzina talasa $v_0$ zavisi samo od sredine, a ne od kretanja izvora, pa se pri kretanju izvora talasni frontovi zgušnjavaju ispred njega (manja talasna dužina, viši ton) i razređuju iza njega (veća talasna dužina, niži ton).</p>
+
+<p>Izvođenje za slučaj kada se kreće samo izvor brzinom $v_i$ ka mirnom prijemniku $p_1$: za vreme $\Delta t$ izvor emituje $\nu_0\Delta t$ punih talasa, ali su oni smešteni na skraćenom rastojanju $(v_0-v_i)\Delta t$, jer se i sam izvor pomerio u istom smeru. Talasna dužina kod prijemnika je tada $\lambda_1=(v_0-v_i)\Delta t/(\nu_0\Delta t)=(v_0-v_i)/\nu_0$. Izjednačavanjem sa opštom vezom $\lambda_1=v_0/\nu_1$ dobija se registrovana frekvencija.</p>
+
+<div class="formula">
+$$ \nu_1 = \frac{v_0}{v_0 - v_i}\,\nu_0 \qquad (\text{izvor se približava prijemniku}) $$<br>
+Podsetnik: $\nu_1$ — frekvencija koju registruje prijemnik ($\text{Hz}$); $v_0$ — brzina talasa u sredini ($\text{m/s}$); $v_i$ — brzina izvora ($\text{m/s}$); $\nu_0$ — frekvencija izvora ($\text{Hz}$). Pošto je imenilac manji od $v_0$, razlomak je veći od 1, pa je $\nu_1>\nu_0$ — čuje se viši ton.
+</div>
+
+<p>Za prijemnik od koga se izvor udaljava analogno se dobija $\nu_2=\tfrac{v_0}{v_0+v_i}\nu_0<\nu_0$ (niži ton). Ako se kreće i prijemnik, menja se brzina talasa u odnosu na njega: kada mu ide u susret iznosi $v_0+v_p$, a kada beži od talasa $v_0-v_p$. Objedinjavanjem oba kretanja dobija se opšti izraz.</p>
+
+<div class="formula">
+$$ \nu = \frac{v_0 \pm v_p}{v_0 \mp v_i}\,\nu_0 $$<br>
+Podsetnik: $\nu$ — registrovana frekvencija ($\text{Hz}$); $v_0$ — brzina talasa ($\text{m/s}$); $v_p$ — brzina prijemnika ($\text{m/s}$); $v_i$ — brzina izvora ($\text{m/s}$); $\nu_0$ — frekvencija izvora ($\text{Hz}$). Gornji znaci (prijemnik i izvor se približavaju) daju veću frekvenciju; donji znaci (udaljavaju se) daju manju.
+</div>
+
+<p>Praktičan značaj je veliki: čuje se promena visine sirene vozila u prolazu, a efekat je osnova rada radarskih i sonarskih merača brzine, kao i (u svojoj svetlosnoj verziji) astronomskog merenja kretanja zvezda i galaksija.</p>
+
+<h3 id="h_21">Maksvelove jednačine i nastanak elektromagnetnih talasa</h3>
+
+<p>Šezdesetih godina XIX veka Maksvel je sve poznate zakone o električnim i magnetnim pojavama sažeo u svega četiri jednačine. U diferencijalnom obliku one koriste operacije divergencije (skalarni proizvod operatora „nabla“ sa vektorom — daje skalar i govori koliko polje „izvire“ iz tačke) i rotora (vektorski proizvod — daje vektor i opisuje „vrtložnost“ polja). U odsustvu naelektrisanja i struja glase ovako.</p>
+
+<div class="formula">
+$$ \operatorname{div}\vec{E}=0\,, \quad \operatorname{div}\vec{B}=0\,, \quad \operatorname{rot}\vec{E}=-\frac{\partial\vec{B}}{\partial t}\,, \quad \operatorname{rot}\vec{B}=\frac{1}{c^2}\frac{\partial\vec{E}}{\partial t} $$<br>
+Podsetnik: $\vec{E}$ — vektor jačine električnog polja ($\text{V/m}$); $\vec{B}$ — vektor magnetne indukcije ($\text{T}$); $c$ — brzina svetlosti u vakuumu ($\text{m/s}$); $t$ — vreme ($\text{s}$).
+</div>
+
+<p>Svaka jednačina iskazuje konkretan fizički zakon. Prva je Gausov zakon (fluks $\vec{E}$ kroz zatvorenu površinu bez naelektrisanja je nula). Druga je Gausov zakon za magnetizam (fluks $\vec{B}$ je uvek nula, jer ne postoje magnetni monopoli). Treća je Faradejev zakon indukcije: vremenski promenljivo magnetno polje stvara vrtložno električno polje. Četvrta je uopšteni Amperov zakon: vremenski promenljivo električno polje stvara magnetno polje.</p>
+
+<p>Upravo iz treće i četvrte jednačine sledi nastanak elektromagnetnog talasa. Promenljivo magnetno polje stvara promenljivo električno polje, a ono opet stvara promenljivo magnetno polje. Ta dva polja su trajno spregnuta i čine jedinstveno elektromagnetno polje; njihovo uzajamno indukovanje samo sebe održava i širi se kroz prostor — to je elektromagnetni talas. Za razliku od mehaničkih talasa, on ne zahteva materijalnu sredinu i može se prostirati i kroz vakuum.</p>
+
+<h3 id="h_22">Osobine elektromagnetnih talasa ($\vec{E}\perp\vec{B}$, brzina $c$)</h3>
+
+<p>Za prostiranje duž $z$-ose, pri električnom polju usmerenom duž $x$-ose, komponente polja imaju oblik $E_x=E_0\cos(\omega t-kz)$ i $B_y=B_0\cos(\omega t-kz)$. Pošto obe komponente imaju isti argument kosinusa, električno i magnetno polje osciluju u fazi — istovremeno dostižu maksimum i istovremeno prolaze kroz nulu. Vektori $\vec{E}$ i $\vec{B}$ osciluju u dve uzajamno upravne ravni, a obe su upravne na pravac prostiranja. Elektromagnetni talas je dakle transverzalan.</p>
+
+<p>Brzina talasa zavisi od dielektričnih i magnetnih osobina sredine, $v=1/\sqrt{\varepsilon_0\varepsilon_r\mu_0\mu_r}$. Za vakuum je $\varepsilon_r=\mu_r=1$, pa se dobija jedan od najvažnijih Maksvelovih rezultata: iz čisto električnih i magnetnih konstanti izlazi upravo brzina svetlosti, što pokazuje da je svetlost elektromagnetni talas.</p>
+
+<div class="formula">
+$$ c = \frac{1}{\sqrt{\varepsilon_0\mu_0}} \approx 3\cdot10^{8}\ \text{m/s}\,, \qquad v=\frac{c}{\sqrt{\varepsilon_r\mu_r}}=\frac{c}{n} $$<br>
+Podsetnik: $c$ — brzina svetlosti u vakuumu ($\text{m/s}$); $\varepsilon_0,\mu_0$ — dielektrična i magnetna propustljivost vakuuma; $\varepsilon_r,\mu_r$ — relativne propustljivosti sredine; $v$ — brzina talasa u sredini ($\text{m/s}$); $n=\sqrt{\varepsilon_r\mu_r}$ — apsolutni indeks prelamanja. Pošto je $n\ge1$, talas se u sredini uvek kreće sporije nego u vakuumu.</div>
+
+<p>Energija talasa ravnomerno je podeljena između električne i magnetne komponente (iz Maksvelovih jednačina sledi $\tfrac12\varepsilon_0E_0^2=\tfrac12\mu_0H_0^2$). Ipak, na naelektrisanja praktično deluje samo električno polje: odnos sila je $F_e/F_m=c/v$, a pošto se naelektrisanja kreću brzinama mnogo manjim od $c$, sledi $F_e\gg F_m$.</p>
+
+<h3 id="h_23">Apsorpcija elektromagnetnih talasa i Lamberov zakon</h3>
+
+<p>Kada elektromagnetni (svetlosni) talas upadnog intenziteta $I_0$ naiđe na neku sredinu, energija mu se raspoređuje na tri dela: apsorpciju (deo $I_a$ preuzimaju atomi i molekuli sredine), transmisiju (deo $I_t$ prođe kroz sredinu) i refleksiju (deo $I_r$ se odbije na graničnoj površini). Definišu se apsorpciona moć $A=I_a/I_0$, transparencija $T=I_t/I_0$ i refleksiona moć $R=I_r/I_0$. Pošto se ceo upadni intenzitet raspodeljuje, važi $R+A+T=1$ — što je izraz zakona održanja energije. Apsorpcija može biti siva (sve talasne dužine podjednako) ili selektivna (različito za različite talasne dužine).</p>
+
+<p>Da bismo videli kako intenzitet opada unutar materijala, posmatramo tanak sloj debljine $dx$. Gubitak intenziteta srazmeran je i samom intenzitetu $I$ i debljini sloja: $dI=-kI\,dx$, gde znak minus označava opadanje. Razdvajanjem promenljivih i integracijom od $I_0$ do $I_t$ na celoj debljini $D$ dobija se $\ln(I_t/I_0)=-kD$, a antilogaritmovanjem konačni Lamberov zakon.</p>
+
+<div class="formula">
+$$ I_t = I_0\,e^{-kD} $$<br>
+Podsetnik: $I_t$ — propušteni intenzitet ($\text{W/m}^2$); $I_0$ — upadni intenzitet ($\text{W/m}^2$); $k$ — koeficijent apsorpcije ($1/\text{m}$); $D$ — debljina sloja materijala ($\text{m}$); $e$ — osnova prirodnog logaritma.
+</div>
+
+<p>Lamberov zakon kaže da intenzitet propuštenog zračenja opada eksponencijalno sa porastom debljine sloja. Koeficijent apsorpcije $k$ zavisi od svojstava sredine i od talasne dužine zračenja. Posledica je važna: nikakav konačan sloj ne apsorbuje baš sve zračenje, ali se debljim slojem ono može oslabiti do željene mere — što je osnova zaštite od zračenja, rada optičkih filtera i analize sastava materijala (spektrofotometrija).</p>
+
+<h3 id="h_24">Spektar elektromagnetnih talasa</h3>
+
+<p>Svaki talas opisujemo talasnom dužinom $\lambda$ (najmanje rastojanje između dve tačke koje osciluju u istoj fazi, npr. dva susedna maksimuma) i frekvencijom $\nu$ (određena stanjem atoma koji emituju svetlost; ne menja se pri prostiranju). Njih povezuje osnovna relacija talasnog kretanja $v_0=\lambda\nu$, iz koje sledi da su talasna dužina i frekvencija obrnuto srazmerne — veća frekvencija znači manju talasnu dužinu i veću energiju.</p>
+
+<div class="formula">
+$$ v_0 = \lambda\cdot\nu = \frac{\omega}{k} $$<br>
+Podsetnik: $v_0$ — brzina prostiranja talasa (u vakuumu $v_0\equiv c$) ($\text{m/s}$); $\lambda$ — talasna dužina ($\text{m}$); $\nu$ — frekvencija ($\text{Hz}$); $\omega$ — kružna frekvencija ($\text{rad/s}$); $k$ — talasni broj ($1/\text{m}$).
+</div>
+
+<p>Spektar elektromagnetnih talasa čine zračenja koja se razlikuju samo po talasnoj dužini (frekvenciji). Talasna dužina zavisi od dimenzija emitera: što je izvor manji, manja je talasna dužina — zato najkraće talase emituju molekuli, atomi i atomska jezgra. Snop kod kojeg svi talasi imaju istu talasnu dužinu naziva se monohromatski (monoenergijski), a snop sa različitim talasnim dužinama polihromatski.</p>
+
+<p>Poređane od najvećih ka najmanjim talasnim dužinama, oblasti spektra su: radio-talasi (od više kilometara do oko $0{,}3\,\text{m}$; telekomunikacije); mikrotalasi ($0{,}3\,\text{m}$ do $1\,\text{mm}$; radari, izučavanje molekulske strukture); optički spektar — infracrveno zračenje ($1\,\text{mm}$–$760\,\text{nm}$), vidljiva svetlost ($760$–$380\,\text{nm}$) i ultraljubičasto ($380$–$0{,}6\,\text{nm}$); rentgenski (X) zraci ($10^{-9}$ do $6\cdot10^{-12}\,\text{m}$; medicinska dijagnostika); gama-zraci ($10^{-10}$ do $10^{-14}\,\text{m}$; nuklearnog porekla, izazivaju teška oštećenja organizama); i kosmičko zračenje sa još manjim talasnim dužinama. Vidljiva svetlost prostire se od oko $400\,\text{nm}$ (ljubičasta) do oko $700\,\text{nm}$ (crvena), a kraćim talasnim dužinama uvek odgovara veća energija.</p>
+
+<h2 id="pred8" class="l8">Predavanje 8 — Geometrijska i talasna optika</h2>
+
+<h3 id="h_25">Geometrijska optika i Fermaov princip</h3>
+
+<p><strong>Geometrijska optika</strong> je deo optike koji ne ulazi u pitanje šta je svetlost zapravo, već je opisuje pomoću nekoliko idealizacija — <em>svetlosnog zraka</em> (orijentisane poluprave koja pokazuje pravac prostiranja), <em>tačkastog izvora</em> i <em>snopa</em> paralelnih zraka. Ona počiva na četiri osnovna principa: svetlost se kroz homogene prozračne sredine prostire <em>pravolinijski</em>; svetlosni zraci <em>ne interaguju</em> jedan sa drugim (mogu se ukrstiti i nepromenjeni nastaviti dalje); i na granici dveju sredina važe <em>zakon odbijanja</em> i <em>zakon prelamanja</em>. Idealizacije zanemaruju difrakciju i interferenciju, ali daju izvanredno tačne rezultate sve dok su dimenzije sistema (sočiva, ogledala, otvora) mnogo veće od talasne dužine svetlosti — zato se rad gotovo svih optičkih instrumenata objašnjava ovim zakonima.</p>
+
+<p>Sva četiri zakona mogu se izvesti iz jednog elegantnijeg i opštijeg pravila — <strong>Fermaovog principa</strong> (1679): između dve tačke u prostoru svetlost se kreće onom putanjom za koju joj je potrebno <em>minimalno vreme</em>. Da bismo razumeli zašto, posmatramo delić puta $ds$ koji svetlost pređe za vreme $dt = ds/v_0$. Pošto se u gušćoj sredini svetlost kreće sporije, uvodi se pojam <strong>indeksa prelamanja</strong> $n = c/v_0$, koji kazuje koliko je puta svetlost u datoj sredini sporija nego u vakuumu. Tada je $dt = (n/c)\,ds$, a ukupno vreme dobijamo sabiranjem (integracijom) duž cele putanje.</p>
+
+<div class="formula">
+$$ n = \frac{c}{v_0} \qquad\qquad L = \tau c = \int_{1}^{2} n\,ds = n\,s $$
+<br>Podsetnik: $n$ — indeks prelamanja (bezdimenziono); $c$ — brzina svetlosti u vakuumu (m/s); $v_0$ — brzina u sredini (m/s); $\tau$ — vreme prelaska puta (s); $L$ — optički pređeni put (m); $s$ — geometrijski pređeni put (m).
+</div>
+
+<p>Veličina $L = n\,s$ naziva se <strong>optički pređeni put</strong>: to je geometrijski put pomnožen indeksom prelamanja, jer u gušćoj sredini svetlost putuje sporije pa joj „efektivno" treba prevaliti veći put. Zahtev da optički put bude minimalan ekvivalentan je zahtevu minimalnog vremena, i upravo iz njega — kao što ćemo videti — proizilaze i zakon odbijanja i zakon prelamanja. To je velika snaga Fermaovog principa: dva naizgled različita zakona slede iz jednog jedinog pravila.</p>
+
+<h3 id="h_26">Zakon odbijanja (refleksije) svetlosti</h3>
+
+<p><strong>Zakon odbijanja</strong> glasi: svetlosni zrak se na graničnoj površini između dve sredine reflektuje pod istim uglom pod kojim na nju pada, pri čemu upadni zrak, odbijeni zrak i normala leže u istoj ravni. Svi uglovi mere se u odnosu na <em>normalu</em> — zamišljenu pravu upravnu na površinu u tački u kojoj zrak pada. Kada se na put svetlosti postavi providna prepreka, jedan deo svetlosti se vraća u istu sredinu (odbijanje), a drugi prelazi u drugu (prelamanje); koliki je udeo svakog zavisi od prirode sredina, upadnog ugla i talasne dužine.</p>
+
+<p>Zakon se izvodi pomoću <strong>Hajgensovog principa</strong>: svaka tačka koju pogodi talas postaje izvor novog sfernog (sekundarnog) talasa, a novi talasni front je obvojnica svih tih sekundarnih talasa. Kada ravan front padne koso na površinu, jedan njegov kraj (tačka A) već dotakne površinu i počne da emituje sekundarni talas, dok drugi kraj (A') tek treba da stigne. Za isto vreme za koje front stigne od A' do tačke B na površini, sekundarni talas iz A stigne do B'. Pošto se oba kreću kroz istu sredinu istom brzinom, prelaze jednake puteve, pa su trouglovi $\triangle ABA'$ i $\triangle ABB'$ podudarni — odatle direktno sledi jednakost uglova.</p>
+
+<div class="formula">
+$$ \alpha = \alpha' $$
+<br>Podsetnik: $\alpha$ — upadni ugao, između upadnog zraka i normale (° ili rad); $\alpha'$ — odbojni ugao, između odbijenog zraka i normale (° ili rad).
+</div>
+
+<p>Isti se zakon dobija i iz Fermaovog principa. Ako svetlost iz tačke $S$ mora preko ogledala $MN$ da stigne u tačku $P$, konstruišemo tačku $S'$ ogledalski simetričnu tački $S$. Zbog simetrije je dužina puta $S\,O'\,P$ jednaka dužini $S'\,O'\,P$, a najkraće rastojanje između $S'$ i $P$ je prava linija — ona seče površinu u jednoj tački $O$ za koju upravo važi $\alpha = \alpha'$. Posledica zakona vidi se svuda u prirodi: mirna vodena površina ponaša se kao prirodno ogledalo i daje jasan odraz planine i neba, ali samo dok je glatka — ako se voda talasa, zraci se odbijaju na sve strane i lik se razbija.</p>
+
+<h3 id="h_27">Zakon prelamanja (Snelijus–Dekartov zakon)</h3>
+
+<p><strong>Prelamanje (refrakcija)</strong> je promena pravca svetlosti pri prelasku iz jedne sredine u drugu. Osnovna ideja: ako talas pređe u sredinu drugačijih optičkih osobina, menja se njegova brzina (i talasna dužina), a zbog toga i pravac prostiranja — zrak se „lomi" na granici. <strong>Zakon prelamanja</strong> povezuje upadni ugao $\alpha$ i prelomni ugao $\beta$ sa indeksima prelamanja dveju sredina.</p>
+
+<p>Izvodi se ponovo Hajgensovim principom. Dok front u prvoj sredini (brzine $v_1$) pređe put $\overline{DC} = \overline{AC}\sin\alpha = v_1 t$, sekundarni talas u drugoj sredini (brzine $v_2$) pređe $\overline{AB} = \overline{AC}\sin\beta = v_2 t$. Pošto se oba odnose na isti interval $t$ i istu zajedničku stranicu $\overline{AC}$, deljenjem ovih jednačina skraćuju se $\overline{AC}$ i $t$, i ostaje odnos sinusa izražen preko odnosa brzina. Pošto je sredina u kojoj je svetlost sporija ona sa većim indeksom prelamanja, odnos brzina jednak je <em>obrnutom</em> odnosu indeksa.</p>
+
+<div class="formula">
+$$ \frac{\sin\alpha}{\sin\beta} = \frac{v_1}{v_2} = \frac{n_2}{n_1} \quad\Rightarrow\quad n_1\sin\alpha = n_2\sin\beta $$
+<br>Podsetnik: $\alpha$ — upadni ugao; $\beta$ — prelomni ugao; $v_1, v_2$ — brzine svetlosti u prvoj i drugoj sredini (m/s); $n_1, n_2$ — indeksi prelamanja dveju sredina (bezdimenziono).
+</div>
+
+<p>Iz zakona slede dva slučaja. Pri prelasku iz <em>ređe u gušću</em> sredinu ($n_1 < n_2$, npr. vazduh → voda) zrak se prelama <strong>ka normali</strong> ($\beta < \alpha$); pri prelasku iz <em>gušće u ređu</em> ($n_1 > n_2$) zrak se prelama <strong>od normale</strong> ($\beta > \alpha$). Isti rezultat daje i Fermaov princip: tražeći tačku na granici za koju je optički put $L = n_1 s_1 + n_2 s_2$ minimalan (uslov $dL/dx = 0$), prepoznaju se sinusi uglova i ponovo se dobija $n_1\sin\alpha = n_2\sin\beta$. Posledice su svakodnevne: slamka u čaši vode izgleda prelomljeno, a Sunce na horizontu vidimo iznad njegovog stvarnog položaja jer se zraci postepeno savijaju kroz sve gušće slojeve atmosfere.</p>
+
+<h3 id="h_28">Totalna refleksija i optička vlakna</h3>
+
+<p>Kada svetlost prelazi iz optički <em>gušće u ređu</em> sredinu ($n_1 > n_2$), prelomni ugao je veći od upadnog. Ako postepeno povećavamo upadni ugao, prelomni raste sve dok pri <strong>graničnom uglu</strong> $\alpha_g$ ne dostigne $\beta = 90^\circ$ — tada prelomljeni zrak „klizi" tačno po graničnoj površini. Za svaki upadni ugao <em>veći</em> od graničnog prelamanje uopšte nije moguće: sva svetlost se vraća u gušću sredinu. Ta pojava naziva se <strong>totalna refleksija</strong> (potpuno unutrašnje odbijanje). Granični ugao dobijamo iz zakona prelamanja uvrštavanjem uslova $\beta = 90^\circ$.</p>
+
+<div class="formula">
+$$ n_1\sin\alpha_g = n_2\sin 90^\circ \quad\Rightarrow\quad \sin\alpha_g = \frac{n_2}{n_1} \quad\Rightarrow\quad \alpha_g = \arcsin\frac{n_2}{n_1} $$
+<br>Podsetnik: $\alpha_g$ — granični ugao totalne refleksije (° ili rad); $n_1$ — indeks gušće sredine iz koje svetlost dolazi; $n_2$ — indeks ređe sredine; $\sin 90^\circ = 1$. Pošto je $n_2 < n_1$, odnos $n_2/n_1 < 1$ pa $\alpha_g$ uvek postoji.
+</div>
+
+<p>Kod totalne refleksije nema gubitka svetlosti — odbija se ceo upadni snop, za razliku od metalnih ogledala koja deo svetlosti apsorbuju. Zato se u dvogledima, periskopima i fotoaparatima koriste <strong>prizme</strong> oblika pravouglog trougla ($45^\circ$, $45^\circ$, $90^\circ$): zrak ulazi normalno (bez prelamanja), unutra pada na drugu stranu pod $45^\circ$ (što je iznad graničnog ugla za staklo) i totalno se odbija, menjajući pravac za $90^\circ$ ili smer za $180^\circ$.</p>
+
+<p>Najvažnija savremena primena su <strong>optička vlakna (svetlovodi)</strong>. Zrak koji uđe u tanko stakleno vlakno pod pogodnim uglom udara u zid pod uglom većim od graničnog, pa se totalno reflektuje, zatim u suprotni zid, i tako se kroz vlakno kreće cik-cak putanjom, kao „zarobljen" unutar njega. To omogućava prenos signala na velike daljine. Čarls Kao i Džordž Hokam pokazali su šezdesetih godina da bi se sa dovoljno čistim staklom slabljenje signala drastično smanjilo, a jedan kabl mogao bi da prenosi saobraćaj ekvivalentan $200\,000$ telefonskih razgovora — što je donelo revoluciju u telekomunikacijama. U medicini se snop od oko $200\,000$ vlakana koristi u <em>endoskopu</em>: svako vlakno prenosi sliku jednog detalja, pa se cela slika sastavlja kao mozaik (gušća vlakna → oštrija slika).</p>
+
+<h3 id="h_29">Sočiva — jednačina sočiva, sabirna i rasipna, jačina</h3>
+
+<p><strong>Sočiva</strong> su providna tela (staklo, kvarc) ograničena dvema sfernim ili jednom sfernom i jednom ravnom površinom, na kojima se svetlost prelama. Po optičkom dejstvu dele se na <strong>sabirna</strong> (smanjuju prelomni ugao zraka pa ih skupljaju ka jednoj tački) i <strong>rasipna</strong> (povećavaju prelomni ugao pa zrake razilaze). Važan pojam je <strong>žiža (fokus)</strong> $F$ — tačka u kojoj se sakupljaju zraci koji padaju paralelno optičkoj osi. Kod sabirnog sočiva žiža je realna (presek samih prelomljenih zraka), a kod rasipnog imaginarna (presek njihovih produžetaka unazad).</p>
+
+<p>Žižna daljina, a time i dejstvo sočiva, zavisi od materijala, okolne sredine i zakrivljenosti površina, što povezuje <strong>jednačina sfernih sočiva</strong>. <strong>Optička jačina</strong> $j$ je recipročna vrednost žižne daljine i izražava se u dioptrijama (D): što je sočivo „jače" (kraća žiža), to više sakuplja ili razilazi zrake. Iz formule se vidi da sočivo deluje jače ako se po indeksu prelamanja mnogo razlikuje od okoline (član $n_2 - n_1$). Poluprečnici se uzimaju pozitivno za ispupčene (konveksne), a negativno za izdubljene (konkavne) površine; za ravnu stranu je $R \to \infty$ pa odgovarajući član otpada.</p>
+
+<div class="formula">
+$$ j = \frac{1}{f} = \frac{n_2 - n_1}{n_1}\left(\frac{1}{R_1} + \frac{1}{R_2}\right) \qquad\qquad \frac{1}{f} = \frac{1}{p} + \frac{1}{\ell} \qquad\qquad u = \frac{L}{P} = \frac{\ell}{p} $$
+<br>Podsetnik: $j$ — optička jačina (D, gde je $1\,\text{D}=1\,\text{m}^{-1}$); $f$ — žižna daljina (m); $n_2$ — indeks materijala sočiva; $n_1$ — indeks okolne sredine; $R_1, R_2$ — poluprečnici zakrivljenosti (m); $p$ — udaljenost predmeta (m); $\ell$ — udaljenost lika (m); $u$ — linearno uvećanje (bezdimenziono); $L, P$ — veličine lika i predmeta (m).
+</div>
+
+<p><strong>Osnovna jednačina sočiva</strong> $1/f = 1/p + 1/\ell$ povezuje žižnu daljinu sa položajem predmeta i lika i važi za obe vrste sočiva — kod rasipnih su $f$ i $\ell$ imaginarni pa se uzimaju sa negativnim predznakom. Kod sabirnog sočiva za $p > f$ lik je realan i obrnut (umanjen za $p > 2f$, jednak za $p = 2f$, uvećan za $f < p < 2f$); kada je predmet bliži od žiže ($p < f$) sočivo radi kao <em>lupa</em> — daje uspravan, uvećan, imaginaran lik. Rasipno sočivo uvek daje imaginaran, uspravan i umanjen lik, nezavisno od položaja predmeta.</p>
+
+<h3 id="h_30">Talasna optika i interferencija svetlosti (Jangov ogled)</h3>
+
+<p>Da bismo objasnili pojave koje geometrijska optika zanemaruje, podsećamo se da je svetlost <em>elektromagnetni talas</em> za koji važi <strong>princip superpozicije</strong>: kada se u nekoj tački sretnu dva talasa, njihova pomeranja se sabiraju. Dva talasa se <strong>pojačavaju</strong> ako stignu <em>u fazi</em> (maksimum na maksimum), a <strong>poništavaju</strong> ako stignu <em>u protivfazi</em> (maksimum na minimum). Da bi slika maksimuma i minimuma bila stabilna, talasi moraju biti <strong>koherentni</strong> — imati istu frekvenciju i vremenski nepromenljivu faznu razliku. Pojačanje nastaje kada je putna razlika ceo umnožak talasnih dužina, a poništavanje kada je neparan umnožak polovina talasnih dužina.</p>
+
+<div class="formula">
+$$ \delta = k\lambda \;\;(\text{maksimum}) \qquad\qquad \delta = (2k+1)\frac{\lambda}{2} \;\;(\text{minimum}) $$
+<br>Podsetnik: $\delta$ — putna razlika dva talasa (m); $\lambda$ — talasna dužina (m); $k$ — ceo broj (red), $k = 0, \pm 1, \pm 2, \dots$
+</div>
+
+<p>Klasičan dokaz interferencije dao je <strong>Tomas Jang</strong> (1801). Svetlost je propustio kroz jedan uzan otvor, a zatim kroz zastor sa dve bliske pukotine $S_1$ i $S_2$. Po Hajgensovom principu obe pukotine postaju izvori talasa, a pošto potiču od iste polazne svetlosti — koherentni su i interferiraju. Na zaklonu se javlja niz naizmeničnih svetlih i tamnih pruga. Za tačku $M$ na zaklonu, posmatranu pod uglom $\alpha$, putna razlika dva zraka je $\delta = d\sin\alpha$, pa uslovi za maksimum i minimum glase:</p>
+
+<div class="formula">
+$$ d\sin\alpha = k\lambda \;\;(\text{svetla pruga}) \qquad\qquad y_k = k\,\frac{\lambda D}{d} $$
+<br>Podsetnik: $d$ — rastojanje između pukotina (m); $\alpha$ — ugao posmatranja; $k$ — red maksimuma (ceo broj); $\lambda$ — talasna dužina (m); $y_k$ — položaj $k$-tog maksimuma od centra (m); $D$ — rastojanje proreza do zaklona (m). Korišćeno je $\sin\alpha \approx \operatorname{tg}\alpha = y/D$ za male uglove.
+</div>
+
+<p>Položaj pruga zavisi od talasne dužine: što je $\lambda$ veće, pruge su razmaknutije. Zato u beloj svetlosti samo centralni maksimum ($k=0$, gde položaj ne zavisi od boje) ostaje beo, dok su ostali maksimumi obojeni, jer se maksimumi raznih boja javljaju na malo različitim mestima. Time je Jang eksperimentalno potvrdio talasnu prirodu svetlosti.</p>
+
+<h3 id="h_31">Interferencija na tankom sloju</h3>
+
+<p>Ovaj efekat objašnjava zašto mehur od sapunice i tanak sloj ulja na vodi blistaju u bojama. Kada svetlost padne na tanak proziran sloj, jedan deo se odbija od gornje površine, a drugi prolazi u sloj, odbija se od donje površine i izlazi nazad. Ova dva snopa potiču od istog talasa pa su koherentni i interferiraju. U analizi su ključna dva pojma: <strong>optički put</strong> (geometrijski put pomnožen indeksom prelamanja, jer je u sloju talasna dužina kraća — $\delta = n\,s$) i <strong>skok faze za $\pi$</strong> pri refleksiji od optički gušće sredine, koji se uračunava dodatkom $\lambda/2$ na pređeni put.</p>
+
+<p>Za sloj debljine $d$ i indeksa $n$, sređivanjem geometrije i primenom zakona prelamanja dobija se optička razlika hoda. U najjednostavnijem slučaju normalnog upada ($\alpha = 0$), drugi zrak pređe dodatni put $2nd$, a od jedne refleksije sa gušće sredine dolazi član $\lambda/2$:</p>
+
+<div class="formula">
+$$ \delta = 2d\sqrt{n^2 - \sin^2\alpha} - \frac{\lambda}{2} \qquad\xrightarrow{\;\alpha=0\;}\qquad \delta = 2nd - \frac{\lambda}{2} $$
+<br>Podsetnik: $\delta$ — optička razlika hoda (m); $d$ — debljina sloja (m); $n$ — indeks prelamanja sloja; $\alpha$ — upadni ugao; $\lambda$ — talasna dužina (m); član $\lambda/2$ — od skoka faze pri refleksiji sa gušće sredine.
+</div>
+
+<p>Uslovi za maksimum ($\delta = k\lambda$) i minimum kod tankog sloja deluju „zamenjeni" upravo zbog dodatka $\lambda/2$. Bitno je pažljivo analizirati skokove faze: ako se <em>oba</em> zraka odbijaju od gušće sredine (npr. opna sapunice na staklu), oba dobijaju $\lambda/2$ pa se ti članovi poništavaju i ostaje $\delta = 2nd$ — što daje drugačiju potrebnu debljinu nego kod opne u vazduhu. Efekat se zapaža kada je debljina sloja uporediva sa $\lambda$; pošto uslov pojačanja zavisi od boje, različite debljine pojačavaju različite boje, pa slojevi blistaju u prelivima. Važna tehnička primena su <strong>antirefleksioni slojevi</strong> na sočivima, gde se odbijena svetlost interferencijom poništava.</p>
+
+<h3 id="h_32">Difrakcija i optička rešetka</h3>
+
+<p><strong>Difrakcija</strong> je skretanje talasa od pravolinijskog pravca pri nailasku na prepreku ili uzan otvor, odnosno prodiranje svetlosti u oblast geometrijske senke — tamo gde bi po geometrijskoj optici trebalo da bude mrak. Objašnjava se Hajgensovim principom: svaka tačka talasnog fronta je izvor sekundarnog talasa, pa se na ivici otvora ti talasi šire i iza prepreke. Efekat je uočljiv samo kada je dimenzija otvora istog reda veličine kao talasna dužina; ako je otvor mnogo veći, skretanje je zanemarljivo.</p>
+
+<p><strong>Optička (difrakciona) rešetka</strong> je sistem velikog broja uskih paralelnih pukotina na jednakom međusobnom rastojanju $a$ (konstanta rešetke). Svaka pukotina difraktuje svetlost, a zatim talasi iz svih pukotina interferiraju. Zbog jednakih rastojanja, samo u određenim pravcima talasi iz svih pukotina stižu u fazi, dajući veoma oštre i jake maksimume. Putna razlika dve susedne pukotine je $\delta = a\sin\theta$, a maksimum nastaje kada je ona ceo umnožak talasne dužine.</p>
+
+<div class="formula">
+$$ n\lambda = a\sin\theta_n\,, \qquad n = 0, \pm 1, \pm 2, \dots $$
+<br>Podsetnik: $n$ — red difrakcije (ceo broj); $\lambda$ — talasna dužina (m); $a$ — konstanta rešetke, rastojanje susednih pukotina (m); $\theta_n$ — ugao difrakcije maksimuma $n$-tog reda.
+</div>
+
+<p>Za $n=0$ je $\theta_0 = 0$ (centralni maksimum na pravcu upadnog snopa), a maksimumi se javljaju simetrično na obe strane ($n = \pm 1, \pm 2, \dots$). Pošto je $\sin\theta_n \le 1$, postoji najveći mogući red $n_{\max} = 1/(N\lambda)$ (gde je $N = 1/a$ broj pukotina po jedinici dužine), pa je broj maksimuma konačan. Rešetka je moćan alat za razlaganje svetlosti po talasnim dužinama (spektroskopija), jer se maksimumi raznih boja javljaju pod različitim uglovima. Difrakciju srećemo i svakodnevno — svetlost se savija oko ivice odškrinutih vrata, pa osvetljeni rub nije oštro ograničen.</p>
+
+<h3 id="h_33">Disperzija svetlosti</h3>
+
+<p><strong>Disperzija</strong> je zavisnost indeksa prelamanja sredine od talasne dužine (boje) svetlosti. Posledica je da se bela (polihromatska) svetlost pri prolasku kroz prizmu razlaže na spektar boja, jer se svaka talasna dužina prelama pod malo drugačijim uglom. Uzrok leži na nivou atoma: promenljivo električno polje svetlosnog talasa izaziva <em>prinudne oscilacije</em> elektrona frekvencijom $\omega$ dolaznog talasa, a ti elektroni i sami zrače sekundarne talase. Primarni i sekundarni talasi se slažu u rezultujući talas čija se faza, a time i brzina prostiranja $v_0$, razlikuje od one u vakuumu — pa se menja i indeks prelamanja $n = c/v_0$. Pošto jačina prinudnih oscilacija zavisi od frekvencije, i indeks prelamanja zavisi od frekvencije, odnosno talasne dužine.</p>
+
+<div class="formula">
+$$ n = \frac{c}{v_0} = f(\lambda) $$
+<br>Podsetnik: $n$ — apsolutni indeks prelamanja (bezdimenziono); $c$ — brzina svetlosti u vakuumu (m/s); $v_0$ — brzina svetlosti u sredini (m/s); $\lambda$ — talasna dužina (m, u optici često nm); $f(\lambda)$ — oznaka da $n$ zavisi od talasne dužine.
+</div>
+
+<p>Zavisnost je obrnuto srazmerna talasnoj dužini: veće $\lambda$ → manje $n$. Zato se <strong>crvena</strong> svetlost (najveća $\lambda$) <em>najmanje</em> prelama, a <strong>ljubičasta</strong> (najmanja $\lambda$) <em>najviše</em>. Na disperzionoj krivoj ($n^2$ u funkciji kružne frekvencije $\omega$) razlikuju se oblasti <em>normalne</em> disperzije (indeks raste sa frekvencijom) i, u uskom pojasu oko sopstvene frekvencije $\omega_0$ čestica, oblast <em>anomalne</em> disperzije (indeks opada sa frekvencijom). Najlepša manifestacija disperzije u prirodi je <strong>duga</strong>: u kišnoj kapljici svetlost se prelama, jednom reflektuje od zadnje površine i ponovo prelama pri izlasku, razdvajajući boje (duga se vidi pod uglom oko $42^\circ$). Disperzija omogućava i razlaganje svetlosti na spektar — kontinualni, emisioni (svetle linije) i apsorpcioni (tamne linije), pri čemu po <em>Kirhofovom zakonu</em> atom apsorbuje upravo one talasne dužine koje sam emituje.</p>
+
+<h3 id="h_34">Polarizacija svetlosti (Malusov i Brusterov zakon, LCD)</h3>
+
+<p>Svetlost je <em>transverzalni</em> elektromagnetni talas — vektori električnog i magnetnog polja osciluju upravno na pravac prostiranja. Kod <strong>nepolarizovane</strong> (prirodne) svetlosti ravan oscilovanja se neprestano menja i svi pravci su ravnopravni; kod <strong>linearno polarizovane</strong> svetlosti vektor električnog polja osciluje samo u jednoj ravni. Sama činjenica da se svetlost može polarizovati direktan je dokaz njene transverzalne prirode (kod longitudinalnog talasa polarizacija ne bi imala smisla). Obična svetlost nije polarizovana jer je atomi emituju u nasumičnim trenucima i nasumičnim ravnima. Polarizovanu svetlost dobijamo refleksijom, dvojnim prelamanjem ili selektivnom apsorpcijom (polaroidi).</p>
+
+<p><strong>Brusterov zakon</strong> opisuje polarizaciju refleksijom. Pri odbijanju od granice dveju sredina i odbijeni i prelomljeni zrak su delimično polarizovani u međusobno normalnim ravnima, a stepen polarizacije zavisi od upadnog ugla. Postoji poseban <em>Brusterov ugao</em> $\alpha_B$ pri kome je odbijena svetlost <strong>potpuno</strong> linearno polarizovana — to je ugao pri kome odbijeni i prelomljeni zrak zaklapaju $90^\circ$. Tada je $\beta = 90^\circ - \alpha_B$, pa Snelijusov zakon daje tangensni oblik.</p>
+
+<div class="formula">
+$$ \operatorname{tg}\alpha_B = \frac{n_2}{n_1} \quad\Rightarrow\quad \alpha_B = \operatorname{arctg}\frac{n_2}{n_1} $$
+<br>Podsetnik: $\alpha_B$ — Brusterov ugao (°); $n_1$ — indeks prve sredine (iz koje svetlost dolazi); $n_2$ — indeks druge sredine; oba bezdimenziona. Pri ovom uglu odbijeni i prelomljeni zrak su međusobno normalni.
+</div>
+
+<p>Intenzitet polarizovane svetlosti pri prolasku kroz drugi polaroid (<em>analizator</em>) opisuje <strong>Malusov zakon</strong> (Malus, 1809). Ako osa analizatora zaklapa ugao $\theta$ sa ravni polarizacije dolazne svetlosti, kroz analizator prolazi samo komponenta polja duž njegove ose, $E_A = E_0\cos\theta$. Pošto je intenzitet srazmeran kvadratu amplitude ($I \propto E^2$), kvadriranjem se dobija:</p>
+
+<div class="formula">
+$$ I = I_0\cos^2\theta $$
+<br>Podsetnik: $I$ — intenzitet svetlosti iza analizatora (W/m²); $I_0$ — intenzitet svetlosti koja ulazi u analizator (W/m²); $\theta$ — ugao između ose analizatora i ravni polarizacije (° ili rad).
+</div>
+
+<p>Pri paralelnim osama ($\theta = 0$) svetlost prolazi nesmanjeno ($I = I_0$), a pri ukrštenim ($\theta = 90^\circ$) iza analizatora nema svetlosti ($I = 0$). Na ovoj zakonitosti počiva <strong>LCD tehnologija</strong> (displeji sa tečnim kristalima). Tečni kristali su optički aktivni — zakreću ravan polarizacije — ali tu aktivnost gube u spoljašnjem električnom polju. U LCD ćeliji polarizator i analizator su ukršteni: bez polja tečni kristal zaokrene ravan polarizacije pa svetlost prolazi i segment izgleda svetao, a kada se uključi električno polje zakretanje izostaje, svetlost se ne propušta i segment je taman. Uključivanjem i isključivanjem polja po segmentima formiraju se slova i brojevi na ekranu.</p>
+
+<h2 id="pred9" class="l9">Predavanje 9 — Kvantna optika i atomska fizika</h2>
+
+<h3 id="h_35">Toplotno zračenje, apsolutno crno telo, Štefan–Bolcmanov i Vinov zakon</h3>
+
+<p>Toplotno zračenje je onaj deo elektromagnetnog zračenja koji telo emituje na račun promene svoje unutrašnje (toplotne) energije. Svako telo neprestano razmenjuje energiju sa okolinom: istovremeno zrači i apsorbuje zračenje koje na njega pada. Posebno je važno stanje toplotne (termodinamičke) ravnoteže, u kome se temperatura tela ne menja, jer je energija koju telo u jedinici vremena emituje tačno jednaka energiji koju u istom vremenu apsorbuje — razmena postoji, ali joj je bilans nula.</p>
+
+<p>Da bismo opisali koliko jako telo zrači i koliko jako apsorbuje na pojedinim talasnim dužinama, uvodimo dve veličine. Emisiona moć govori koliko energije telo izrači po jedinici površine i u jedinici vremena, pa je u suštini intenzitet zračenja. Apsorpciona moć je bezdimenziona veličina (broj između 0 i 1) jednaka odnosu apsorbovane i upadne energije na datoj talasnoj dužini. Pošto telo ne može da apsorbuje više nego što na njega padne, apsorpciona moć je uvek $\le 1$.</p>
+
+<div class="formula">
+$$ \varepsilon_{\lambda,T} = \frac{E}{S\,t} = \frac{P}{S} \equiv I, \qquad a_{\lambda,T} = \frac{E_{\lambda}^{(aps)}}{E_{\lambda}^{(up)}} $$<br>
+Podsetnik: $\varepsilon_{\lambda,T}$ — emisiona moć (intenzitet $I$), $[\text{W/m}^2]$; $E$ — izračena energija $[\text{J}]$; $S$ — površina $[\text{m}^2]$; $t$ — vreme $[\text{s}]$; $P$ — snaga zračenja $[\text{W}]$; $a_{\lambda,T}$ — apsorpciona moć (bezdimenziona); indeksi $\lambda$ i $T$ naglašavaju zavisnost od talasne dužine i temperature.
+</div>
+
+<p>Apsolutno crno telo je fizički model tela koje idealno apsorbuje celokupno upadno zračenje, bez obzira na frekvenciju i ugao pod kojim pada, pa je za njega $a_{\lambda,T}=1$. Praktično se ostvaruje kao šuplja lopta sa malim otvorom čija je unutrašnjost presvučena slabo reflektujućim slojem (čađ): zrak koji uđe kroz otvor mnogo puta se odbija od zidova i pri svakom odbijanju gubi deo energije, pa je verovatnoća da izađe nazad praktično nula. Zato se sam otvor ponaša kao apsolutno crno telo. Spektar njegovog zračenja je kontinualan, teži nuli na vrlo malim i vrlo velikim talasnim dužinama, a ima izražen maksimum na najverovatnijoj talasnoj dužini $\lambda_m$, koja se sa porastom temperature pomera ka kraćim talasnim dužinama.</p>
+
+<p>Dva zakona kvantitativno opisuju ovaj spektar. Štefan–Bolcmanov zakon kaže da je ukupna emisiona moć srazmerna četvrtom stepenu apsolutne temperature: pošto $T$ ulazi na četvrti stepen, udvostručenje temperature povećava izračenu snagu $2^4=16$ puta, zbog čega su krive za toplija tela mnogo više. Vinov zakon pomeranja kaže da je $\lambda_m$ obrnuto srazmerno temperaturi — što je telo toplije, to mu maksimum spektra leži na kraćoj talasnoj dužini (zato usijano telo prelazi od crveno-žute ka belo-plavičastoj boji).</p>
+
+<div class="formula">
+$$ \varepsilon = \sigma\,T^4, \qquad \lambda_m = \frac{b}{T} $$<br>
+Podsetnik: $\varepsilon$ — ukupna emisiona moć $[\text{W/m}^2]$; $T$ — apsolutna temperatura $[\text{K}]$; $\sigma = 5{,}67\cdot10^{-8}\ \text{W}/(\text{m}^2\text{K}^4)$ — Štefan–Bolcmanova konstanta; $\lambda_m$ — najverovatnija talasna dužina $[\text{m}]$; $b = 2{,}9\cdot10^{-3}\ \text{K}\cdot\text{m}$ — Vinova konstanta.
+</div>
+
+<h3 id="h_36">Ultraljubičasta katastrofa i Plankova hipoteza (kvant energije)</h3>
+
+<p>Eksperimentalni oblik spektra apsolutno crnog tela klasična fizika nije mogla da izvede. Primena klasične (Maksvelove) elektromagnetne teorije, koju su sproveli Rejli i Džins, slaže se sa merenjem samo pri niskim frekvencijama (velikim talasnim dužinama). Pri visokim frekvencijama (kratkim talasnim dužinama) klasična kriva, umesto da opada ka nuli, neograničeno raste, što bi značilo da apsolutno crno telo u ravnoteži zrači beskonačno veliku snagu. Taj fizički nemoguć rezultat naziva se ultraljubičasta (Rejli–Džinsova) katastrofa i jasno je pokazao da klasična fizika tu zakazuje.</p>
+
+<p>Problem je 1900. godine rešio Maks Plank hipotezom da se elektromagnetno zračenje ne emituje kontinualno, već u tačno određenim paketima (kvantima) energije — fotonima. Energija jednog fotona srazmerna je frekvenciji: fotoni veće frekvencije (kraće talasne dužine) nose veću energiju. Ključna posledica je da ukupna energija zračenja može biti samo celobrojni umnožak energije jednog kvanta — energija je kvantovana, dolazi u „porcijama" i ne može biti, recimo, polovina kvanta.</p>
+
+<div class="formula">
+$$ \epsilon_f = h\,\nu = \frac{h\,c}{\lambda}, \qquad E = N\,h\,\nu, \quad N = 1,2,3,\dots $$<br>
+Podsetnik: $\epsilon_f$ — energija fotona $[\text{J}]$; $h = 6{,}626\cdot10^{-34}\ \text{J}\cdot\text{s}$ — Plankova konstanta; $\nu$ — frekvencija $[\text{Hz}]$; $c$ — brzina svetlosti; $\lambda$ — talasna dužina $[\text{m}]$; $N$ — ceo broj fotona; $E$ — ukupna energija zračenja $[\text{J}]$.
+</div>
+
+<p>Polazeći od kvantne hipoteze, Plank je izveo formulu za spektralnu emisionu moć apsolutno crnog tela koja se u potpunosti slaže sa eksperimentom na svim talasnim dužinama. Upravo ograničenje na celobrojne kvante uklanja beskonačni porast pri visokim frekvencijama i otklanja ultraljubičastu katastrofu. Time je Plankova formula ne samo uklonila paradoks nego i reprodukovala izmereni oblik spektra (porast, maksimum, opadanje), čime je položen temelj kvantne fizike.</p>
+
+<div class="formula">
+$$ \varepsilon_{\lambda,T} = \frac{2\pi c^2 h}{\lambda^5}\,\frac{1}{e^{\frac{hc}{\lambda kT}} - 1} $$<br>
+Podsetnik: $\varepsilon_{\lambda,T}$ — spektralna emisiona moć $[\text{W/m}^2]$; $c$ — brzina svetlosti; $h$ — Plankova konstanta; $\lambda$ — talasna dužina; $T$ — apsolutna temperatura; $k$ — Bolcmanova konstanta $[\text{J/K}]$.
+</div>
+
+<h3 id="h_37">Fotoelektrični efekat i Ajnštajnovo objašnjenje</h3>
+
+<p>Fotoelektrični efekat je pojava izbijanja elektrona iz materijala (najčešće metala) obasjanog elektromagnetnim zračenjem. Da bi elektron napustio metal, mora savladati privlačnu silu pozitivnih jona kristalne rešetke; najmanja energija potrebna za to je izlazni rad $A$. Eksperimenti su pokazali četiri zakonitosti: broj izbijenih elektrona srazmeran je intenzitetu svetlosti; maksimalna kinetička energija elektrona ne zavisi od intenziteta, već linearno raste sa frekvencijom; efekat se javlja samo iznad neke granične frekvencije koja zavisi od materijala; i dešava se trenutno, bez zakašnjenja.</p>
+
+<p>Klasična talasna teorija ovo ne može da objasni. Po njoj bi elektron oscilovao u polju talasa i otrgao se kad amplituda (intenzitet) postane dovoljna, pa bi efekat zavisio od intenziteta a ne od frekvencije, kinetička energija bi rasla sa intenzitetom, ne bi postojala granična frekvencija, i trebalo bi vreme da elektron „nakupi" energiju. Sve ovo je suprotno merenjima. Problem je 1905. godine razrešio Albert Ajnštajn, proširivši Plankovu hipotezu tvrdnjom da se svetlost ne samo emituje, nego i prenosi i apsorbuje u fotonima.</p>
+
+<p>Po Ajnštajnu, fotoefekat je neelastičan sudar fotona i elektrona u kome foton predaje elektronu celokupnu svoju energiju $h\nu$. Ta energija se troši na izlazni rad, a ostatak ostaje elektronu kao kinetička energija. Energetski bilans tog sudara je Ajnštajnova jednačina fotoefekta. Pošto se merenja sa zaustavnim (zakočnim) naponom $U_k$ slažu sa ovom slikom — pri $U_k$ polje potpuno zaustavi elektrone, pa je $\tfrac{1}{2}m_e v^2 = eU_k$ — jednačina je eksperimentalno potvrđena.</p>
+
+<div class="formula">
+$$ h\nu = A + E_{kin}, \qquad \frac{hc}{\lambda} = A + \frac{1}{2}\,m_e v^2 $$<br>
+Podsetnik: $h\nu = hc/\lambda$ — energija fotona $[\text{J}]$; $A$ — izlazni rad $[\text{J}]$; $E_{kin}=\tfrac12 m_e v^2$ — kinetička energija fotoelektrona; $m_e = 9{,}11\cdot10^{-31}\ \text{kg}$ — masa elektrona; $v$ — brzina elektrona; $\lambda$ — talasna dužina upadne svetlosti.
+</div>
+
+<p>Ova teorija objašnjava sve činjenice: veći intenzitet znači više fotona, dakle više izbijenih elektrona (srazmernost broja i intenziteta); kinetička energija zavisi od $h\nu$, dakle samo od frekvencije; postoji energijski prag — efekta ima samo ako je energija fotona barem jednaka izlaznom radu. Granični slučaj $E_{kin}=0$ daje graničnu frekvenciju $\nu_g$ i njoj odgovarajuću crvenu granicu fotoefekta $\lambda_g$. Ispod te frekvencije efekta nema, ma koliko jaka bila svetlost. Pošto je reč o sudaru pojedinačnog fotona sa pojedinačnim elektronom, izbijanje je trenutno.</p>
+
+<div class="formula">
+$$ h\nu_g = A \quad\Rightarrow\quad \frac{hc}{\lambda_g} = A $$<br>
+Podsetnik: $\nu_g$ — granična frekvencija (najmanja pri kojoj se još javlja fotoefekat) $[\text{Hz}]$; $\lambda_g$ — crvena granica fotoefekta $[\text{m}]$; $A$ — izlazni rad $[\text{J}]$.
+</div>
+
+<h3 id="h_38">Komptonov efekat</h3>
+
+<p>Komptonov efekat, koji je Artur Kompton otkrio 1923. godine, je elastična interakcija fotona rentgenskog zračenja talasne dužine $\lambda$ i slabo vezanog atomskog elektrona, koji se zbog slabe veze može smatrati slobodnim. Dok kod fotoefekta foton preda celu energiju, ovde mu predaje samo deo energije i impulsa, pa nastavlja kretanje sa većom talasnom dužinom $\lambda' > \lambda$. To nije slučajno: ako je foton predao deo energije, preostala energija mu je manja, a manjoj energiji odgovara manja frekvencija, dakle veća talasna dužina (za foton važi $\epsilon_f \sim 1/\lambda$).</p>
+
+<p>Pomeraj talasne dužine dat je Komptonovom formulom i zavisi samo od ugla rasejanja $\theta$, a ne od početne talasne dužine. Kada foton ne skrene ($\theta=0$) nema pomeraja; najveći pomeraj je pri odbijanju unazad ($\theta=180^\circ$, $\cos\theta=-1$), gde činilac $1-\cos\theta$ dostiže vrednost 2.</p>
+
+<div class="formula">
+$$ \Delta\lambda = \lambda' - \lambda = \frac{h}{m_0 c}\,(1 - \cos\theta) = \lambda_c\,(1 - \cos\theta) $$<br>
+Podsetnik: $\Delta\lambda$ — porast talasne dužine pri rasejanju $[\text{m}]$; $\lambda, \lambda'$ — talasna dužina upadnog i rasejanog fotona; $h$ — Plankova konstanta; $m_0$ — masa mirovanja elektrona; $c$ — brzina svetlosti; $\theta$ — ugao rasejanja; $\lambda_c = h/(m_0 c) = 2{,}42\cdot10^{-12}\ \text{m}$ — Komptonova talasna dužina.
+</div>
+
+<p>Klasična teorija predviđa da bi prinudno oscilovanje elektrona dalo sekundarno zračenje iste frekvencije (iste talasne dužine) kao upadno, pa promenu $\lambda$ ne može da objasni. Pravo objašnjenje daje Plankova hipoteza o fotonima: sudar fotona i mirujućeg elektrona, u kome foton predaje deo energije i zato izlazi sa $\lambda' > \lambda$. Komptonov efekat je tako jedan od najjasnijih dokaza čestične (korpuskularne) prirode svetlosti i postojanja impulsa fotona.</p>
+
+<h3 id="h_39">Atomski spektri (Balmerova i Ridbergova formula)</h3>
+
+<p>Još u XIX veku merenja su pokazala da zračenje koje emituju atomi nije neprekidan niz svih talasnih dužina, već se sastoji od uskih, međusobno razdvojenih spektralnih linija. Raspored tih linija karakterističan je za svaki element — svaki hemijski element ima svoj „otisak prsta" u spektru, pa se po spektru element može prepoznati. Vodonik, natrijum, helijum, neon i živa daju potpuno različite skupove linija u vidljivom delu (otprilike 350–650 nm).</p>
+
+<p>Talasna dužina svake linije u spektru atoma vodonika računa se po Balmerovoj formuli, biranjem dva prirodna broja $k<n$. Veoma slične spektre imaju i „vodoniku slični joni" (npr. $\text{He}^+$, $\text{Li}^{2+}$), koji u omotaču imaju samo jedan elektron; za njih važi uopštena formula sa dodatnim činiocem $Z^2$, koji za veći atomski broj pomera linije ka kraćim talasnim dužinama. Za sam vodonik je $Z=1$, pa se uopštena formula svodi na osnovnu Balmerovu.</p>
+
+<div class="formula">
+$$ \frac{1}{\lambda} = R\left(\frac{1}{k^2} - \frac{1}{n^2}\right), \qquad \frac{1}{\lambda} = R\,Z^2\left(\frac{1}{k^2} - \frac{1}{n^2}\right) $$<br>
+Podsetnik: $\lambda$ — talasna dužina linije $[\text{m}]$; $k, n$ — prirodni brojevi, $k<n$; $R = 1{,}097\cdot10^{7}\ \text{m}^{-1}$ — Ridbergova konstanta; $Z$ — atomski broj (broj protona).
+</div>
+
+<p>Postojanje diskretnih linija bilo je nerešiva zagonetka za klasičnu fiziku i postalo je odlučujući eksperimentalni test za svaki model atoma: tačan model morao je da reprodukuje upravo ovakav linijski spektar i konkretnu vrednost Ridbergove konstante.</p>
+
+<h3 id="h_40">Raderfordov model atoma i njegov problem</h3>
+
+<p>Da bi otkrio stvarni raspored naelektrisanja u atomu (koji Tomsonov model „pudinga" nije davao), Ernest Raderford je 1910. godine posmatrao rasejanje $\alpha$-čestica pri prolasku kroz tanku zlatnu foliju. Najveći deo čestica prolazio je neometano, deo je skretao pod raznim uglovima (broj skrenutih opada sa uglom), a mali broj se čak odbijao unazad pod uglom do $180^\circ$. Iz toga je zaključio: atom je najvećim delom „prazan prostor" sa lakim elektronima; pozitivno naelektrisanje i gotovo sva masa skoncentrisani su u sićušnom, masivnom jezgru; retka odbijanja unazad pokazuju da je jezgro izuzetno malo.</p>
+
+<p>Tako je nastao planetarni model: pozitivno jezgro u središtu i elektroni koji kruže oko njega, slično planetama oko Sunca. Jezgro sadrži pozitivne protone i neutralne neutrone (otkrivene tek 1932), a broj elektrona jednak je broju protona jer je atom neutralan. Elektron se na kružnoj orbiti održava ravnotežom privlačne Kulonove sile i potrebne centripetalne sile.</p>
+
+<div class="formula">
+$$ \frac{1}{4\pi\varepsilon_0}\,\frac{Z e^2}{r^2} = \frac{m_e v^2}{r} $$<br>
+Podsetnik: leva strana — Kulonova privlačna sila između jezgra $+Ze$ i elektrona; desna strana — centripetalna sila; $\varepsilon_0$ — dielektrična propustljivost vakuuma; $Z$ — atomski broj; $e$ — elementarno naelektrisanje; $r$ — poluprečnik orbite; $m_e$ — masa elektrona; $v$ — brzina elektrona.
+</div>
+
+<p>Model ima dva ozbiljna nedostatka. Prvi: elektron na kružnoj putanji je stalno ubrzan, a po elektrodinamici svaka ubrzana naelektrisana čestica zrači i gubi energiju; gubeći energiju elektron bi se spiralno sunovratio na jezgro za trenutak — što se ne dešava, jer je atom stabilan. Drugi: pošto bi se energija menjala kontinuirano, atom bi davao kontinualan spektar, dok su izmereni spektri linijski. Klasični planetarni model dakle ne može da objasni ni stabilnost atoma ni linijske spektre.</p>
+
+<h3 id="h_41">Borovi postulati i Borova teorija (energije nivoa, poluprečnici)</h3>
+
+<p>Da bi otklonio te nedostatke, Nils Bor je 1913. godine uveo dva postulata. Prvi postulat (o stacionarnim stanjima): od svih klasično mogućih putanja dozvoljene su samo one za koje je moment impulsa elektrona celobrojni umnožak redukovane Plankove konstante $\hbar$. Na tim stacionarnim orbitama, određenim glavnim kvantnim brojem $n$, atom ne zrači — time otpada klasično pravilo da ubrzani elektron mora zračiti, pa elektron ne pada na jezgro (rešen prvi nedostatak).</p>
+
+<div class="formula">
+$$ L = m_e\, v\, r = n\,\hbar, \qquad n = 1, 2, 3, \dots $$<br>
+Podsetnik: $L$ — moment impulsa elektrona; $m_e$ — masa elektrona; $v$ — brzina; $r$ — poluprečnik orbite; $n$ — glavni kvantni broj; $\hbar = h/2\pi$ — redukovana Plankova konstanta.
+</div>
+
+<p>Drugi postulat (o kvantnim prelazima): atom emituje ili apsorbuje foton samo kada elektron pređe sa jedne stacionarne orbite na drugu, a energija fotona jednaka je razlici energija ta dva stanja. Ako elektron prelazi na nižu orbitu, višak energije se oslobađa kao foton (emisija); ako prelazi na višu, foton se apsorbuje. Pošto su energije orbita diskretne, diskretne su i energije (i talasne dužine) fotona — odatle linijski spektar (rešen drugi nedostatak). Stanje $n=1$ je osnovno, ostala su pobuđena. Teorija važi samo za jednoelektronske sisteme („atome vodonikovog tipa").</p>
+
+<div class="formula">
+$$ h\nu = |E_n - E_k| $$<br>
+Podsetnik: $h$ — Plankova konstanta; $\nu$ — frekvencija fotona; $E_n, E_k$ — energije elektrona na $n$-toj i $k$-toj orbiti; apsolutna vrednost obezbeđuje pozitivnu energiju fotona.
+</div>
+
+<p>Kombinujući jednačinu mehaničke ravnoteže sa prvim postulatom dobijaju se poluprečnik i brzina elektrona na $n$-toj orbiti. Poluprečnik raste sa kvadratom kvantnog broja ($r_n \propto n^2$), pa su više orbite sve udaljenije, dok brzina opada ($v_n \propto 1/n$) — elektroni na udaljenijim orbitama kreću se sporije.</p>
+
+<div class="formula">
+$$ r_n = \frac{4\pi\varepsilon_0 \hbar^2}{Z m_e e^2}\, n^2, \qquad v_n = \frac{Z e^2}{4\pi\varepsilon_0 \hbar}\,\frac{1}{n} $$<br>
+Podsetnik: $r_n$ — poluprečnik $n$-te orbite; $v_n$ — brzina na njoj; $\varepsilon_0$ — propustljivost vakuuma; $\hbar$ — redukovana Plankova konstanta; $m_e$ — masa elektrona; $Z$ — atomski broj; $e$ — elementarno naelektrisanje; $n$ — glavni kvantni broj.
+</div>
+
+<p>Ukupna energija elektrona je zbir kinetičke i (negativne) potencijalne Kulonove energije. Konačan izraz je negativan (elektron je vezan) i srazmeran $1/n^2$: nivoi su sve gušći i sve bliži nuli kako $n$ raste, a $E_n \to 0$ za slobodan elektron. Upravo diskretne vrednosti $E_n$ daju, preko drugog postulata, diskretne linije i — kada se izrazi preko talasne dužine — uopštenu Balmerovu formulu. Najveći trijumf teorije je što daje Ridbergovu konstantu preko osnovnih konstanti, u odličnom slaganju sa izmerenom vrednošću.</p>
+
+<div class="formula">
+$$ E_n = -\frac{m_e Z^2 e^4}{8\,\varepsilon_0^2 h^2}\cdot\frac{1}{n^2}, \qquad R_H = \frac{m_e e^4}{8\, c\, \varepsilon_0^2 h^3} = 1{,}097\cdot10^7\ \text{m}^{-1} $$<br>
+Podsetnik: $E_n$ — ukupna energija elektrona na $n$-toj orbiti (negativna, energija veze); $R_H$ — Ridbergova konstanta; $m_e$ — masa elektrona; $e$ — elementarno naelektrisanje; $\varepsilon_0$ — propustljivost vakuuma; $h$ — Plankova konstanta; $c$ — brzina svetlosti; $Z$ — atomski broj; $n$ — glavni kvantni broj.
+</div>
+
+<h3 id="h_42">Spektralne serije (Ridbergova formula)</h3>
+
+<p>Spektralna serija je skup svih linija koje odgovaraju prelascima elektrona sa raznih viših nivoa na jedan isti, fiksiran niži nivo $k$. Ako fiksiramo donji nivo $k$ i pustimo da gornji nivo $n$ uzima sve vrednosti veće od $k$, dobijamo sve linije te serije; drugi izbor $k$ daje drugu seriju. Recipročna talasna dužina svake linije data je uopštenom Balmerovom (Ridbergovom) formulom, koja proizlazi direktno iz Borove teorije.</p>
+
+<div class="formula">
+$$ \left(\frac{1}{\lambda}\right)_{n\to k} = Z^2 R_H\left(\frac{1}{k^2} - \frac{1}{n^2}\right) $$<br>
+Podsetnik: $\lambda$ — talasna dužina linije; $Z$ — atomski broj (za vodonik $Z=1$); $R_H$ — Ridbergova konstanta; $k$ — fiksirani donji nivo serije; $n$ — gornji nivo, $n>k$.
+</div>
+
+<p>Po izboru donjeg nivoa redom slede: Lajmanova serija ($k=1$, $n=2,3,\dots$), Balmerova ($k=2$), Pašenova ($k=3$), Breketova ($k=4$), Pfundova ($k=5$) i Hamfrizova ($k=6$). Unutar jedne serije prelaz sa najbližeg višeg nivoa (npr. $n=2 \to k=1$ kod Lajmana) daje najmanju razliku u zagradi, dakle najmanju energiju fotona i najveću talasnu dužinu — ta linija se zove glavna linija serije.</p>
+
+<p>Pošto su gornji nivoi sve bliži jedan drugom kako $n$ raste, svaka naredna serija leži na sve manjim energijama prelaza, pa joj linije padaju na sve veće talasne dužine. Zato je Lajmanova serija u ultraljubičastom delu spektra, Balmerova u vidljivom (zbog čega je istorijski prva i izmerena), a Pašenova i ostale u infracrvenom. Slaganje ovih serija sa merenjima bilo je presudna potvrda Borovog modela.</p>
+
+<h3 id="h_43">Dualistička priroda svetlosti / fotoni</h3>
+
+<p>Niz pojava — toplotno zračenje, fotoelektrični i Komptonov efekat, emisija i apsorpcija u atomima — pokazao je da je klasična slika svetlosti kao isključivo elektromagnetnog talasa nepotpuna. U nekim pojavama (interferencija, difrakcija) do izražaja dolaze talasna svojstva, a u drugim (fotoefekat, Komptonov efekat) čestična. Zato je prihvaćena teza o dvojnoj (dualističkoj) prirodi svetlosti: talasno i čestično tumačenje ne protivureče, već se dopunjuju. Foton je kvant elektromagnetnog zračenja, određen pre svega svojom energijom, i nije klasična mehanička čestica (nema masu i zapreminu kuglice).</p>
+
+<p>Most između dve slike gradi se preko energije i impulsa fotona. Energija povezuje talasne veličine (frekvencija, talasna dužina) sa česticom. Posmatran iz ugla relativnosti, foton ima i energiju $\epsilon_f = mc^2$; izjednačavanjem oba izraza i skraćivanjem jednog $c$ dobija se veza talasne dužine sa impulsom, koja u jednoj jednačini sjedinjuje korpuskularnu osobinu (impuls $p$) i talasnu osobinu (talasnu dužinu $\lambda$).</p>
+
+<div class="formula">
+$$ \epsilon_f = h\,\nu = \frac{h\,c}{\lambda} = m c^2, \qquad \lambda = \frac{h}{m c} = \frac{h}{p} $$<br>
+Podsetnik: $\epsilon_f$ — energija fotona $[\text{J}]$; $h$ — Plankova konstanta; $\nu$ — frekvencija; $c$ — brzina svetlosti; $\lambda$ — talasna dužina; $m$ — (relativistička) masa fotona; $p = mc$ — impuls fotona $[\text{kg}\cdot\text{m/s}]$.
+</div>
+
+<p>Da dualizam nije samo formalan, potvrđuju eksperimenti. Tim Fabricija Karbonea je 2015. godine na nanožici prvi put istovremeno uhvatio oba lica svetlosti: stojeći svetlosni talas (talasno svojstvo) i razmenu energijskih paketa između elektrona i fotona (čestično svojstvo). S druge strane, da je foton nedeljiv pokazao je Klauzerov eksperiment iz 1970-ih: pojedinačni foton koji nailazi na kristal ili se reflektuje ili prolazi, ali dva detektora nikada ne otkucaju istovremeno — foton se ne može rascepiti, on biva apsorbovan ili reflektovan kao celina. Time je potvrđeno da je kvant energije $\epsilon_f = h\nu = \hbar\omega$ elementaran i nedeljiv, a foton izuzetno stabilan objekat (boja, tj. frekvencija, fotona sa udaljenih zvezda ostaje očuvana).</p>
+
+<h2 id="pred10" class="l10">Predavanje 10 — Osnove kvantne mehanike</h2>
+
+<h3 id="h_44">Dualistička (talasno-čestična) priroda mikroobjekata</h3>
+
+<p>Dualistička priroda znači da jedan isti mikroobjekat poseduje istovremeno i talasna i čestična svojstva, a koje će se „lice" ispoljiti zavisi od pojave koju posmatramo. Kod svetlosti talasna priroda dolazi do izražaja u interferenciji, difrakciji, disperziji i polarizaciji, dok se čestična (fotonska) priroda ispoljava kod fotoelektričnog efekta, Komptonovog efekta, te pri emisiji i apsorpciji svetlosti iz atoma. Ova dvojnost nije svojstvo samo svetlosti, već je univerzalna osobina svih objekata mikrosveta.</p>
+
+<p>Fizički razlog zašto možemo govoriti o jednom objektu sa dva svojstva leži u tome što se ista energija fotona može izraziti na dva načina: kao talasu, preko frekvencije, i kao čestici, preko ekvivalencije mase i energije. Pošto oba izraza opisuju jednu istu energiju, smemo ih izjednačiti, čime se talasna veličina (talasna dužina) direktno povezuje sa čestičnom (impulsom).</p>
+
+<div class="formula">
+$$\epsilon_f = h\,\nu = \frac{h\,c}{\lambda} = m\,c^2 \;\;\Rightarrow\;\; \lambda = \frac{h}{m\,c} = \frac{h}{p}$$<br>
+Podsetnik: $\epsilon_f$ — energija fotona (J); $h$ — Plankova konstanta ($6{,}626\cdot10^{-34}$ J·s); $\nu$ — frekvencija (Hz); $c$ — brzina svetlosti ($\approx 3\cdot10^{8}$ m/s); $\lambda$ — talasna dužina (m); $m$ — masa fotona (kg); $p = m\,c$ — impuls fotona (kg·m/s).
+</div>
+
+<p>Značaj relacije $\lambda = h/p$ je u tome što u jednoj jednačini spaja talasnu osobinu ($\lambda$) i čestičnu osobinu ($p$) istog objekta — upravo se u njoj ogleda dualizam. Posledica je dalekosežna: pošto dvojna priroda nije ograničena na svetlost, ona postaje polazna tačka za de Broljevu hipotezu i za celokupnu kvantnu mehaniku.</p>
+
+<h3 id="h_45">De Broljeva hipoteza i njena potvrda (difrakcija elektrona)</h3>
+
+<p>Luj de Brolj je 1923. godine proširio dualizam sa svetlosti na svu materiju: svakoj materijalnoj čestici mase $m$ koja se kreće brzinom $v < c$ može se pridružiti talas (de Broljev talas) određene talasne dužine. Talasnu dužinu dobijamo iz iste relacije kao za foton, samo što umesto $c$ stoji brzina čestice $v$. Suština ideje je da i obična čestica, na primer elektron, poseduje talasnu prirodu.</p>
+
+<div class="formula">
+$$\lambda = \frac{h}{p} = \frac{h}{m\,v} \qquad (10.1)$$<br>
+Podsetnik: $\lambda$ — de Broljeva talasna dužina pridružena čestici (m); $h$ — Plankova konstanta (J·s); $p = m\,v$ — impuls čestice (kg·m/s); $m$ — masa čestice (kg); $v$ — brzina čestice (m/s), pri čemu je $v < c$.</div>
+
+<p>Hipoteza je dala i fizičko objašnjenje ZAŠTO elektroni u stacionarnim stanjima atoma ne zrače: elektronu na putanji pridružuje se stojeći talas takav da na obimu orbite staje ceo broj talasnih dužina. Tada se talas „zatvara sam u sebe", ne razgrađuje se i nema gubitka energije, pa nema ni zračenja. Iz uslova $2\pi r_n = n\lambda$, uz $\lambda = h/(m_e v_n)$, izvodi se i prvi Borov postulat $m_e r_n v_n = n\,h/(2\pi)$ — dakle talasna priroda daje dublji smisao onome što je Bor morao da postulira.</p>
+
+<p>Eksperimentalnu potvrdu doneli su Dejvison i Džermer (1927) posmatranjem difrakcije elektrona na monokristalu nikla. Elektroni ubrzani naponom od $100$ V imaju talasnu dužinu reda $10^{-10}$ m, uporedivu sa rastojanjima između atoma, pa kristal služi kao difrakciona rešetka. Dobijena raspodela intenziteta bila je ista kao pri difrakciji X-zraka, čime je potvrđena talasna priroda elektrona.</p>
+
+<div class="formula">
+$$\lambda = \frac{h}{p} = \frac{h}{\sqrt{2\,m\,e\,U}} \approx 10^{-10}\ \text{m}$$<br>
+Podsetnik: $\lambda$ — talasna dužina elektrona (m); $h$ — Plankova konstanta (J·s); $m$ — masa elektrona (kg); $e$ — naelektrisanje elektrona (C); $U$ — ubrzavajući napon (V); $\sqrt{2meU}$ — impuls koji elektron stekne jer mu je kinetička energija jednaka $eU$.</div>
+
+<p>Značaj potvrde je u tome što je talasno-čestični dualizam time postao eksperimentalna činjenica, a ne samo pretpostavka. Kasniji ogledi (Cajlinger, 1999) pokazali su difrakciju i kod ogromnih molekula fulerena $C_{60}$ i fluorofulerena $C_{60}F_{48}$, što potvrđuje da hipoteza važi i za objekte mnogo masivnije od pojedinačnih čestica.</p>
+
+<h3 id="h_46">Zašto se dualizam ne primećuje kod makroskopskih tela</h3>
+
+<p>Iako de Broljeva relacija formalno pridružuje talas svakom telu, kod makroskopskih objekata talasne pojave su potpuno neprimetne. Razlog je u veličini pridružene talasne dužine: pošto je $\lambda = h/(mv)$, a Plankova konstanta je izuzetno mala, kod velikih masa i uobičajenih brzina talasna dužina ispada nezamislivo mala.</p>
+
+<div class="formula">
+$$\lambda = \frac{h}{m\,v} \approx 10^{-34}\ \text{m} \quad (\text{metak: } m=10^{-2}\,\text{kg},\ v=700\,\text{m/s})$$<br>
+Podsetnik: $\lambda$ — talasna dužina pridružena telu (m); $h = 6{,}626\cdot10^{-34}$ J·s — Plankova konstanta; $m$ — masa tela (kg); $v$ — brzina tela (m/s).</div>
+
+<p>Dobijena vrednost reda $10^{-34}$ m toliko je mala da u prirodi ne postoji nijedan objekat sa otvorima ili rešetkom tako sitnih dimenzija na kojem bi se takav talas mogao difraktovati. Zato je talasna pojava makro tela neostvariva — ona postoji samo formalno. Posledica je da je talasno-čestični dualizam isključiva osobina mikrosveta (elektroni, fotoni i slične čestice), a ne tela iz svakodnevnog iskustva.</p>
+
+<h3 id="h_47">Relacije neodređenosti (smisao)</h3>
+
+<p>U kvantnoj mehanici postoje parovi veličina koje nije moguće istovremeno tačno izmeriti: što tačnije odredimo jednu, to neodređenija postaje druga. Ovu zakonitost je formulisao Verner Hajzenberg 1927. godine. Za par položaj–impuls (duž iste ose) i za par energija–vreme važe relacije sa donjom granicom proizvoda neodređenosti.</p>
+
+<div class="formula">
+$$\Delta x \cdot \Delta p_x \geq \frac{\hbar}{2}\ , \qquad \Delta E \cdot \Delta t \geq \frac{\hbar}{2}$$<br>
+Podsetnik: $\Delta x$ — neodređenost položaja (m); $\Delta p_x$ — neodređenost impulsa duž iste ose (kg·m/s); $\Delta E$ — neodređenost energije stanja (J); $\Delta t$ — vreme boravka (dužina života) u stanju (s); $\hbar$ — redukovana Plankova konstanta ($\approx 1{,}055\cdot10^{-34}$ J·s).</div>
+
+<p>Fizički smisao: relacije nisu posledica nesavršenosti instrumenata, već su ugrađene u samu prirodu mikrosveta i direktna su posledica talasno-čestičnog dualizma. Da bi čestica imala dobro određen položaj, talasna funkcija mora biti lokalizovana u uskoj oblasti (oštar maksimum). Da bi imala dobro određen impuls (preko $p = h/\lambda$), funkcija mora sadržati mnogo pravilnih, jednako razmaknutih maksimuma kroz širok prostor. Ta dva zahteva su u sukobu — bolja preciznost impulsa nužno razmazuje položaj, i obrnuto.</p>
+
+<p>Iz relacije energija–vreme sledi praktična posledica: kratkotrajna stanja (mali $\Delta t$) imaju razmazanu, neodređenu energiju (veliki $\Delta E$), dok dugotrajna stanja imaju oštro definisanu energiju. Bitno je i da se položaj i impuls vezuju samo duž iste ose ($x$–$p_x$ itd.), a ne unakrsno.</p>
+
+<h3 id="h_48">Talasna funkcija i njen fizički smisao ($|\Psi|^2$)</h3>
+
+<p>Pošto relacije neodređenosti zabranjuju istovremeno tačno poznavanje položaja i impulsa, pojam putanje u kvantnoj fizici gubi smisao, pa se klasična mehanika ne može koristiti. Umesto toga, stanje čestice opisuje se talasnom funkcijom $\Psi(\vec{r},t)$ — kompleksnom funkcijom prostornih koordinata i vremena (a za stacionarna stanja samo prostornih koordinata, $\Psi(\vec r)$).</p>
+
+<p>Sama talasna funkcija je kompleksna, pa nema neposredan fizički smisao i ne može se direktno izmeriti. Smisao ima njen kvadrat modula, koji se dobija množenjem $\Psi$ sa kompleksno konjugovanom $\Psi^{*}$ — to je uvek realna i nenegativna veličina i predstavlja gustinu verovatnoće pronalaženja čestice.</p>
+
+<div class="formula">
+$$\rho = \Psi\,\Psi^{*} = |\Psi|^{2} = \frac{dP}{dV} \;\;\Rightarrow\;\; dP = |\Psi(\vec r, t)|^{2}\, dV$$<br>
+Podsetnik: $\rho$ — gustina verovatnoće (1/m³); $\Psi^{*}$ — kompleksno konjugovana talasna funkcija; $|\Psi|^2$ — kvadrat modula (realan, nenegativan); $dP$ — verovatnoća (bezdimenziona, $0$ do $1$) da se čestica nađe u $dV$; $dV$ — element zapremine (m³).</div>
+
+<p>Fizički smisao je dakle: $|\Psi|^2\,dV$ je verovatnoća da u trenutku $t$ česticu zateknemo baš u zapremini $dV$. Posledica je da talasna funkcija, preko svog kvadrata modula, dobija konkretan merljiv smisao i u potpunosti određuje stanje čestice (zato se zove i svojstvena funkcija ili funkcija stanja). Njome se opisuju razna stanja: slobodna čestica, elektron u atomu, čestica u potencijalnoj jami, elektron u metalu, nukleon u jezgru.</p>
+
+<h3 id="h_49">Superpozicija stanja</h3>
+
+<p>Princip superpozicije glasi: ako se objekat može naći u stanju $\Psi_1$ i u stanju $\Psi_2$, tada se može naći i u stanju koje je njihova linearna kombinacija. Ovo je jedan od osnovnih principa kvantne mehanike i posledica je toga što je Šredingerova jednačina linearna, pa je svaki zbir rešenja takođe rešenje.</p>
+
+<div class="formula">
+$$\Psi = a\,\Psi_1 + b\,\Psi_2\ , \qquad |a|^2 + |b|^2 = 1$$<br>
+Podsetnik: $\Psi$ — rezultujuće (superponovano) stanje; $\Psi_1,\Psi_2$ — moguća stanja; $a,b$ — koeficijenti superpozicije (kompleksni ili realni); $|a|^2$ — verovatnoća da se pri merenju realizuje $\Psi_1$; $|b|^2$ — verovatnoća za $\Psi_2$.</div>
+
+<p>Koeficijenti imaju verovatnosno značenje: kvadrat modula koeficijenta daje verovatnoću da se pri merenju realizuje odgovarajuće stanje. Pošto objekat mora biti u nekom od mogućih stanja, zbir tih verovatnoća mora biti jedan (uslov normiranja). Princip se uopštava na proizvoljan broj stanja.</p>
+
+<div class="formula">
+$$\Psi = \sum_{i=1}^{n} c_i\,\Psi_i\ , \qquad \sum_{i=1}^{n} |c_i|^2 = 1 \qquad (10.8)$$<br>
+Podsetnik: $\Psi_i$ — $i$-to moguće stanje; $c_i$ — koeficijent uz njega (kompleksan/realan); $|c_i|^2$ — verovatnoća realizacije $i$-tog stanja; uslov $\sum|c_i|^2=1$ izražava da objekat mora biti u nekom od mogućih stanja.</div>
+
+<h3 id="h_50">Šredingerova jednačina</h3>
+
+<p>Ulogu koju u klasičnoj fizici ima drugi Njutnov zakon — opis ponašanja i razvoja sistema — u kvantnoj mehanici preuzima Šredingerova jednačina (1925/6). To je diferencijalna jednačina drugog reda čija rešenja su talasne funkcije čestica u odgovarajućim kvantnim stanjima. Rešavanjem jednačine dobijamo sve što o čestici želimo da znamo.</p>
+
+<div class="formula">
+$$-\frac{\hbar^2}{2m}\,\frac{\partial^2 \Psi(x,t)}{\partial x^2} + U(x,t)\,\Psi(x,t) = i\hbar\,\frac{\partial \Psi(x,t)}{\partial t} \qquad (10.9)$$<br>
+Podsetnik: $\Psi(x,t)$ — talasna funkcija; $\hbar = h/2\pi \approx 1{,}055\cdot10^{-34}$ J·s; $m$ — masa (kg); $U(x,t)$ — potencijalna energija (J); $i$ — imaginarna jedinica ($i^2=-1$); $\partial^2\Psi/\partial x^2$ — drugi izvod po položaju; $\partial\Psi/\partial t$ — prvi izvod po vremenu.</div>
+
+<p>Za stacionarna stanja (merljive veličine se ne menjaju s vremenom) talasna funkcija ne zavisi od vremena, pa se jednačina svodi na jednostavniji oblik u kojem se na desnoj strani pojavljuje ukupna energija $E$.</p>
+
+<div class="formula">
+$$-\frac{\hbar^2}{2m}\,\frac{d^2 \Psi(x)}{dx^2} + U(x)\,\Psi(x) = E\,\Psi(x) \qquad (10.10)$$<br>
+Podsetnik: $\Psi(x)$ — talasna funkcija (zavisi samo od položaja); $U(x)$ — potencijalna energija (J); $E$ — ukupna energija mikroobjekta (J); $\hbar$ — redukovana Plankova konstanta; $m$ — masa (kg).</div>
+
+<p>Rešavanjem se dobijaju dve vrste rezultata: dozvoljene (svojstvene) vrednosti energije i funkcije stanja (svojstvene funkcije) pomoću kojih se računaju verovatnoće. Bitno je naglasiti poreklo: iako po obliku podseća na difuzionu jednačinu, Šredingerova jednačina je potpuno nov koncept koji se ne može izvesti iz poznatog — ona je postulat kvantne mehanike, koji prihvatamo jer njena rešenja izvanredno tačno opisuju eksperimente.</p>
+
+<h3 id="h_51">Čestica u beskonačno dubokoj potencijalnoj jami (kvantizacija energije)</h3>
+
+<p>Posmatramo česticu mase $m$ u jednodimenzionoj pravougaonoj jami širine $L$ sa beskonačno visokim zidovima: unutra ($0<x<L$) je $U=0$, a izvan jame $U\to\infty$. Pitanje je koje su dozvoljene vrednosti energije. Egzaktan odgovor daje Šredingerova jednačina, ali se isti rezultat dobija jednostavnim razmišljanjem preko stojećih talasa i neprekidnosti talasne funkcije.</p>
+
+<p>Izvan jame čestica ne može postojati (beskonačan potencijal), pa je tamo $\Psi=0$. Pošto talasna funkcija mora biti neprekidna, ona se na zidovima mora glatko nadovezati na nulu: $\Psi(0)=0$ i $\Psi(L)=0$. To znači da u jami mogu „stati" samo oni talasi kod kojih na širini $L$ stane ceo broj polutalasa — baš kao stojeći talas na žici pričvršćenoj na oba kraja. Odatle slede dozvoljene talasne dužine $\lambda_n = 2L/n$, pa preko $p=h/\lambda$ i dozvoljeni impulsi $p_n = nh/(2L)$.</p>
+
+<div class="formula">
+$$E_n = \frac{p_n^2}{2m} = \frac{h^2}{8mL^2}\,n^2 = \frac{\pi^2 \hbar^2}{2mL^2}\,n^2 \qquad (10.11)$$<br>
+Podsetnik: $E_n$ — dozvoljena (svojstvena) energija $n$-tog stanja (J); $p_n = nh/(2L)$ — impuls (kg·m/s); $m$ — masa čestice (kg); $L$ — širina jame (m); $n=1,2,3,\dots$ — kvantni broj; $h$ — Plankova konstanta; $\hbar = h/2\pi$.</div>
+
+<p>Pošto čestica unutar jame ima samo kinetičku energiju (jer je $U=0$), ukupna energija je $E_n=p_n^2/(2m)$, što daje rezultat (10.11). Energija je kvantovana — uzima samo diskretne vrednosti određene celim brojem $n$ — i raste sa $n^2$, pa razmaci između nivoa rastu ka višim stanjima. Iz ovog modela slede tri opšta zaključka: (1) energija lokalizovane čestice je kvantovana; (2) ne može biti nula — najniži nivo $n=1$ ima konačnu „nultu energiju", jer bi nulta energija (mirovanje na tačno određenom mestu) prekršila princip neodređenosti; (3) diskretnost je posledica konfiniranja — kad $L\to\infty$, $E_n\to0$ i spektar postaje kontinualan, kao kod slobodne čestice. U tri dimenzije energija je zbir doprinosa $n_x^2+n_y^2+n_z^2$.</p>
+
+<h3 id="h_52">Tunel-efekat i primena (STM)</h3>
+
+<p>Tunel-efekat (tunelovanje) je pojava da mikročestica savlada konačnu potencijalnu barijeru čak i kada je njena energija niža od visine barijere — što je u klasičnoj fizici nemoguće. Klasično bi čestica prešla prepreku samo ako joj ukupna energija nije manja od potencijalne energije na vrhu; ako nema dovoljno energije, vraća se. Tunelovanje je direktna posledica talasno-čestične prirode i principa neodređenosti.</p>
+
+<p>Fizičko objašnjenje: unutar barijere impuls čestice postaje imaginaran, pa talasna funkcija ne oscilira kao običan talas, već eksponencijalno opada (rezultat rešavanja Šredingerove jednačine za tu oblast). Ako barijera nije previše široka, na drugoj strani talasna funkcija ima malu, ali od nule različitu amplitudu. Pošto kvadrat amplitude daje verovatnoću, sledi da je verovatnoća prolaska kroz barijeru konačna — čestica je „protunelovala".</p>
+
+<p>Najpoznatija primena je skenirajući tunelski mikroskop (STM), koji prikazuje pojedinačne atome na površini. Tanak metalni šiljak približi se površini na nekoliko angstrema; kroz vakuumski procep elektroni tuneluju i javlja se struja tunelovanja koja eksponencijalno zavisi od rastojanja.</p>
+
+<div class="formula">
+$$I_T \sim \mathrm{e}^{-2kd}\ , \qquad k = \frac{\sqrt{2m(U-E)}}{\hbar}$$<br>
+Podsetnik: $I_T$ — struja tunelovanja (A); $d$ — rastojanje šiljak–uzorak (m, praktično nm); $k$ — konstanta opadanja (m⁻¹); $m$ — masa elektrona (kg); $U-E$ — koliko barijera nadvisuje energiju elektrona (J ili eV); $\hbar$ — redukovana Plankova konstanta; $\mathrm{e}\approx2{,}718$.</div>
+
+<p>Značaj je u izuzetnoj osetljivosti: zbog eksponencijalne zavisnosti, promena rastojanja od svega $0{,}1$ nm menja struju za otprilike ceo red veličine (oko deset puta), pa STM „oseti" pojedinačne atome. Povratnom spregom struja se drži konstantnom dok šiljak prelazi preko uzorka, čime vrh prati reljef površine i daje sliku rasporeda atoma; štaviše, STM može i da pomera pojedinačne atome. Tunelovanje je važno i šire: omogućava fuziju u Suncu (protoni tuneluju kroz odbojnu barijeru), učestvuje u spontanim mutacijama DNK i u alfa-raspadu.</p>
+
+<h3 id="h_53">Bozoni i fermioni; kvantni brojevi (Paulijev princip)</h3>
+
+<p>Posebno svojstvo mikročestica, bez analogije u makrosvetu, jeste spin — sopstveni moment impulsa čestice iznosa $\hbar\sqrt{s(s+1)}$. Prema vrednosti spinskog kvantnog broja $s$ sve čestice se dele u dve grupe: bozone (celobrojno $s=0,1,2,\dots$) i fermione (poluceo $s=\tfrac12,\tfrac32,\dots$). Elektroni, protoni i neutroni su fermioni, a fotoni bozoni.</p>
+
+<div class="formula">
+$$\hbar\sqrt{s(s+1)}$$<br>
+Podsetnik: izraz — iznos sopstvenog momenta impulsa (spina) (J·s); $s$ — spinski kvantni broj ($0,\tfrac12,1,\tfrac32,\dots$); $\hbar\approx1{,}055\cdot10^{-34}$ J·s.</div>
+
+<p>Iako je spin individualno svojstvo, on određuje i kolektivno ponašanje istovrsnih čestica. Za fermione važi Paulijev princip isključenja (zabrane): dva fermiona ne mogu biti u istom kvantnom stanju — jedno stanje prima najviše jedan fermion. Bozoni se ponašaju suprotno: nemaju zabranu i čak imaju tendenciju gomilanja u istom stanju (verovatnoća stvaranja bozona raste sa brojem čestica koje to stanje već zauzimaju).</p>
+
+<p>Stanje elektrona u atomu u potpunosti određuju četiri kvantna broja: glavni $n=1,2,3,\dots$ (srednje rastojanje od jezgra, a kod vodonika i energija); orbitalni $\ell=0,1,\dots,n-1$ (moment impulsa, broj podnivoa); magnetni $m=0,\pm1,\dots,\pm\ell$ (prostorna orijentacija orbitale, broj orbitala u podnivou); i spinski $s=\pm\tfrac12$ (orijentacija spina, „gore"/„dole"). Pomoću njih Paulijev princip glasi: u atomu ne mogu postojati dva elektrona sa jednakim vrednostima sva četiri kvantna broja $(n,\ell,m,s)$.</p>
+
+<div class="formula">
+$$(n,\ \ell,\ m,\ s): \quad n=1,2,3,\dots\,;\ \ \ell=0,\dots,n-1\,;\ \ m=0,\pm1,\dots,\pm\ell\,;\ \ s=\pm\tfrac12$$<br>
+Podsetnik: $n$ — glavni kvantni broj; $\ell$ — orbitalni; $m$ — magnetni; $s$ — spinski; svi su bezdimenzioni (čisti brojevi). Paulijev princip: svaka kombinacija $(n,\ell,m,s)$ odgovara najviše jednom elektronu.</div>
+
+<p>Značaj Paulijevog principa je ogroman: bez njega bi svi elektroni u atomu pali na najniži nivo, svi atomi bi izgledali isto i hemija ne bi postojala. Pošto fermioni to ne mogu, elektroni popunjavaju sve više nivoe i nastaju složene, raznolike elektronske strukture — odatle raznovrsnost hemijskih elemenata. Red popunjavanja orbitala iste energije dodatno propisuje Hundovo pravilo: svaka orbitala podnivoa prvo prima po jedan elektron istog spina, a tek potom dolazi do sparivanja.</p>
+
+<div id="disclaimer-napomena" style="max-width:860px;margin:50px auto 24px;padding:18px 22px;background:#16182e;color:#c2c7e0;border-radius:10px;border:1px solid #2a2c50;font-family:'Segoe UI',Arial,sans-serif;font-size:13px;line-height:1.7;">
+<b style="color:#ffd24d;">⚠️ Napomena (Disclaimer)</b><br>
+Ovo <b>nije</b> zvaničan sajt Fakulteta tehničkih nauka, niti zvaničan sajt predmeta, katedre ili profesora — i ni na koji način nije povezan sa njima. Ovo su <b>lične beleške i objašnjenja</b> koja je student napravio isključivo za sopstveno učenje i postavio na internet samo radi lakšeg pristupa sa različitih uređaja. <b>Ne polažem nikakva autorska prava</b> na originalne prezentacije, slajdove i materijale — sva prava pripadaju njihovim autorima (nastavnicima / FTN-u). Materijal je neslužben, može sadržati greške i ne predstavlja zvaničan izvor za ispit. Na zahtev autora ili nadležnih, sporni sadržaj se <b>odmah uklanja</b>. Ovaj sajt je <b>potpuno nekomercijalan</b>: ne ostvarujem nikakvu zaradu niti bilo kakvu materijalnu korist od njega (nema reklama, naplate, pretplate ni donacija).
+</div>
+
+</body>
+</html>
