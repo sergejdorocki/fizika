@@ -1,0 +1,268 @@
+==== Šesto predavanje ====
+  F = -\tilde{k}\,x \qquad (6.1)
+  m \int v\,dv + \tilde{k}\int x\,dx = C_1 \quad\Rightarrow\quad \frac{mv^2}{2} + \frac{\tilde{k}x^2}{2} = C_1
+  C_1 = \tfrac{1}{2}\tilde{k}x_0^2
+  \frac{mv^2}{2} + \frac{\tilde{k}x^2}{2} = \frac{\tilde{k}x_0^2}{2} \quad (=\text{const}) \qquad (6.2)
+  v = \sqrt{\frac{\tilde{k}}{m}\left(x_0^2 - x^2\right)} = \omega\sqrt{x_0^2 - x^2} \qquad (6.3)
+  \omega = \sqrt{\frac{\tilde{k}}{m}} \quad - \text{ kružna (ugaona) frekvencija oscilovanja}
+  \boxed{\,x = x_0\,\sin(\omega t + \varphi)\,} \qquad (6.4)
+  x = x_0\sin\!\left(\omega t + \tfrac{\pi}{2}\right) = x_0\cos(\omega t) \qquad (6.5)
+  \omega = 2\pi\nu = \frac{2\pi}{T} \qquad,\qquad \nu = \frac{1}{T}
+  v = \frac{dx}{dt} = \frac{d}{dt}\big[x_0\sin(\omega t+\varphi)\big] = \omega x_0\cos(\omega t+\varphi)
+  a = \frac{dv}{dt} = \frac{d}{dt}\big[\omega x_0\cos(\omega t+\varphi)\big] = -\omega^2 x_0\sin(\omega t+\varphi) = -\omega^2 x
+  E_k = \tfrac{1}{2}mv^2 = \tfrac{1}{2}m\omega^2\left(x_0^2 - x^2\right)
+  E_p = -\int_0^x F\,dx = \tilde{k}\int_0^x x\,dx = \tfrac{1}{2}\tilde{k}x^2 = \tfrac{1}{2}m\omega^2 x^2
+  E_u = E_k + E_p = \tfrac{1}{2}m\omega^2 x_0^2 = \text{const}
+  F(t) = m\,a(t) = m\frac{d^2x}{dt^2} = -m\omega^2 x_0\sin\!\left(\omega t - \tfrac{\pi}{2}\right) \equiv -F_0\sin\!\left(\omega t -
+  F_0 = m\omega^2 x_0 = 20\cdot10^{-3}\,\text{kg}\cdot\left(1\,\tfrac{\text{rad}}{\text{s}}\right)^2\cdot 0{,}1\,\text{m} = 2\,\text
+  \tilde k = \frac{F_0}{x_0} = \frac{2\cdot10^{-3}\,\text{N}}{0{,}1\,\text{m}} = 0{,}02\,\tfrac{\text{N}}{\text{m}}
+  T = \frac{2\pi}{\omega} = \frac{2\cdot 3{,}14\,\text{rad}}{1\,\tfrac{\text{rad}}{\text{s}}} = 6{,}28\,\text{s}
+  v_{max} = x_0\,\omega = 0{,}1\,\text{m}\cdot 1\,\tfrac{\text{rad}}{\text{s}} = 0{,}1\,\tfrac{\text{m}}{\text{s}} = 10\,\tfrac{\tex
+  -L\frac{dI}{dt} = \frac{q}{C} \quad\Rightarrow\quad L\frac{dI}{dt} + \frac{q}{C} = 0
+  L\frac{dI}{dt} + \frac{q}{C} = 0 \;\Big/\cdot dq \;\Rightarrow\; LI\,dI + \frac{1}{C}q\,dq = 0 \;\Rightarrow\; \tfrac12 LI^2 + \tf
+  \tfrac12 LI^2 + \tfrac12\frac{q^2}{C} = \tfrac12\frac{q_0^2}{C} \qquad (6.11)
+  q = q_0\sin\!\left(\frac{1}{\sqrt{LC}}\,t + \varphi\right) = q_0\sin(\omega t + \varphi) \qquad (6.12)
+  \omega = \frac{1}{\sqrt{LC}}
+  q = q_0\cos(\omega t) \qquad (6.13)
+  \psi(0,t) = \psi_0\cos(\omega t) \qquad (6.14)
+  \psi(x,t) = \psi_0\cos\big[\omega(t-\Delta t)\big] = \psi_0\cos\!\left[\omega\!\left(t-\frac{x}{v_0}\right)\right]
+  \psi(x,t) = \psi_0\cos\!\left[2\pi\!\left(\frac{t}{T} - \frac{x}{\lambda}\right)\right] \qquad (6.15)
+  k = \frac{2\pi}{\lambda}
+  \psi(x,t) = \psi_0\cos(\omega t - kx) \qquad (6.16)
+  u(x,t) = \frac{\partial\psi}{\partial t} = -\omega\psi_0\sin(\omega t - kx) \qquad (6.17)
+  a(x,t) = \frac{\partial u}{\partial t} = -\omega^2\psi_0\cos(\omega t - kx) = -\omega^2\psi \qquad (6.18)
+  \omega\,dt - k\,dx = 0 \;\Rightarrow\; v_0 = \frac{dx}{dt} = \frac{\omega}{k} = \frac{2\pi\nu}{2\pi/\lambda} = \lambda\nu \qquad (
+  \boxed{\,v_0 = \lambda\,\nu\,}
+  e^{i\alpha} = \cos\alpha + i\sin\alpha
+  \psi(x,t) = \psi_0\,\mathrm{Re}\!\left[e^{i(\omega t - kx)}\right] \quad\text{ili}\quad \psi(x,t) = \psi_0\,e^{\pm i(\omega t - kx
+  v_0 = \sqrt{\frac{E}{\rho}} \qquad (6.20)
+  v_0 = \sqrt{\frac{\kappa p}{\rho}} \qquad (6.21)
+  v_0 = \sqrt{\frac{\kappa RT}{M}} \qquad (6.22)
+  v_0 = c_0\sqrt{\frac{T}{T_0}} \qquad (6.23)
+  v_0 = \frac{2\ell}{t} = \sqrt{\frac{E}{\rho}} \;\Rightarrow\; E = \frac{4\ell^2}{t^2}\rho
+  E = \frac{4\cdot(30)^2}{(0{,}0166)^2}\cdot 8960 = 1{,}17\cdot10^{11}\,\text{Pa} = 117\,\text{GPa}
+  v_T = \sqrt{\langle v^2\rangle} = \sqrt{\frac{3RT}{M}} \qquad,\qquad v_0 = \sqrt{\frac{\kappa RT}{M}}
+  v_T = \sqrt{\frac{3}{1{,}67}}\cdot 970 = 1300\,\tfrac{\text{m}}{\text{s}}
+  \frac{F}{S} = E_Y\frac{\Delta L}{L}
+  \frac{F}{S} = E_Y\frac{\partial\psi}{\partial x} \;\Rightarrow\; F = S E_Y\frac{\partial\psi}{\partial x} \qquad (6.24)
+  dF = S E_Y\frac{\partial^2\psi}{\partial x^2}\,dx \qquad (6.25)
+  dF = \rho S\,dx\frac{\partial^2\psi}{\partial t^2} \qquad (6.26)
+  \frac{\partial^2\psi}{\partial t^2} = \frac{E_Y}{\rho}\cdot\frac{\partial^2\psi}{\partial x^2} \qquad (6.27)
+  \frac{\partial^2\psi}{\partial t^2} = v_0^2\cdot\frac{\partial^2\psi}{\partial x^2} \qquad (6.28)
+  \frac{\partial^2\psi}{\partial t^2} = \frac{F}{\gamma}\cdot\frac{\partial^2\psi}{\partial x^2} \;,\quad v_0=\sqrt{\frac{F}{\gamma}
+  v_0=\sqrt{\left(\frac{\partial p}{\partial\rho}\right)_{ad}}=\sqrt{\frac{\kappa p}{\rho}}
+  \frac{\partial^2 E_x}{\partial t^2}=v_0^2\frac{\partial^2 E_x}{\partial z^2} \;,\qquad \frac{\partial^2 B_y}{\partial t^2}=v_0^2\f
+  v_0=\sqrt{\frac{1}{\varepsilon_0\varepsilon_r\mu_0\mu_r}}=\frac{c}{\sqrt{\varepsilon_r\mu_r}} \;,\quad c=3\cdot10^8\,\tfrac{\text{
+==== Sedmo predavanje ====
+  \langle\epsilon\rangle = \tfrac12\mu\omega^2\psi_0^2
+  \langle w\rangle = n_0\langle\epsilon\rangle = \tfrac12 n_0\mu\omega^2\psi_0^2 = \tfrac12\rho\omega^2\psi_0^2
+  I = v_0\langle w\rangle = \frac{P}{S} = \tfrac12\rho v_0\omega^2\psi_0^2 \;,\qquad [I]=\tfrac{\text{W}}{\text{m}^2} \qquad (7.1)
+  p = E_Y\frac{\partial\psi}{\partial x} = v_0^2\rho k\psi_0\sin(\omega t - kx) \equiv \Delta p_{max}\sin(\omega t - kx)
+  \Delta p_{max} = \rho v_0\psi_0\omega \qquad (7.2)
+  I = \frac12\frac{\Delta p_{max}^2}{\rho v_0} = \frac{\Delta p_{eff}^2}{\mathcal{R}_{ac}} \qquad (7.3)
+  L\,[\text{dB}] = 10\log_{10}\frac{I}{I_0} \qquad (7.4)
+  \delta = n\lambda \;;\qquad n=0,\pm1,\pm2,\dots \qquad (7.5)
+  \delta = (2n+1)\frac{\lambda}{2} \;;\qquad n=0,\pm1,\pm2,\dots \qquad (7.6)
+  \psi_+ = \psi_0\cos(\omega t - kx) \;,\qquad \psi_- = \psi_0\cos(\omega t + kx)
+  \psi = \psi_+ + \psi_- = 2\psi_0\cos(kx)\cos(\omega t) \equiv A(x)\cos(\omega t) \qquad (7.7)
+  A(x) = 2\psi_0\cos(kx) \qquad (7.8)
+  L = (2n+1)\frac{\lambda_n}{4} \;,\qquad n=0,1,2,\dots
+  \nu_n = \frac{1}{\lambda_n}\sqrt{\frac{E}{\rho}} = \frac{2n+1}{4L}\sqrt{\frac{E}{\rho}}
+  L = (n+1)\frac{\lambda_n}{2} \;,\qquad n=0,1,2,\dots
+  \nu_n = \frac{n+1}{2L}\sqrt{\frac{E}{\rho}}
+  \nu_0 = \frac{1}{2L}\sqrt{\frac{E}{\rho}} \;,\qquad \nu_1 = \frac{1}{L}\sqrt{\frac{E}{\rho}} = 2\nu_0
+  L = (2n+1)\frac{\lambda_n}{2} \;,\qquad n=0,1,2,\dots
+  \nu_n = \frac{2n+1}{2L}\sqrt{\frac{E}{\rho}}
+  \nu_0 = \frac{1}{2L}\sqrt{\frac{E}{\rho}} \;,\quad \nu_1 = \frac{3}{2L}\sqrt{\frac{E}{\rho}} \;,\quad \nu_2 = \frac{5}{2L}\sqrt{\f
+  L = (n+1)\frac{\lambda_n}{2} \;,\qquad n=0,1,2,\dots
+  \nu_n = \frac{n+1}{2L}\sqrt{\frac{\kappa p}{\rho}}
+  \lambda_1 = \frac{(v_0-v_i)\Delta t}{\nu_0\Delta t} = \frac{v_0-v_i}{\nu_0}
+  \nu_1 = \frac{v_0}{v_0-v_i}\,\nu_0 \quad(\text{viša — izvor prilazi})
+  \nu_2 = \frac{v_0}{v_0+v_i}\,\nu_0 \quad(\text{niža — izvor se udaljava})
+  \nu = \frac{v_0 \pm v_p}{v_0 \mp v_i}\,\nu_0 \qquad (7.13)
+  \mathrm{div}\,\vec{E} = 0 \;,\qquad \mathrm{div}\,\vec{B} = 0
+  \mathrm{rot}\,\vec{E} = -\frac{\partial\vec{B}}{\partial t} \;,\qquad \mathrm{rot}\,\vec{B} = \frac{1}{c^2}\frac{\partial\vec{E}}{
+  E_x(z,t) = E_0\cos(\omega t - kz) \qquad (7.14a)
+  B_y(z,t) = B_0\cos(\omega t - kz) \qquad (7.14b)
+  k = \frac{2\pi}{\lambda} = \frac{\omega}{v_0}
+  v_0 = \frac{1}{\sqrt{\varepsilon_0\varepsilon_r\mu_0\mu_r}} \qquad (7.15)
+  c = \frac{1}{\sqrt{\varepsilon_0\mu_0}} \approx 3\cdot10^8\,\tfrac{\text{m}}{\text{s}} \;,\qquad v_0 = \frac{c}{\sqrt{\varepsilon_
+  R + A + T = 1
+  dI = -k I\,dx \quad\Rightarrow\quad \frac{dI}{I} = -k\,dx
+  \int_{I_0}^{I_t}\frac{dI}{I} = -k\int_0^D dx \quad\Rightarrow\quad \ln\frac{I_t}{I_0} = -kD
+  I_t = I_0\,e^{-kD} \qquad (7.17)
+  \tfrac12\varepsilon_0 E_0^2 = \tfrac12\mu_0 H_0^2 \qquad (7.18)
+  \frac{F_e}{F_m} = \frac{c}{v} \quad\Rightarrow\quad F_e \gg F_m \quad(\text{jer } v\ll c)
+  v_0 = \lambda\cdot\nu = \frac{\omega}{k}
+==== Osmo predavanje ====
+  dt = \frac{ds}{v_0}
+  n = \frac{c}{v_0}
+  \tau = \frac{1}{c}\int_1^2 n\,ds \quad\Rightarrow\quad L \equiv \tau c = \int_1^2 n\,ds = n\,s
+  \alpha = \alpha'
+  \overline{DC} = \overline{AC}\,\sin\alpha = v_1\,t \,, \qquad \overline{AB} = \overline{AC}\,\sin\beta = v_2\,t \,,
+  \frac{\sin\alpha}{\sin\beta} = \frac{v_1}{v_2} = \frac{n_2}{n_1} \quad\Rightarrow\quad n_1\,\sin\alpha = n_2\,\sin\beta \,.
+  n_1  n_2 \;\Rightarrow\; \beta > \alpha
+  \alpha = \alpha'
+  \alpha = \alpha'
+  n_1 < n_2
+  L = n_1\,s_1 + n_2\,s_2 = n_1\sqrt{a_1^2 + x^2} + n_2\sqrt{a_2^2 + (b-x)^2}
+  \frac{dL}{dx} = \frac{n_1\,x}{\sqrt{a_1^2 + x^2}} - \frac{n_2\,(b-x)}{\sqrt{a_2^2 + (b-x)^2}} = n_1\,\frac{x}{s_1} - n_2\,\frac{b-
+  \frac{x}{s_1} = \sin\alpha \qquad \text{i} \qquad \frac{b-x}{s_2} = \sin\beta
+  n_1\,\sin\alpha = n_2\,\sin\beta
+  \alpha \equiv \alpha_g \;\Rightarrow\; \beta = 90^\circ
+  \alpha' > \alpha_g \;\Rightarrow\; \text{totalna refleksija}
+  n_1 \sin\alpha_g = n_2 \sin 90^\circ \quad\Rightarrow\quad \sin\alpha_g = \frac{n_2}{n_1} \quad\Rightarrow\quad \alpha_g = \arcsin
+  n_0 \sin\alpha = n \sin\beta \quad\Rightarrow\quad \sin\beta = \frac{\sin\alpha}{n}
+  n\,\sin\alpha_g = n_0\,\sin 90^\circ = 1 \;\Rightarrow\; n = \frac{1}{\sin\alpha_g} = \frac{1}{\sin\left(47,33^\circ\right)} = 1,3
+  \beta = \arcsin\!\left(\frac{\sin\alpha}{n}\right) = \arcsin\!\left(\frac{\sin 25^\circ}{1,36}\right) = 18,1^\circ
+  1000\,dB/km \;\longrightarrow\; 20\,dB/km
+  \sin\theta_g = \frac{n_2}{n_1}
+  \sin \alpha_g = \frac{n_2}{n_1}
+  p > 2f \Rightarrow L  P
+  p < f
+  p,\qquad f,\qquad \ell
+  j\,[\mathrm{D}] = \frac{1}{f} = \frac{n_2 - n_1}{n_1}\left(\frac{1}{R_1} + \frac{1}{R_2}\right)
+  R_1,\quad R_2,\quad f
+  \frac{1}{f} = \frac{1}{p} + \frac{1}{\ell}
+  -\frac{1}{f} = \frac{1}{p} - \frac{1}{\ell}
+  u = \frac{L}{P} = \frac{\ell}{p}
+  y = y_1 + y_2
+  \delta = k\,\lambda \,; \qquad k = 0, \pm 1, \pm 2, \dots
+  \delta = (2k+1)\,\frac{\lambda}{2} \,; \qquad k = 0, \pm 1, \pm 2, \dots
+  \delta = x_2 - x_1 \simeq d\sin\alpha
+  \delta = d \sin\alpha = k\,\lambda
+  \delta = d \sin\alpha = (2k+1)\,\frac{\lambda}{2}
+  y_k = k\,\frac{\lambda D}{d}
+  y_k = (2k+1)\,\frac{\lambda D}{2d}
+  \delta = n\, s
+  \delta = s + \frac{\lambda}{2}
+  \delta = n \cdot (\overline{AB} + \overline{BC}) - \left(\overline{DC} + \frac{\lambda}{2}\right) .
+  \cos\beta = \frac{d}{\overline{AB}} \;\Rightarrow\; \overline{AB} = \overline{BC} = \frac{d}{\cos\beta} ,
+  \operatorname{tg}\beta = \frac{\overline{AC}}{2d}, \quad \sin\alpha = \frac{\overline{DC}}{\overline{AC}} \;\Rightarrow\; \overlin
+  \delta = \frac{2nd}{\cos\beta} - 2d\sin\alpha\,\operatorname{tg}\beta - \frac{\lambda}{2} .
+  \delta = 2d\sqrt{n^2-\sin^2\alpha} - \frac{\lambda}{2}
+  (2k+1)\,\frac{\lambda}{2} = 2d\sqrt{n^2-\sin^2\alpha} \qquad (k=0,1,2,3,\dots)
+  k\,\lambda = 2d\sqrt{n^2-\sin^2\alpha} \qquad (k=1,2,3,\dots)
+  \alpha = 0^\circ, \qquad n_0 \approx 1, \qquad n > 1
+  n = 1{,}35, \qquad n_0 \approx 1, \qquad \lambda = 620\ \mathrm{nm}, \qquad d = ?
+  \delta = 2nd - \frac{\lambda}{2} \qquad 2nd - \frac{\lambda}{2} = k\cdot\lambda
+  2nd = k\,\lambda + \frac{\lambda}{2} = 2k\,\frac{\lambda}{2} + \frac{\lambda}{2} \;\Rightarrow\; d = \frac{(2k+1)\,\lambda}{4n} \q
+  d_{min} = \frac{\lambda}{4n} = \frac{6{,}2\cdot 10^{-7}\,\text{m}}{4\cdot 1{,}35} = 1{,}15\cdot 10^{-7}\,\text{m} = 0{,}115\,\mu\t
+  \delta = 2nd + \frac{\lambda}{2} - \frac{\lambda}{2} = 2nd
+  2nd = k \cdot \lambda \qquad\Longrightarrow\qquad d = \frac{k \cdot \lambda}{2n} \quad (k = 1, 2, 3 \ldots)
+  d_{min} = \frac{\lambda}{2n} = 0{,}23 \,\mu m
+  d \sim \lambda
+  n\lambda = a\,\sin\theta_n \;, \qquad n = 0,\ \pm 1,\ \pm 2,\dots
+  n\lambda = a\,\frac{\Delta z_n}{\sqrt{\ell^2 + \Delta z_n^{\,2}}} \approx \frac{a\,\Delta z_n}{\ell}
+  a \cdot \sin\theta_n = n \cdot \lambda
+  \tan\theta_4 = \frac{\Delta z_4}{\ell}
+  n\lambda = a\,\sin\theta_n = \frac{1}{N}\,\sin\theta_n \quad\Rightarrow\quad \sin\theta_4 = 4\lambda N .
+  \sin\theta_4 = \frac{\Delta z_4}{\sqrt{\ell^2 + \Delta z_4^2}} ,
+  \frac{\Delta z_4}{\sqrt{\ell^2 + \Delta z_4^2}} = 4\lambda N ,
+  \ell = \Delta z_4 \cdot \sqrt{\frac{1}{(4\lambda N)^2}} \approx 100\,cm = 1\,m .
+  n\lambda = a \sin\theta_n = \frac{1}{N}\sin\theta_n \qquad (n = 0, \pm 1, \pm 2, \ldots)
+  n_{max}\,\lambda = \frac{1}{N} = \frac{1}{10^{5}\,m^{-1}\cdot 6\cdot 10^{-7}\,m} = 16{,}7 \mapsto 16
+  m = 2\cdot 16 + 1 = 33
+  n = n(\lambda)
+  n = \frac{c}{v_0}
+  n = \frac{c}{v_0} = f(\lambda)
+  n^2 = f(\omega)
+  n^2 = f(\omega)
+  n = n(\lambda)
+  n(\lambda) = \frac{c}{v(\lambda)}
+  \vec{E} \perp \vec{B}, \qquad \vec{E} \perp \vec{v}, \qquad \vec{B} \perp \vec{v}
+  n_2 > n_1
+  \operatorname{tg}\alpha_B = \frac{n_2}{n_1} \quad\Rightarrow\quad \alpha_B = \operatorname{arctg}\frac{n_2}{n_1}
+  \alpha_B + \beta = 90^\circ
+  n_0 \sin\alpha_B = n \sin\beta
+  \sin\alpha_B = n \sin\beta = n \sin(90^\circ - \alpha_B) = n \cos\alpha_B
+  \mathrm{tg}\,\alpha_B = n \qquad \alpha_B = \mathrm{arctg}(n) = 57^\circ
+  90^\circ - \alpha_B = 33^\circ
+  \vec{E}_r \perp \vec{E}_n
+  E_A = E_0 \cos\theta
+  E_A = E_0 \, \cos\theta
+  I = I_0 \, \cos^2 \theta
+  I = I_0 \cos^2 \theta
+  \theta = \arccos\!\left(\sqrt{0{,}373}\right) = 52{,}4^\circ
+  \alpha = K(\lambda,\,T)\cdot \ell
+  \alpha = K(\lambda,\,T)\, c\, \ell
+  I = I_0 \cdot \cos^2\theta
+  I = I_0 \cdot \cos^2\theta
+  I = I_0 \cdot \cos^2(90^\circ) = I_0 \cdot 0 = 0
+  I_{\text{rasejano}} \propto \frac{1}{\lambda^4}
+==== Deveto predavanje ====
+  \varepsilon_{\lambda,T} = \frac{E}{S\,t} = \frac{P}{S} \equiv I \quad \left[\mathrm{W/m^2}\right] \tag{9.1}
+  a_{\lambda,T} = \frac{E_{\lambda}^{(\text{aps})}}{E_{\lambda}^{(\text{up})}}
+  \varepsilon_{\lambda,T} \quad \left[10^{13} \, \frac{\text{W}}{\text{m}^3}\right]
+  \varepsilon = \sigma T^4
+  \lambda_m = \frac{b}{T}
+  \frac{\varepsilon_{\lambda,T}}{a_{\lambda,T}} = f(\lambda, T)
+  \epsilon_f = h\nu = \frac{hc}{\lambda}
+  E = N \cdot \epsilon_f = Nh\nu = N\frac{hc}{\lambda}, \quad N = 1, 2, 3, \ldots
+  \varepsilon_{\lambda,T} = \frac{2\pi c^2 h}{\lambda^5} \cdot \frac{1}{e^{\frac{hc}{\lambda kT}} - 1}
+  E_{k,\text{max}} = eU_k
+  I_s \propto \Phi
+  \frac{1}{2} m_e v^2 = e U_k
+  h\nu = A + E_{\text{kin}}
+  \frac{hc}{\lambda} = A + \frac{1}{2}m_e v^2 \tag{9.10}
+  h\nu_g = A \quad \Rightarrow \quad \frac{hc}{\lambda_g} = A
+  \Delta\lambda = \lambda' - \lambda = \frac{h}{m_0 c}(1 - \cos\theta) = \lambda_c(1 - \cos\theta)
+  \epsilon_f \sim \frac{1}{\lambda'}
+  \frac{1}{\lambda} = R \left( \frac{1}{k^2} - \frac{1}{n^2} \right)
+  \frac{1}{\lambda} = R \, Z^2 \left( \frac{1}{k^2} - \frac{1}{n^2} \right)
+  A = Z + N
+  e = 1{,}602 \cdot 10^{-19} \, \text{C}
+  m_p \approx 1836 \cdot m_e
+  \frac{1}{4\pi\varepsilon_0} \frac{Z e^2}{r^2} = \frac{m_e v^2}{r} \qquad (9.15)
+  L = m_e \, v \, r = n \hbar \,, \qquad (n = 1, 2, 3, \ldots)
+  h\nu = |E_n - E_k|
+  E_{\text{foton}} = h\nu = E_{n_2} - E_{n_1}
+  \frac{m_e v_n^2}{r_n} = \frac{1}{4\pi\varepsilon_0}\,\frac{Ze^2}{r_n^2}
+  m_e\, v_n\, r_n = n\hbar \;; \quad n = 1, 2, 3, \ldots
+  r_n = \frac{\varepsilon_0 h^2}{\pi\, m_e Z e^2}\,n^2 = \frac{4\pi\varepsilon_0\hbar^2}{Z m_e e^2}\,n^2 \qquad v_n = \frac{Ze^2}{2\
+  E_n = E_n^{kin} + E_n^{pot} = \frac{m_e v_n^2}{2} - \frac{Ze^2}{4\pi\varepsilon_0 r_n} = -\frac{m_e Z^2 e^4}{8\varepsilon_0^2 h^2}
+  (h\nu)_{n\to k} = E_n - E_k = -\frac{m_e Z^2 e^4}{8\varepsilon_0^2 h^2}\left(\frac{1}{n^2} - \frac{1}{k^2}\right)
+  \left(\frac{1}{\lambda}\right)_{n\to k} = Z^2 R_H \left(\frac{1}{k^2} - \frac{1}{n^2}\right)
+  \frac{1}{\lambda} = R_H \left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right), \quad n_2 > n_1
+  \lambda_{2\to1} = \frac{1}{Z^2 R_H \left(\dfrac{1}{1^2} - \dfrac{1}{2^2}\right)}
+  \left(\frac{1}{\lambda}\right)_{n\to2} = Z^2 R_H \left(\frac{1}{2^2} - \frac{1}{n^2}\right)
+  \epsilon_f = h \cdot \nu = \frac{h\, c}{\lambda}
+  \epsilon_f = m c^2
+  \lambda = \frac{h}{p}
+  \ell_f = c \cdot \tau_e \sim 0{,}3\,\text{m}
+  E = E_0 \sin(\omega t - kx)
+  \epsilon_f = h\nu = \hbar\omega
+==== Deseto predavanje ====
+  \epsilon_f = h\,\nu = \frac{h\,c}{\lambda}\,, \qquad \epsilon_f = m\,c^2
+  \lambda = \frac{h}{m\,c} = \frac{h}{p}
+  \lambda = \frac{h}{p} = \frac{h}{m\,v} \qquad (10.1)
+  \mathcal{O}_n = 2\pi r_n
+  \mathcal{O}_n = n\,\frac{h}{p_n} = n\,\frac{h}{m_e\,v_n}
+  2\pi r_n = n\,\frac{h}{m_e\,v_n} \quad \Rightarrow \quad m_e\,r_n\,v_n = n\,\frac{h}{2\pi}
+  \lambda = \frac{h}{p} = \frac{h}{\sqrt{2meU}} \approx 10^{-10}\ \text{m}
+  \lambda = \frac{h}{p} = \frac{h}{mv}
+  \lambda = \frac{h}{mv} = \frac{6{,}626 \cdot 10^{-34} \, \text{Js}}{10^{-2} \, \text{kg} \cdot 700 \, \frac{\text{m}}{\text{s}}} \
+  \Delta x \cdot \Delta p_x \geq \frac{\hbar}{2} \,, \quad \Delta y \cdot \Delta p_y \geq \frac{\hbar}{2} \,, \quad \Delta z \cdot \
+  \Delta E \cdot \Delta t \geq \frac{\hbar}{2}
+  \Psi(\vec{r},\, t) \equiv \Psi(x, y, z, t)
+  \Psi(\vec{r}) \equiv \Psi(x, y, z)
+  \rho = \Psi(\vec{r}, t) \cdot \Psi^*(\vec{r}, t) = |\Psi(\vec{r}, t)|^2 = \frac{dP}{dV}
+  dP = |\Psi(\vec{r}, t)|^2 \, dV
+  p = \frac{h}{\lambda}
+  \Psi = a \cdot \Psi_1 + b \cdot \Psi_2
+  |a|^2 + |b|^2 = 1
+  \Psi = \sum_{i=1}^{n} c_i \Psi_i \qquad , \qquad \sum_{i=1}^{n} |c_i|^2 = 1
+  -\frac{\hbar^2}{2m}\frac{\partial^2 \Psi(x,t)}{\partial x^2} + U(x,t)\,\Psi(x,t) = i\hbar\,\frac{\partial \Psi(x,t)}{\partial t}
+  -\frac{\hbar^2}{2m}\frac{d^2 \Psi(x)}{dx^2} + U(x)\,\Psi(x) = E\,\Psi(x)
+  \Psi(x=0) = 0 \qquad \text{i} \qquad \Psi(x=L) = 0
+  \lambda_n = \frac{2L}{n}, \quad n = 1, 2, 3, \ldots
+  p_n = \frac{nh}{2L}
+  E_n = \frac{p_n^2}{2m} = \frac{h^2}{8mL^2} \cdot n^2 = \frac{\pi^2 \hbar^2}{2mL^2} \cdot n^2
+  E_{n_x, n_y, n_z} = \frac{\pi^2 \hbar^2}{2mL^2} \cdot \left(n_x^2 + n_y^2 + n_z^2\right)
+  \frac{1}{2}mv^2 + mgh \geq mgH
+  I_T \sim e^{-2kd}
+  S = \hbar\sqrt{s(s+1)}
+  n = 1, 2, 3, \ldots
+  \ell = 0,\ 1,\ 2,\ 3,\ \ldots,\ n-1
+  m = 0, \pm 1, \pm 2, \pm 3, \ldots, \pm \ell
+  s = +\tfrac{1}{2}, \quad s = -\tfrac{1}{2}
